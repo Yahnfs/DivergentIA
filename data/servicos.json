@@ -1,0 +1,115 @@
+[
+  {
+    "id": "cras-serra-centro",
+    "nome": "CRAS Serra Centro",
+    "tipo": "assistencia_social",
+    "orgao": "Secretaria Municipal de Assistência Social - Serra",
+    "municipio": "Serra",
+    "endereco": "Rua exemplo, 100 - Centro, Serra/ES (verificar endereço atualizado na prefeitura)",
+    "horario": "Segunda a sexta, 8h às 17h",
+    "documentos_necessarios": ["CPF", "RG", "Comprovante de residência", "NIS (se possuir)"],
+    "fluxo_atendimento": "Procurar recepção, informar necessidade (ex: benefício, encaminhamento), realizar cadastro no CadÚnico se ainda não tiver.",
+    "contato": "Telefone/endereço a confirmar junto à Prefeitura de Serra",
+    "tags": ["cras", "assistencia social", "serra", "cadastro unico"]
+  },
+  {
+    "id": "creas-vitoria",
+    "nome": "CREAS Vitória",
+    "tipo": "assistencia_social",
+    "orgao": "Secretaria Municipal de Assistência Social - Vitória",
+    "municipio": "Vitória",
+    "endereco": "Endereço a confirmar junto à Prefeitura de Vitória",
+    "horario": "Segunda a sexta, 8h às 17h",
+    "documentos_necessarios": ["CPF", "RG", "Relato da situação de vulnerabilidade/violação de direitos"],
+    "fluxo_atendimento": "Atendimento a famílias e indivíduos em situação de risco pessoal e social, incluindo violação de direitos de PCD e crianças neurodivergentes.",
+    "contato": "Telefone/endereço a confirmar junto à Prefeitura de Vitória",
+    "tags": ["creas", "assistencia social", "vitoria", "protecao especial"]
+  },
+  {
+    "id": "mediador-escolar-rede-municipal",
+    "nome": "Solicitação de mediador escolar / profissional de apoio - Rede Municipal",
+    "tipo": "educacao",
+    "orgao": "Secretaria Municipal de Educação",
+    "municipio": null,
+    "endereco": "Secretaria de Educação do município ou diretamente na escola de matrícula",
+    "horario": "Horário de expediente da secretaria/escola",
+    "documentos_necessarios": [
+      "Laudo médico ou relatório multiprofissional com CID",
+      "Relatório pedagógico da escola (se já matriculado)",
+      "RG e CPF do responsável",
+      "Comprovante de matrícula"
+    ],
+    "fluxo_atendimento": "1) Matricular a criança na escola pública da região. 2) Apresentar laudo à direção/coordenação pedagógica. 3) Escola encaminha pedido formal de mediador/profissional de apoio à Secretaria de Educação. 4) Secretaria avalia e designa profissional, prazo varia por município.",
+    "contato": "Secretaria Municipal de Educação do município de residência",
+    "tags": ["mediador escolar", "educacao inclusiva", "autismo", "tea", "escola publica", "atendente terapeutico"]
+  },
+  {
+    "id": "mediador-escolar-rede-estadual-es",
+    "nome": "Solicitação de mediador escolar - Rede Estadual (SEDU-ES)",
+    "tipo": "educacao",
+    "orgao": "Secretaria de Estado da Educação do Espírito Santo (SEDU)",
+    "municipio": null,
+    "endereco": "Escola estadual de matrícula ou Superintendência Regional de Educação (SRE)",
+    "horario": "Horário de expediente escolar",
+    "documentos_necessarios": [
+      "Laudo médico/relatório multiprofissional",
+      "Documentos pessoais do aluno e responsável",
+      "Comprovante de matrícula na rede estadual"
+    ],
+    "fluxo_atendimento": "1) Matricular na escola estadual. 2) Apresentar laudo à direção. 3) Escola solicita à SRE (Superintendência Regional) o profissional de apoio escolar. 4) Acompanhamento do processo pela família junto à direção.",
+    "contato": "SEDU - Superintendência Regional de Educação da região",
+    "tags": ["mediador escolar", "sedu", "educacao inclusiva", "rede estadual", "autismo"]
+  },
+  {
+    "id": "defensoria-publica-es",
+    "nome": "Defensoria Pública do Estado do Espírito Santo",
+    "tipo": "juridico",
+    "orgao": "Defensoria Pública - ES",
+    "municipio": null,
+    "endereco": "Núcleos da Defensoria Pública em Vitória, Vila Velha, Serra, Cariacica, entre outros",
+    "horario": "Segunda a sexta, conforme unidade",
+    "documentos_necessarios": ["RG", "CPF", "Comprovante de residência", "Comprovante de baixa renda (se aplicável)"],
+    "fluxo_atendimento": "Atendimento jurídico gratuito para quem não pode pagar advogado, incluindo ações para garantir direitos de PCD/autistas (ex: negativa de mediador escolar, negativa de benefício, discriminação).",
+    "contato": "Agendamento via site ou presencial nos núcleos da Defensoria",
+    "tags": ["defensoria publica", "juridico", "direitos", "gratuito", "deficiencia"]
+  },
+  {
+    "id": "juizado-especial-es",
+    "nome": "Juizado Especial Cível/Fazenda Pública - ES",
+    "tipo": "juridico",
+    "orgao": "Tribunal de Justiça do Espírito Santo",
+    "municipio": null,
+    "endereco": "Fóruns das comarcas da Grande Vitória",
+    "horario": "Segundo a sexta, expediente forense",
+    "documentos_necessarios": ["RG", "CPF", "Documentos da causa (laudos, negativas por escrito, protocolos)"],
+    "fluxo_atendimento": "Para causas de menor complexidade contra órgãos públicos (ex: prefeitura que nega direito), sem necessidade obrigatória de advogado em alguns casos.",
+    "contato": "Fórum da comarca correspondente",
+    "tags": ["juizado especial", "juridico", "fazenda publica", "direitos"]
+  },
+  {
+    "id": "secretaria-direitos-humanos-es",
+    "nome": "Secretaria de Estado dos Direitos Humanos e Assistência Social - ES",
+    "tipo": "orgao_especializado",
+    "orgao": "Governo do Estado do Espírito Santo",
+    "municipio": null,
+    "endereco": "Sede em Vitória/ES",
+    "horario": "Segunda a sexta, 8h às 17h",
+    "documentos_necessarios": ["Depende da demanda específica"],
+    "fluxo_atendimento": "Orientação sobre políticas de inclusão, encaminhamento a programas estaduais para PCD e famílias atípicas.",
+    "contato": "Site oficial do Governo do ES",
+    "tags": ["direitos humanos", "secretaria estadual", "inclusao", "deficiencia"]
+  },
+  {
+    "id": "ubs-generica",
+    "nome": "Unidade Básica de Saúde (UBS) do bairro",
+    "tipo": "saude",
+    "orgao": "Secretaria Municipal de Saúde",
+    "municipio": null,
+    "endereco": "UBS mais próxima da residência (consultar pelo CEP na prefeitura)",
+    "horario": "Segunda a sexta, 7h às 17h (varia por unidade)",
+    "documentos_necessarios": ["Cartão SUS", "RG", "Comprovante de residência"],
+    "fluxo_atendimento": "Porta de entrada do SUS: acompanhamento pediátrico, encaminhamento para especialidades (neuropediatria, terapia ocupacional, fonoaudiologia) via regulação municipal.",
+    "contato": "UBS de referência do bairro",
+    "tags": ["saude", "ubs", "sus", "encaminhamento", "neuropediatria"]
+  }
+]

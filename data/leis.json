@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lei-13146-2015",
+    "titulo": "Estatuto da Pessoa com Deficiência",
+    "esfera": "federal",
+    "municipio": null,
+    "numero": "Lei nº 13.146/2015",
+    "resumo": "Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência, garantindo direitos em educação, saúde, trabalho, acessibilidade e atendimento prioritário.",
+    "tags": ["deficiencia", "pcd", "inclusao", "direitos", "acessibilidade", "educacao inclusiva"]
+  },
+  {
+    "id": "lei-12764-2012",
+    "titulo": "Lei Berenice Piana - Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista",
+    "esfera": "federal",
+    "municipio": null,
+    "numero": "Lei nº 12.764/2012",
+    "resumo": "Reconhece a pessoa com Transtorno do Espectro Autista (TEA) como pessoa com deficiência para todos os efeitos legais, garantindo acesso a educação, saúde e assistência social.",
+    "tags": ["autismo", "tea", "berenice piana", "deficiencia", "educacao inclusiva", "saude"]
+  },
+  {
+    "id": "isencao-impostos-veiculos-pcd",
+    "titulo": "Isenção de impostos para aquisição de veículos por PCD",
+    "esfera": "federal",
+    "municipio": null,
+    "numero": "Lei nº 8.989/1995 (IPI) e legislações estaduais de ICPVA/ICMS",
+    "resumo": "Pessoas com deficiência física, visual, mental severa/profunda ou autistas têm direito a isenção de IPI, ICMS e IPVA na compra de veículo adaptado, mediante laudo médico e processo junto à Receita Federal/Sefaz estadual.",
+    "tags": ["isencao", "ipva", "icms", "ipi", "veiculo", "deficiencia", "autismo"]
+  },
+  {
+    "id": "passe-livre",
+    "titulo": "Passe Livre Intermunicipal e Federal para Pessoas com Deficiência",
+    "esfera": "federal",
+    "municipio": null,
+    "numero": "Lei nº 8.899/1994",
+    "resumo": "Garante gratuidade no transporte coletivo interestadual para pessoas com deficiência comprovadamente carentes. Passes intermunicipais/municipais variam por estado/prefeitura.",
+    "tags": ["passe livre", "transporte", "deficiencia", "gratuidade"]
+  },
+  {
+    "id": "laudo-perpetuo-tea-tdah-es",
+    "titulo": "Laudo perpétuo para TEA/TDAH no Espírito Santo",
+    "esfera": "estadual",
+    "municipio": null,
+    "numero": "Legislação estadual ES sobre laudo perene",
+    "resumo": "Dispensa a renovação periódica de laudos médicos para pessoas com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH) em condições permanentes, simplificando o acesso contínuo a direitos e benefícios.",
+    "tags": ["laudo perpetuo", "tea", "tdah", "autismo", "espirito santo"]
+  },
+  {
+    "id": "vagas-reservadas-serra",
+    "titulo": "Vagas reservadas de estacionamento para PCD - Serra/ES",
+    "esfera": "municipal",
+    "municipio": "Serra",
+    "numero": "Legislação municipal de Serra sobre vagas reservadas",
+    "resumo": "Estabelece a obrigatoriedade de vagas reservadas para PCD e idosos em estabelecimentos públicos e privados, com concessão de credencial de estacionamento pela prefeitura mediante laudo médico.",
+    "tags": ["vaga reservada", "estacionamento", "credencial", "serra", "deficiencia"]
+  },
+  {
+    "id": "atendimento-prioritario-vitoria",
+    "titulo": "Atendimento prioritário em órgãos públicos - Vitória/ES",
+    "esfera": "municipal",
+    "municipio": "Vitória",
+    "numero": "Legislação municipal de Vitória sobre atendimento prioritário",
+    "resumo": "Garante atendimento prioritário efetivo (não apenas placas) para PCD, idosos, gestantes e pessoas com TEA/TDAH em repartições públicas municipais, com fila e guichê exclusivos quando possível.",
+    "tags": ["atendimento prioritario", "vitoria", "deficiencia", "autismo", "tdah"]
+  },
+  {
+    "id": "credencial-estacionamento-vila-velha",
+    "titulo": "Concessão de credencial de estacionamento para PCD - Vila Velha/ES",
+    "esfera": "municipal",
+    "municipio": "Vila Velha",
+    "numero": "Legislação municipal de Vila Velha sobre credencial de estacionamento",
+    "resumo": "Define o processo, documentos e prazos para solicitação da credencial de estacionamento para pessoas com deficiência junto à Secretaria Municipal de Transporte de Vila Velha.",
+    "tags": ["credencial", "estacionamento", "vila velha", "deficiencia"]
+  }
+]
