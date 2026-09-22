@@ -1,0 +1,193 @@
+[
+  {
+    "id": "lacuna-escolas",
+    "titulo": "Lista de escolas com acessibilidade ou apoio para deficiência e autismo",
+    "gatilhos": [
+      [
+        "escola",
+        "colegio",
+        "creche",
+        "cmei",
+        "emef",
+        "umei"
+      ],
+      [
+        "quais",
+        "qual escola",
+        "que escola",
+        "lista",
+        "onde tem",
+        "onde ha",
+        "onde fica",
+        "indica",
+        "recomend",
+        "tem alguma",
+        "existe alguma",
+        "algum colegio",
+        "onde encontr",
+        "onde ach",
+        "onde procur",
+        "onde busc",
+        "onde consig",
+        "onde conseg",
+        "onde posso"
+      ],
+      [
+        "acessib",
+        "cadeirante",
+        "cadeira de rodas",
+        "rampa",
+        "elevador",
+        "banheiro adapt",
+        "mediador",
+        "apoio",
+        "inclusiv",
+        "autis",
+        "tdah",
+        "deficien",
+        "especial",
+        "acessiv"
+      ]
+    ],
+    "mensagem": "Não tenho uma lista de escolas com acessibilidade para cadeirantes, nem de escolas com mediador ou apoio para estudantes com autismo: essa informação não está na minha base, e prefiro não inventar. Quem sabe dizer quais escolas têm rampa, banheiro adaptado e profissionais de apoio é a Secretaria de Educação do seu município. Veja os contatos abaixo e pergunte por escolas com essa estrutura perto da sua casa.",
+    "contatos": [
+      "pref-vitoria-156",
+      "pref-vitoria-geral",
+      "serra-gee",
+      "serra-ouvidoria",
+      "vv-educacao-especial",
+      "pref-vv-geral",
+      "sedu-educacao-especial",
+      "sedu-central"
+    ],
+    "perguntas": [
+      "municipio"
+    ],
+    "sugestoes": [
+      "Como peço mediador ou apoio escolar?"
+    ]
+  },
+  {
+    "id": "lacuna-saude",
+    "titulo": "Lista de clínicas, terapeutas e profissionais de saúde",
+    "gatilhos": [
+      [
+        "clinica",
+        "terapia",
+        "terapeuta",
+        "fono",
+        "psicolog",
+        "neuropediatra",
+        "neurologista",
+        "psiquiatra",
+        "medico",
+        "consultorio",
+        "profissional",
+        "especialista"
+      ],
+      [
+        "quais",
+        "onde tem",
+        "onde ha",
+        "onde fica",
+        "onde consigo",
+        "indica",
+        "recomend",
+        "lista",
+        "conhece",
+        "procurar",
+        "encontrar",
+        "onde encontr",
+        "onde ach",
+        "onde procur",
+        "onde busc",
+        "onde consig",
+        "onde conseg",
+        "onde posso"
+      ],
+      [
+        "autis",
+        "tdah",
+        "deficien",
+        "neurodiverg",
+        "laudo",
+        "diagnostic"
+      ]
+    ],
+    "mensagem": "Não tenho uma lista de clínicas, terapeutas ou médicos: essa informação não está na minha base. A Lei Berenice Piana garante à pessoa com autismo o acesso a diagnóstico e a atendimento multiprofissional pelo sistema de saúde (art. 3º, III). Para saber onde esse atendimento é feito no seu município, pergunte à Prefeitura: veja os contatos abaixo.",
+    "contatos": [
+      "pref-vitoria-156",
+      "pref-vitoria-geral",
+      "serra-ouvidoria",
+      "pref-vv-geral",
+      "defensoria-es"
+    ],
+    "perguntas": [
+      "municipio"
+    ],
+    "sugestoes": [
+      "Quais são os meus direitos na saúde?"
+    ]
+  },
+  {
+    "id": "lacuna-locais",
+    "titulo": "Lista de locais acessíveis (restaurantes, lojas, passeios)",
+    "gatilhos": [
+      [
+        "restaurante",
+        "shopping",
+        "cinema",
+        "parque",
+        "praia",
+        "hotel",
+        "mercado",
+        "cafe",
+        "loja",
+        "lugar",
+        "local",
+        "passeio",
+        "bar ",
+        "locais",
+        "lugares",
+        "estabelecimento",
+        "atracao",
+        "atracoes",
+        "balneario"
+      ],
+      [
+        "acessib",
+        "cadeirante",
+        "rampa",
+        "banheiro adapt",
+        "braille",
+        "sensorial",
+        "silencios",
+        "baixo estimulo",
+        "cadeira de rodas",
+        "acessiv"
+      ],
+      [
+        "quais",
+        "onde",
+        "tem ",
+        "indica",
+        "recomend",
+        "lista",
+        "existe",
+        "onde encontr",
+        "onde ach",
+        "onde procur",
+        "onde busc",
+        "onde consig",
+        "onde conseg",
+        "onde posso",
+        "onde tem",
+        "onde ha"
+      ]
+    ],
+    "mensagem": "Não tenho uma lista fixa de restaurantes, lojas ou passeios acessíveis. Mas esta página tem um mapa colaborativo de locais acessíveis, cadastrados pela própria comunidade: veja a seção “Locais acessíveis” logo abaixo. Se você conhece um lugar com rampa, banheiro adaptado ou ambiente de baixo estímulo, cadastre para ajudar outras famílias.",
+    "contatos": [],
+    "perguntas": [],
+    "sugestoes": []
+  }
+]

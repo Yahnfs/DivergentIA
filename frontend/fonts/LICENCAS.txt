@@ -1,0 +1,13 @@
+Fontes usadas pelo frontend do DivergentIA (guardadas aqui para a página não depender de servidores externos)
+
+1) Atkinson Hyperlegible
+   Copyright 2020 Braille Institute of America, Inc.
+   Criada pelo Braille Institute para aumentar a legibilidade para pessoas com baixa visão.
+   Licença: SIL Open Font License 1.1 - https://openfontlicense.org
+
+2) Lexend
+   Copyright 2018 The Lexend Project Authors (https://github.com/googlefonts/lexend)
+   Desenhada para facilitar a leitura.
+   Licença: SIL Open Font License 1.1 - https://openfontlicense.org
+
+Os arquivos .woff2 são os subconjuntos "latin" distribuídos pelo Google Fonts (cobrem os acentos do português).

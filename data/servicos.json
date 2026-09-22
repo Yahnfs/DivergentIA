@@ -1,115 +1,1139 @@
 [
   {
-    "id": "cras-serra-centro",
-    "nome": "CRAS Serra Centro",
-    "tipo": "assistencia_social",
-    "orgao": "Secretaria Municipal de Assistência Social - Serra",
-    "municipio": "Serra",
-    "endereco": "Rua exemplo, 100 - Centro, Serra/ES (verificar endereço atualizado na prefeitura)",
-    "horario": "Segunda a sexta, 8h às 17h",
-    "documentos_necessarios": ["CPF", "RG", "Comprovante de residência", "NIS (se possuir)"],
-    "fluxo_atendimento": "Procurar recepção, informar necessidade (ex: benefício, encaminhamento), realizar cadastro no CadÚnico se ainda não tiver.",
-    "contato": "Telefone/endereço a confirmar junto à Prefeitura de Serra",
-    "tags": ["cras", "assistencia social", "serra", "cadastro unico"]
+    "id": "bpc-pcd",
+    "titulo": "BPC – Benefício de Prestação Continuada para pessoa com deficiência",
+    "tipo": "beneficio",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "O BPC garante 1 salário mínimo por mês à pessoa com deficiência que comprove baixa renda. Não precisa ter contribuído para o INSS. O pedido é feito pela internet, no Meu INSS.",
+    "quem_pode": "Pessoa com deficiência (impedimento de longo prazo, de no mínimo 2 anos) cuja renda por pessoa da família seja de até 1/4 do salário mínimo. Precisa ser brasileiro (nato ou naturalizado) ou ter nacionalidade portuguesa.",
+    "passos": [
+      {
+        "titulo": "Faça ou atualize o CadÚnico no CRAS",
+        "texto": "Inscreva a família no Cadastro Único (CadÚnico) no CRAS da sua região, ou atualize o cadastro se já tiver. A última atualização precisa ter menos de 2 anos, com o CPF de todas as pessoas da casa."
+      },
+      {
+        "titulo": "Peça o benefício no Meu INSS",
+        "texto": "Faça o pedido no Meu INSS (site ou aplicativo): entre com CPF e senha, escolha 'Novo pedido', digite 'assistencial' e selecione 'Benefício assistencial à pessoa com deficiência'. Se o sistema estiver fora do ar, ligue 135."
+      },
+      {
+        "titulo": "Vá à avaliação social e à perícia médica",
+        "texto": "Se o INSS chamar, vá à avaliação social e à perícia médica, que comprovam a deficiência. Leve um documento de identificação com foto."
+      },
+      {
+        "titulo": "Acompanhe o pedido",
+        "texto": "Acompanhe o pedido no Meu INSS, em 'Consultar pedidos'. A resposta leva em média 45 dias."
+      }
+    ],
+    "documentos": [
+      "Documento de identificação (RG, CIN, CNH ou CTPS) e CPF de quem pede e de todas as pessoas da família que moram na mesma casa",
+      "Se houver representante: documento e CPF dele, mais procuração ou termo de tutela, curatela ou guarda"
+    ],
+    "onde": "Meu INSS (site ou aplicativo), Central 135 e CRAS (para o CadÚnico).",
+    "custo_prazo": "Gratuito. Resposta em média em 45 dias.",
+    "atencao": "O BPC não paga 13º salário e não deixa pensão por morte. Quem começa a trabalhar não pode receber o BPC ao mesmo tempo, mas pode pedir o Auxílio-Inclusão se a remuneração for de até 2 salários mínimos.",
+    "contatos": [
+      "inss-135",
+      "cras-vitoria",
+      "cras-serra",
+      "cras-vila-velha"
+    ],
+    "links": [
+      {
+        "titulo": "Solicitar o BPC pela internet (gov.br)",
+        "url": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-a-pessoa-com-deficiencia"
+      },
+      {
+        "titulo": "Regras do BPC para pessoa com deficiência (INSS)",
+        "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-com-deficiencia-bpc-loas"
+      }
+    ],
+    "tags": [
+      "bpc",
+      "loas",
+      "beneficio assistencial",
+      "salario minimo",
+      "baixa renda",
+      "deficiencia",
+      "autismo",
+      "tea",
+      "inss",
+      "meu inss",
+      "cadunico",
+      "renda"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-a-pessoa-com-deficiencia",
+    "titulo_curto": "Como pedir o BPC",
+    "inclui": [
+      "cras-cadunico"
+    ]
   },
   {
-    "id": "creas-vitoria",
-    "nome": "CREAS Vitória",
-    "tipo": "assistencia_social",
-    "orgao": "Secretaria Municipal de Assistência Social - Vitória",
+    "id": "isencao-ipi-veiculo-pcd",
+    "titulo": "Isenção de IPI (e IOF) na compra de carro por pessoa com deficiência ou autismo",
+    "tipo": "beneficio",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "Pessoas com deficiência física, visual, auditiva, mental severa ou profunda, ou com autismo, podem comprar carro com isenção de IPI e, em alguns casos, de IOF. O pedido é feito pela internet, no sistema SISEN da Receita Federal, com a conta gov.br.",
+    "quem_pode": "Pessoa com deficiência física, visual, auditiva, mental severa ou profunda, ou com transtorno do espectro autista, mesmo menor de 18 anos, diretamente ou por meio do representante legal. É preciso ter recursos compatíveis com o valor do carro (a não ser que a compra seja financiada), não ter impedimentos legais para benefícios fiscais e, se for contribuinte individual do INSS, não ter dívidas previdenciárias.",
+    "passos": [
+      {
+        "titulo": "Consiga o laudo médico",
+        "texto": "Consiga o laudo médico da sua condição (deficiência física e/ou visual, deficiência mental severa ou profunda, ou autismo). O laudo deve ser feito por serviço público de saúde, por serviço privado que faça parte do SUS (contratado ou conveniado) ou pelo Detran, por suas clínicas credenciadas."
+      },
+      {
+        "titulo": "Faça o pedido no SISEN (gov.br)",
+        "texto": "Acesse o SISEN, da Receita Federal, e entre com a conta gov.br. Faça o pedido de isenção e anexe os documentos pelo próprio sistema."
+      },
+      {
+        "titulo": "Consulte o resultado",
+        "texto": "Consulte o resultado no sistema depois de 3 dias úteis. A Receita não envia nada pelo correio. Se o pedido for negado, dá para recorrer em até 10 dias, pelo mesmo canal."
+      },
+      {
+        "titulo": "Compre o carro dentro do prazo",
+        "texto": "Com a autorização em mãos, compre o carro dentro do prazo: ela vale 270 dias, contados da data em que ficou disponível no SISEN."
+      }
+    ],
+    "documentos": [
+      "Documento de identificação oficial de quem vai receber o benefício",
+      "Laudo médico (de deficiência física e/ou visual, de deficiência mental severa ou profunda, ou de autismo)",
+      "Se o pedido for feito por representante legal: documento dele e comprovante da representação (certidão de nascimento, termo de curatela etc.)"
+    ],
+    "onde": "Pela internet, no SISEN (com conta gov.br).",
+    "custo_prazo": "Gratuito. Resultado em média em 3 dias úteis; a autorização vale por 270 dias.",
+    "atencao": "A isenção de IPI vale para 1 carro a cada 3 anos, com motor de até 2.0, no mínimo 4 portas e combustível de origem renovável, sistema reversível de combustão, híbrido ou elétrico. A isenção de IOF só pode ser usada uma vez e vale para carros de até 127 HP. IPVA e ICMS são impostos do estado: o pedido é separado, na Sefaz-ES.",
+    "contatos": [
+      "sefaz-es"
+    ],
+    "links": [
+      {
+        "titulo": "Obter isenção de impostos para comprar carro (gov.br)",
+        "url": "https://www.gov.br/pt-br/servicos/obter-isencao-de-impostos-para-comprar-carro"
+      }
+    ],
+    "tags": [
+      "isencao",
+      "ipi",
+      "iof",
+      "imposto",
+      "carro",
+      "veiculo",
+      "automovel",
+      "deficiencia",
+      "autismo",
+      "tea",
+      "sisen",
+      "receita federal",
+      "compra de carro",
+      "ipva",
+      "icms"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/obter-isencao-de-impostos-para-comprar-carro",
+    "titulo_curto": "Isenção de IPI e IOF na compra de carro"
+  },
+  {
+    "id": "isencao-ipva-es",
+    "titulo": "Isenção de IPVA para pessoa com deficiência ou autismo no Espírito Santo",
+    "tipo": "beneficio",
+    "esfera": "estadual",
+    "municipio": null,
+    "resumo": "No Espírito Santo, pessoa com deficiência física, auditiva, visual ou mental severa ou profunda, ou autista, proprietária de veículo, pode pedir isenção do IPVA à Sefaz (Receita Estadual). É preciso um laudo pericial de médico do SUS.",
+    "quem_pode": "Pessoa com deficiência física, auditiva, visual ou mental severa ou profunda, ou autista, proprietária de veículo automotor, ou o responsável legal.",
+    "passos": [
+      {
+        "titulo": "Consiga o laudo pericial do SUS",
+        "texto": "Consiga o laudo pericial com um médico do SUS, indicando o tipo de deficiência. No site da Sefaz há modelos de laudo de avaliação (autismo, deficiência mental, deficiência física, visual e auditiva)."
+      },
+      {
+        "titulo": "Preencha o requerimento da Sefaz",
+        "texto": "Baixe e preencha o Requerimento de Reconhecimento de Isenção de IPVA no site da Sefaz (menu Receita Estadual > IPVA > Isenção de IPVA)."
+      },
+      {
+        "titulo": "Envie à Agência da Receita Estadual",
+        "texto": "Envie o requerimento e os documentos para a Agência da Receita Estadual pelo e-Docs, ou leve à Agência da Receita Estadual da sua região."
+      },
+      {
+        "titulo": "Retire o resultado",
+        "texto": "Retire o resultado na Agência da Receita Estadual. O prazo informado na página do serviço é de até 5 dias úteis."
+      }
+    ],
+    "documentos": [
+      "Requerimento de isenção preenchido e assinado",
+      "Laudo pericial de médico do SUS, especificando o tipo de deficiência",
+      "CRLV (Certificado de Registro e Licenciamento do Veículo), para veículo usado",
+      "Se for o caso: documento que comprove a responsabilidade legal (tutela ou curatela) e procuração",
+      "Comprovante de pagamento da taxa de requerimento (DUA)"
+    ],
+    "onde": "Agência da Receita Estadual (Sefaz-ES) da sua região, ou pelo e-Docs.",
+    "custo_prazo": "Há taxa de requerimento (o valor muda: confirme na Sefaz). Prazo informado: até 5 dias úteis.",
+    "atencao": "A página do Faça Fácil que descreve esse passo a passo cita normas atualizadas até 2018. Regras, valor da taxa e limite de valor do veículo podem ter mudado: confirme no site da Sefaz ou ligando para a Sefaz antes de começar.",
+    "contatos": [
+      "sefaz-es"
+    ],
+    "links": [
+      {
+        "titulo": "Isenção de IPVA – Sefaz-ES (formulários e laudos)",
+        "url": "https://sefaz.es.gov.br/isencao-de-ipva"
+      },
+      {
+        "titulo": "IPVA para pessoa com deficiência ou autista – Faça Fácil (passo a passo)",
+        "url": "https://facafacil.es.gov.br/Servicos/Detalhes/2953?IdUnidade=2"
+      }
+    ],
+    "tags": [
+      "ipva",
+      "isencao",
+      "imposto",
+      "veiculo",
+      "carro",
+      "deficiencia",
+      "autismo",
+      "tea",
+      "sefaz",
+      "receita estadual",
+      "espirito santo",
+      "icms"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://facafacil.es.gov.br/Servicos/Detalhes/2953?IdUnidade=2",
+    "titulo_curto": "Isenção de IPVA no Espírito Santo",
+    "cobertura": "parcial"
+  },
+  {
+    "id": "passe-livre-interestadual",
+    "titulo": "Passe Livre Interestadual para pessoa com deficiência",
+    "tipo": "beneficio",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "O Passe Livre Interestadual dá gratuidade em ônibus, trem e barco entre estados para pessoa com deficiência de baixa renda (Lei 8.899/1994). O pedido é feito pelo site do Passe Livre, com a conta gov.br, e a credencial digital sai na hora.",
+    "quem_pode": "Pessoa com deficiência com renda familiar per capita de até 1 salário mínimo, comprovada de um destes jeitos: ser beneficiária do BPC; ou estar no CadÚnico com renda até 1 salário mínimo por pessoa e constar no Cadastro-Inclusão; ou estar no CadÚnico com renda até 1 salário mínimo por pessoa e ter o atesto de deficiência inserido por um médico no portal do Passe Livre.",
+    "passos": [
+      {
+        "titulo": "Confira se você se encaixa nas regras",
+        "texto": "Veja se você se encaixa em uma das três formas de comprovar renda e deficiência (BPC; CadÚnico + Cadastro-Inclusão; ou CadÚnico + atesto médico no portal)."
+      },
+      {
+        "titulo": "Entre no site do Passe Livre com o gov.br",
+        "texto": "Acesse passelivre.antt.gov.br, clique em 'Entrar com o gov.br' e depois em 'Obter o Passe Livre'."
+      },
+      {
+        "titulo": "Preencha e envie o requerimento",
+        "texto": "Preencha o requerimento, confira os dados e confirme o envio. Nos pedidos online, o benefício é deferido ou indeferido na hora."
+      },
+      {
+        "titulo": "Emita a credencial digital",
+        "texto": "Em 'Meu Passe Livre', clique em 'Emitir credencial' para baixar ou imprimir a credencial digital. Se precisar de acompanhante, o médico registra isso no sistema."
+      }
+    ],
+    "documentos": [
+      "Conta gov.br",
+      "Atesto médico de deficiência inserido pelo médico no portal, quando for o caso"
+    ],
+    "onde": "Pelo site passelivre.antt.gov.br (ou pelos Correios, como alternativa, com análise em cerca de 1 mês).",
+    "custo_prazo": "Gratuito. Pelo site, a resposta é imediata.",
+    "atencao": "Esse passe vale para viagens entre estados. Dentro da Grande Vitória, o passe livre do Transcol é outro cadastro (veja o Passe Livre PCD da Ceturb).",
+    "contatos": [
+      "antt-passe-livre",
+      "cras-vitoria",
+      "cras-serra",
+      "cras-vila-velha"
+    ],
+    "links": [
+      {
+        "titulo": "Obter Passe Livre Interestadual Digital (gov.br)",
+        "url": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital"
+      },
+      {
+        "titulo": "Sistema Passe Livre (ANTT)",
+        "url": "https://passelivre.antt.gov.br/"
+      }
+    ],
+    "tags": [
+      "passe livre",
+      "interestadual",
+      "transporte",
+      "onibus",
+      "viagem",
+      "gratuidade",
+      "deficiencia",
+      "antt",
+      "acompanhante",
+      "lei 8.899"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital",
+    "titulo_curto": "Passe Livre Interestadual",
+    "inclui": [
+      "cras-cadunico"
+    ]
+  },
+  {
+    "id": "passe-livre-transcol-pcd",
+    "titulo": "Passe Livre PCD no Transcol (Grande Vitória)",
+    "tipo": "beneficio",
+    "esfera": "estadual",
+    "municipio": null,
+    "resumo": "O Passe Livre PCD dá gratuidade no transporte coletivo do Transcol para pessoas com deficiência que comprovem a deficiência e a situação econômica, conforme a Lei Complementar 213/2001. O cadastro é feito na Ceturb.",
+    "quem_pode": "Pessoa com deficiência habilitada pela Lei Complementar 213/2001 que comprove a deficiência (com laudo médico) e que a situação econômica se enquadra na lei.",
+    "passos": [
+      {
+        "titulo": "Consiga o laudo da especialidade certa",
+        "texto": "Consiga o laudo médico da sua condição, original (ou cópia autenticada), com no máximo 30 dias de emissão. O laudo precisa ter identificação do local de origem, carimbo e assinatura do médico da especialidade certa (por exemplo: oftalmologista para deficiência visual; fisiatra, neurologista, ortopedista ou reumatologista para deficiência física; psiquiatra ou neurologista para deficiência intelectual ou doença mental)."
+      },
+      {
+        "titulo": "Reúna a comprovação de renda",
+        "texto": "Reúna a comprovação de renda: comprovantes com menos de 60 dias e a inscrição atualizada no Cadastro Único (CadÚnico)."
+      },
+      {
+        "titulo": "Faça o cadastro na Ceturb",
+        "texto": "Faça o cadastro em um destes locais: Loja Central da Ceturb (Rua Constante Sodré, 265, Santa Lúcia, Vitória), Terminais de Laranjeiras ou de Vila Velha, ou Central Faça Fácil (Av. Aloísio Santos, 500, Santo André, Cariacica)."
+      }
+    ],
+    "documentos": [
+      "Laudo médico (original ou cópia autenticada), com até 30 dias de emissão",
+      "Comprovantes de renda com menos de 60 dias",
+      "Inscrição atualizada no CadÚnico"
+    ],
+    "onde": "Loja Central da Ceturb (Vitória), Terminais de Laranjeiras e de Vila Velha, ou Central Faça Fácil (Cariacica).",
+    "custo_prazo": "Confirme prazo e taxas com a Ceturb.",
+    "atencao": "Laudos com mais de 30 dias podem ser aceitos se houver legislação específica ou se a deficiência for permanente. A página oficial traz a lista completa de documentos de renda: confira antes de ir.",
+    "contatos": [
+      "ceturb",
+      "cras-vitoria",
+      "cras-serra",
+      "cras-vila-velha"
+    ],
+    "links": [
+      {
+        "titulo": "Passe Livre PCD – Ceturb (requisitos e locais de cadastro)",
+        "url": "https://ceturb.es.gov.br/passe-livre-pcd"
+      }
+    ],
+    "tags": [
+      "passe livre",
+      "transcol",
+      "ceturb",
+      "cartao gv",
+      "onibus",
+      "transporte",
+      "gratuidade",
+      "deficiencia",
+      "grande vitoria",
+      "lei complementar 213"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://ceturb.es.gov.br/passe-livre-pcd",
+    "titulo_curto": "Passe Livre PCD no Transcol",
+    "inclui": [
+      "cras-cadunico"
+    ]
+  },
+  {
+    "id": "credencial-estacionamento-vitoria",
+    "titulo": "Credencial de estacionamento para pessoa com deficiência – Vitória",
+    "tipo": "documento",
+    "esfera": "municipal",
     "municipio": "Vitória",
-    "endereco": "Endereço a confirmar junto à Prefeitura de Vitória",
-    "horario": "Segunda a sexta, 8h às 17h",
-    "documentos_necessarios": ["CPF", "RG", "Relato da situação de vulnerabilidade/violação de direitos"],
-    "fluxo_atendimento": "Atendimento a famílias e indivíduos em situação de risco pessoal e social, incluindo violação de direitos de PCD e crianças neurodivergentes.",
-    "contato": "Telefone/endereço a confirmar junto à Prefeitura de Vitória",
-    "tags": ["creas", "assistencia social", "vitoria", "protecao especial"]
-  },
-  {
-    "id": "mediador-escolar-rede-municipal",
-    "nome": "Solicitação de mediador escolar / profissional de apoio - Rede Municipal",
-    "tipo": "educacao",
-    "orgao": "Secretaria Municipal de Educação",
-    "municipio": null,
-    "endereco": "Secretaria de Educação do município ou diretamente na escola de matrícula",
-    "horario": "Horário de expediente da secretaria/escola",
-    "documentos_necessarios": [
-      "Laudo médico ou relatório multiprofissional com CID",
-      "Relatório pedagógico da escola (se já matriculado)",
-      "RG e CPF do responsável",
-      "Comprovante de matrícula"
+    "resumo": "A Setran (Secretaria de Transportes, Trânsito e Infraestrutura Urbana) cadastra e emite a credencial para usar as vagas reservadas. Dá para pedir online, pelo Protocolo Virtual, ou presencialmente.",
+    "quem_pode": "Quem mora em Vitória e é pessoa com deficiência ou tem doença que comprometa a mobilidade.",
+    "passos": [
+      {
+        "titulo": "Reúna os documentos",
+        "texto": "Reúna os documentos: CPF, documento de identidade ou CNH (dentro da validade), comprovante de residência de Vitória em nome do requerente e o laudo médico com CID, com validade de no máximo 6 meses."
+      },
+      {
+        "titulo": "Preencha a requisição de vaga especial",
+        "texto": "Preencha a 'Requisição para estacionar em vaga especial – Idoso/Deficiente'."
+      },
+      {
+        "titulo": "Peça online, pelo Protocolo Virtual",
+        "texto": "Para pedir online: no Protocolo Virtual da Prefeitura, clique em 'Novo processo', digite 'Cartão de estacionamento' como assunto, escolha o órgão 'Setran', escreva no resumo que o cadastro é para Deficiente e anexe os documentos."
+      },
+      {
+        "titulo": "Ou peça pessoalmente",
+        "texto": "Para pedir pessoalmente: vá ao Centro Integrado de Atendimento ao Cidadão (Rua Vitório Nunes da Motta, 220), na sala 'Cartão de Estacionamento Idoso e Deficiente', de segunda a sexta, das 8h às 12h e das 13h às 17h."
+      }
     ],
-    "fluxo_atendimento": "1) Matricular a criança na escola pública da região. 2) Apresentar laudo à direção/coordenação pedagógica. 3) Escola encaminha pedido formal de mediador/profissional de apoio à Secretaria de Educação. 4) Secretaria avalia e designa profissional, prazo varia por município.",
-    "contato": "Secretaria Municipal de Educação do município de residência",
-    "tags": ["mediador escolar", "educacao inclusiva", "autismo", "tea", "escola publica", "atendente terapeutico"]
-  },
-  {
-    "id": "mediador-escolar-rede-estadual-es",
-    "nome": "Solicitação de mediador escolar - Rede Estadual (SEDU-ES)",
-    "tipo": "educacao",
-    "orgao": "Secretaria de Estado da Educação do Espírito Santo (SEDU)",
-    "municipio": null,
-    "endereco": "Escola estadual de matrícula ou Superintendência Regional de Educação (SRE)",
-    "horario": "Horário de expediente escolar",
-    "documentos_necessarios": [
-      "Laudo médico/relatório multiprofissional",
-      "Documentos pessoais do aluno e responsável",
-      "Comprovante de matrícula na rede estadual"
+    "documentos": [
+      "CPF",
+      "Documento de identidade ou CNH (dentro da validade)",
+      "Comprovante de residência de Vitória em nome do requerente (conta de água, luz ou telefone; contrato residencial autenticado; ou IPTU recente)",
+      "Laudo com CID, com validade de no máximo 6 meses",
+      "Requisição para estacionar em vaga especial – Idoso/Deficiente (preenchida)",
+      "Se o requerente for menor ou incapaz: comprovante de residência e documento do responsável legal"
     ],
-    "fluxo_atendimento": "1) Matricular na escola estadual. 2) Apresentar laudo à direção. 3) Escola solicita à SRE (Superintendência Regional) o profissional de apoio escolar. 4) Acompanhamento do processo pela família junto à direção.",
-    "contato": "SEDU - Superintendência Regional de Educação da região",
-    "tags": ["mediador escolar", "sedu", "educacao inclusiva", "rede estadual", "autismo"]
+    "onde": "Protocolo Virtual da Prefeitura (online) ou Centro Integrado de Atendimento ao Cidadão, Rua Vitório Nunes da Motta, 220.",
+    "custo_prazo": "Confirme prazo e taxas na Prefeitura.",
+    "atencao": null,
+    "contatos": [
+      "vitoria-setran-cartao",
+      "pref-vitoria-156",
+      "pref-vitoria-geral"
+    ],
+    "links": [
+      {
+        "titulo": "Cadastramento para vagas de estacionamento – Carta de Serviços de Vitória",
+        "url": "https://cartadeservicos.vitoria.es.gov.br/areas/3-Mobilidade-Urbana/servicos/333-Cadastramento-para-Vagas-de-Estacionamento-Pessoa-com-Deficiencia/"
+      }
+    ],
+    "tags": [
+      "credencial",
+      "estacionamento",
+      "vaga",
+      "cartao de estacionamento",
+      "vaga especial",
+      "deficiencia",
+      "setran",
+      "vitoria",
+      "mobilidade reduzida"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://cartadeservicos.vitoria.es.gov.br/areas/3-Mobilidade-Urbana/servicos/333-Cadastramento-para-Vagas-de-Estacionamento-Pessoa-com-Deficiencia/",
+    "titulo_curto": "Credencial de estacionamento (Vitória)",
+    "topico": "credencial-estacionamento"
   },
   {
-    "id": "defensoria-publica-es",
-    "nome": "Defensoria Pública do Estado do Espírito Santo",
-    "tipo": "juridico",
-    "orgao": "Defensoria Pública - ES",
-    "municipio": null,
-    "endereco": "Núcleos da Defensoria Pública em Vitória, Vila Velha, Serra, Cariacica, entre outros",
-    "horario": "Segunda a sexta, conforme unidade",
-    "documentos_necessarios": ["RG", "CPF", "Comprovante de residência", "Comprovante de baixa renda (se aplicável)"],
-    "fluxo_atendimento": "Atendimento jurídico gratuito para quem não pode pagar advogado, incluindo ações para garantir direitos de PCD/autistas (ex: negativa de mediador escolar, negativa de benefício, discriminação).",
-    "contato": "Agendamento via site ou presencial nos núcleos da Defensoria",
-    "tags": ["defensoria publica", "juridico", "direitos", "gratuito", "deficiencia"]
+    "id": "credencial-estacionamento-serra",
+    "titulo": "Credencial de estacionamento para pessoa com deficiência – Serra",
+    "tipo": "documento",
+    "esfera": "municipal",
+    "municipio": "Serra",
+    "resumo": "A Secretaria Municipal de Defesa Social (Sedes) emite a credencial de estacionamento prioritário. O pedido pode ser feito online, pelos processos digitais da Prefeitura, ou pessoalmente no Protocolo Geral.",
+    "quem_pode": "Pessoa com deficiência ou mobilidade reduzida com comprovante de endereço na Serra.",
+    "passos": [
+      {
+        "titulo": "Reúna os documentos",
+        "texto": "Reúna os documentos: formulário próprio, documento do solicitante (CI, CNH ou CTPS), comprovante de endereço recente da Serra em nome do solicitante e laudo médico com CID e CRM do médico, detalhando a deficiência ou a mobilidade reduzida."
+      },
+      {
+        "titulo": "Peça online, nos processos digitais",
+        "texto": "Para pedir online: acesse os processos digitais no site da Prefeitura da Serra, crie um login, inicie um novo processo eletrônico, procure a 'Secretaria Municipal de Defesa Social – SEDES' e selecione 'carteira de estacionamento'. Anexe os documentos pedidos."
+      },
+      {
+        "titulo": "Ou peça pessoalmente no Protocolo Geral",
+        "texto": "Para pedir pessoalmente: protocole o pedido no Protocolo Geral, na sede da Prefeitura (térreo) ou no Núcleo Pró-Cidadão, no Portal de Jacaraípe, de segunda a sexta, das 8h às 17h."
+      },
+      {
+        "titulo": "Aguarde a avaliação e emita a credencial",
+        "texto": "O pedido é avaliado pelo Departamento de Operações de Trânsito. Se estiver tudo certo, a credencial é emitida e, no pedido online, você imprime pelo próprio processo eletrônico. Se houver irregularidade, você recebe um e-mail explicando o que corrigir."
+      }
+    ],
+    "documentos": [
+      "Formulário próprio preenchido",
+      "Documento do solicitante (CI, CNH ou CTPS)",
+      "Comprovante de endereço recente da Serra em nome do solicitante (conta de água, luz ou telefone fixo)",
+      "Laudo (original ou cópia autenticada) com CID e CRM do médico, detalhando a deficiência ou a mobilidade reduzida"
+    ],
+    "onde": "Processos digitais da Prefeitura da Serra (online) ou Protocolo Geral (sede da Prefeitura ou Núcleo Pró-Cidadão, Portal de Jacaraípe).",
+    "custo_prazo": "Confirme prazo e taxas no Departamento de Operações de Trânsito.",
+    "atencao": "Se você não tiver um dos comprovantes de endereço aceitos, ligue para o Departamento de Operações de Trânsito para saber qual documento pode substituir.",
+    "contatos": [
+      "serra-dot",
+      "serra-ouvidoria"
+    ],
+    "links": [
+      {
+        "titulo": "Cartão para pessoas com deficiência – Guia de Serviços da Serra",
+        "url": "https://serra.es.gov.br/site/guiadeservicos/busca/241/CART%C3%83O%20PARA%20PESSOAS%20COM%20DEFICI%C3%8ANCIA"
+      },
+      {
+        "titulo": "Como emitir a credencial de estacionamento prioritário na Serra",
+        "url": "https://serra.es.gov.br/noticias/veja-como-emitir-a-credencial-de-estacionamento-prioritario-na-serra"
+      }
+    ],
+    "tags": [
+      "credencial",
+      "estacionamento",
+      "vaga",
+      "cartao de estacionamento",
+      "vaga especial",
+      "deficiencia",
+      "serra",
+      "sedes",
+      "mobilidade reduzida"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://serra.es.gov.br/site/guiadeservicos/busca/241/CART%C3%83O%20PARA%20PESSOAS%20COM%20DEFICI%C3%8ANCIA",
+    "titulo_curto": "Credencial de estacionamento (Serra)",
+    "topico": "credencial-estacionamento"
   },
   {
-    "id": "juizado-especial-es",
-    "nome": "Juizado Especial Cível/Fazenda Pública - ES",
-    "tipo": "juridico",
-    "orgao": "Tribunal de Justiça do Espírito Santo",
-    "municipio": null,
-    "endereco": "Fóruns das comarcas da Grande Vitória",
-    "horario": "Segundo a sexta, expediente forense",
-    "documentos_necessarios": ["RG", "CPF", "Documentos da causa (laudos, negativas por escrito, protocolos)"],
-    "fluxo_atendimento": "Para causas de menor complexidade contra órgãos públicos (ex: prefeitura que nega direito), sem necessidade obrigatória de advogado em alguns casos.",
-    "contato": "Fórum da comarca correspondente",
-    "tags": ["juizado especial", "juridico", "fazenda publica", "direitos"]
+    "id": "credencial-estacionamento-vila-velha",
+    "titulo": "Credencial de estacionamento para pessoa com deficiência – Vila Velha",
+    "tipo": "documento",
+    "esfera": "municipal",
+    "municipio": "Vila Velha",
+    "resumo": "Em Vila Velha, a credencial de estacionamento é emitida pela Secretaria Municipal de Defesa Social e Trânsito, no setor de atendimento da Prefeitura. As credenciais seguem a Resolução nº 965/2022 do Contran, que define prazo de validade.",
+    "quem_pode": "Pessoa com deficiência com comprometimento de mobilidade.",
+    "passos": [
+      {
+        "titulo": "Procure a Secretaria de Defesa Social e Trânsito",
+        "texto": "Procure o setor de atendimento da Secretaria de Defesa Social e Trânsito, na Prefeitura de Vila Velha (Av. Santa Leopoldina, 840, Coqueiral de Itaparica), e peça a credencial de estacionamento."
+      },
+      {
+        "titulo": "Confirme os documentos por telefone",
+        "texto": "Antes de ir, ligue para a Prefeitura e confirme a lista de documentos e o horário: não encontrei a página atual do serviço. Em Vitória e na Serra, o pedido costuma exigir documento com foto, comprovante de residência e laudo médico com CID."
+      }
+    ],
+    "documentos": [],
+    "onde": "Secretaria de Defesa Social e Trânsito, na Prefeitura de Vila Velha (Av. Santa Leopoldina, 840, Coqueiral de Itaparica).",
+    "custo_prazo": "Confirme com a Prefeitura.",
+    "atencao": "Não consegui abrir a página atual do serviço no site da Prefeitura de Vila Velha: os documentos e o passo a passo precisam ser confirmados por telefone.",
+    "contatos": [
+      "pref-vv-geral"
+    ],
+    "links": [
+      {
+        "titulo": "Credencial de estacionamento para idoso e PCD terão prazo de validade – Prefeitura de Vila Velha",
+        "url": "https://www.vilavelha.es.gov.br/noticias/2022/06/credencial-de-estacionamento-para-idoso-e-pcd-terao-prazo-de-validade-38907"
+      }
+    ],
+    "tags": [
+      "credencial",
+      "estacionamento",
+      "vaga",
+      "cartao de estacionamento",
+      "vaga especial",
+      "deficiencia",
+      "vila velha",
+      "contran",
+      "mobilidade reduzida"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vilavelha.es.gov.br/noticias/2022/06/credencial-de-estacionamento-para-idoso-e-pcd-terao-prazo-de-validade-38907",
+    "titulo_curto": "Credencial de estacionamento (Vila Velha)",
+    "topico": "credencial-estacionamento",
+    "cobertura": "parcial"
   },
   {
-    "id": "secretaria-direitos-humanos-es",
-    "nome": "Secretaria de Estado dos Direitos Humanos e Assistência Social - ES",
-    "tipo": "orgao_especializado",
-    "orgao": "Governo do Estado do Espírito Santo",
-    "municipio": null,
-    "endereco": "Sede em Vitória/ES",
-    "horario": "Segunda a sexta, 8h às 17h",
-    "documentos_necessarios": ["Depende da demanda específica"],
-    "fluxo_atendimento": "Orientação sobre políticas de inclusão, encaminhamento a programas estaduais para PCD e famílias atípicas.",
-    "contato": "Site oficial do Governo do ES",
-    "tags": ["direitos humanos", "secretaria estadual", "inclusao", "deficiencia"]
+    "id": "ciptea-vitoria",
+    "titulo": "Carteira de Identificação da Pessoa com Autismo (CIPTEA) – Vitória",
+    "tipo": "documento",
+    "esfera": "municipal",
+    "municipio": "Vitória",
+    "resumo": "A Prefeitura de Vitória emite gratuitamente a CIPTEA, uma carteira digital que identifica a pessoa com autismo e facilita o acesso a atendimento prioritário em serviços de saúde, educação e assistência social. O pedido é feito pelo site da Prefeitura ou pelo aplicativo Vitória Online.",
+    "quem_pode": "Pessoa com Transtorno do Espectro Autista que more em Vitória, pedindo por si ou pelo representante legal.",
+    "passos": [
+      {
+        "titulo": "Reúna os documentos",
+        "texto": "Reúna os documentos (lista abaixo). O laudo de autismo emitido por médico especialista, particular ou do setor público, tem validade indeterminada em Vitória."
+      },
+      {
+        "titulo": "Faça o pedido pelo site ou pelo Vitória Online",
+        "texto": "Faça o pedido pelo site da Prefeitura de Vitória ou pelo aplicativo Vitória Online."
+      },
+      {
+        "titulo": "Aguarde a validação e a emissão",
+        "texto": "A equipe da Secretaria de Cidadania avalia o pedido, valida e emite a carteira digital. Você pode imprimir em qualquer impressora."
+      },
+      {
+        "titulo": "Tire dúvidas por telefone",
+        "texto": "Para tirar dúvidas, ligue para a Recepção Central, (27) 3382-5484, ou procure a Casa do Cidadão, em Itararé."
+      }
+    ],
+    "documentos": [
+      "Requerimento preenchido e assinado pelo interessado ou pelo representante legal",
+      "Relatório médico (neurologista, psiquiatra ou pediatra) com o diagnóstico e o CID-10 F84; ou carteirinha da AMAES; ou relatório/declaração de acompanhamento da APAE/AMAES com diagnóstico e CID-10 F84",
+      "Certidão de nascimento ou documento de identidade e CPF do interessado (e do representante legal, se for o caso)",
+      "Comprovante de endereço atualizado (o interessado precisa morar em Vitória)",
+      "Foto 3x4 recente"
+    ],
+    "onde": "Site da Prefeitura de Vitória ou aplicativo Vitória Online; dúvidas na Casa do Cidadão, em Itararé.",
+    "custo_prazo": "Gratuito.",
+    "atencao": "Informação de uma notícia oficial de agosto de 2023. Confirme por telefone se o procedimento continua o mesmo.",
+    "contatos": [
+      "vitoria-ciptea",
+      "pref-vitoria-156"
+    ],
+    "links": [
+      {
+        "titulo": "Vitória inicia emissão das carteiras de identificação para pessoas com autismo (Prefeitura de Vitória)",
+        "url": "https://m.vitoria.es.gov.br/noticia/vitoria-inicia-emissao-das-carteiras-de-identificacao-para-pessoas-com-autismo-48364"
+      }
+    ],
+    "tags": [
+      "ciptea",
+      "carteira",
+      "carteirinha",
+      "autismo",
+      "tea",
+      "identificacao",
+      "prioridade",
+      "atendimento prioritario",
+      "vitoria",
+      "romeo mion",
+      "laudo"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://m.vitoria.es.gov.br/noticia/vitoria-inicia-emissao-das-carteiras-de-identificacao-para-pessoas-com-autismo-48364",
+    "titulo_curto": "Carteira do autista (Vitória)",
+    "topico": "carteira-autista"
   },
   {
-    "id": "ubs-generica",
-    "nome": "Unidade Básica de Saúde (UBS) do bairro",
-    "tipo": "saude",
-    "orgao": "Secretaria Municipal de Saúde",
+    "id": "cimptea-serra",
+    "titulo": "Carteira de Identificação Municipal da Pessoa com Autismo (CIMPTEA) – Serra",
+    "tipo": "documento",
+    "esfera": "municipal",
+    "municipio": "Serra",
+    "resumo": "A Secretaria de Direitos Humanos e Cidadania (Sedir) da Serra emite a CIMPTEA, documento oficial com foto e validade de 5 anos. Garante prioridade de atendimento em órgãos públicos municipais e meia-entrada em eventos culturais realizados na Serra.",
+    "quem_pode": "Pessoa com autismo (TEA), mediante laudo médico, pedindo por si ou pelo responsável.",
+    "passos": [
+      {
+        "titulo": "Ligue para receber orientações",
+        "texto": "Ligue para (27) 98182-0968 para receber orientações sobre como fazer o pedido."
+      },
+      {
+        "titulo": "Reúna os documentos e apresente o pedido",
+        "texto": "Reúna os documentos (lista abaixo) e apresente o pedido."
+      },
+      {
+        "titulo": "Lembre-se de revalidar em 5 anos",
+        "texto": "A CIMPTEA vale 5 anos e deve ser revalidada depois desse prazo."
+      }
+    ],
+    "documentos": [
+      "Laudo médico com CID-10 F84",
+      "Documentos pessoais do requerente ou do responsável legal (certidão de nascimento, carteira de identidade ou CPF)",
+      "Comprovante de residência original",
+      "Comprovante de inscrição no Cadastro Único (CadÚnico)",
+      "Telefone de contato",
+      "Foto 3x4"
+    ],
+    "onde": "Secretaria de Direitos Humanos e Cidadania (Sedir), da Prefeitura da Serra: comece pelo telefone (27) 98182-0968.",
+    "custo_prazo": "Validade de 5 anos.",
+    "atencao": "Informação de uma notícia oficial de novembro de 2024. Confirme por telefone se o procedimento continua o mesmo.",
+    "contatos": [
+      "serra-sedir-cimptea",
+      "serra-ouvidoria"
+    ],
+    "links": [
+      {
+        "titulo": "Prefeitura da Serra oferece Carteira de Identificação para pessoas com TEA",
+        "url": "https://www.serra.es.gov.br/noticias/sedir-entre-carteira-de-identificacao-para-pessoas-com-tea"
+      }
+    ],
+    "tags": [
+      "cimptea",
+      "ciptea",
+      "carteira",
+      "carteirinha",
+      "autismo",
+      "tea",
+      "identificacao",
+      "prioridade",
+      "atendimento prioritario",
+      "serra",
+      "meia entrada",
+      "laudo"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.serra.es.gov.br/noticias/sedir-entre-carteira-de-identificacao-para-pessoas-com-tea",
+    "titulo_curto": "Carteira do autista (Serra)",
+    "topico": "carteira-autista",
+    "inclui": [
+      "cras-cadunico"
+    ]
+  },
+  {
+    "id": "ciptea-vila-velha",
+    "titulo": "Carteira do Autista (CIPTEA) – Vila Velha",
+    "tipo": "documento",
+    "esfera": "municipal",
+    "municipio": "Vila Velha",
+    "resumo": "Em maio de 2022, a Prefeitura de Vila Velha anunciou que a Carteira do Autista já estava disponível no site da Prefeitura. Não encontrei a página atual com o passo a passo.",
+    "quem_pode": "Pessoa com autismo (TEA).",
+    "passos": [
+      {
+        "titulo": "Procure o serviço no site ou por telefone",
+        "texto": "Procure a Carteira do Autista no site da Prefeitura de Vila Velha ou ligue para a Prefeitura, (27) 3149-7400, e pergunte como pedir e quais documentos levar."
+      }
+    ],
+    "documentos": [],
+    "onde": "Site ou telefone da Prefeitura de Vila Velha.",
+    "custo_prazo": "Confirme com a Prefeitura.",
+    "atencao": "Não consegui abrir a página atual desse serviço: confirme o procedimento e os documentos por telefone. A Lei Romeo Mion (13.977/2020) determina que a carteira seja gratuita.",
+    "contatos": [
+      "pref-vv-geral"
+    ],
+    "links": [
+      {
+        "titulo": "Site da Prefeitura de Vila Velha",
+        "url": "https://www.vilavelha.es.gov.br"
+      }
+    ],
+    "tags": [
+      "ciptea",
+      "carteira",
+      "carteirinha",
+      "autismo",
+      "tea",
+      "identificacao",
+      "prioridade",
+      "vila velha",
+      "romeo mion"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vilavelha.es.gov.br",
+    "titulo_curto": "Carteira do autista (Vila Velha)",
+    "topico": "carteira-autista",
+    "cobertura": "parcial"
+  },
+  {
+    "id": "cras-cadunico",
+    "titulo": "CRAS e Cadastro Único (CadÚnico): porta de entrada para benefícios",
+    "tipo": "servico",
+    "esfera": "municipal",
     "municipio": null,
-    "endereco": "UBS mais próxima da residência (consultar pelo CEP na prefeitura)",
-    "horario": "Segunda a sexta, 7h às 17h (varia por unidade)",
-    "documentos_necessarios": ["Cartão SUS", "RG", "Comprovante de residência"],
-    "fluxo_atendimento": "Porta de entrada do SUS: acompanhamento pediátrico, encaminhamento para especialidades (neuropediatria, terapia ocupacional, fonoaudiologia) via regulação municipal.",
-    "contato": "UBS de referência do bairro",
-    "tags": ["saude", "ubs", "sus", "encaminhamento", "neuropediatria"]
+    "resumo": "O CRAS (Centro de Referência de Assistência Social) é a porta de entrada da assistência social. É lá que a família faz ou atualiza o Cadastro Único (CadÚnico), exigido para pedir o BPC e o Passe Livre, e recebe orientação sobre benefícios.",
+    "quem_pode": "Famílias e pessoas em situação de vulnerabilidade social. Cada CRAS atende os bairros da sua região.",
+    "passos": [
+      {
+        "titulo": "Descubra o CRAS da sua região",
+        "texto": "Descubra o CRAS da sua região: a lista com endereço, telefone e (em Vitória e na Serra) os bairros atendidos está nos contatos abaixo."
+      },
+      {
+        "titulo": "Vá no horário de atendimento",
+        "texto": "Vá de segunda a sexta, das 8h às 17h. Em Vitória, o agendamento é pelo site do serviço ou pelo aplicativo Vitória Online. Na Serra, o atendimento é por demanda espontânea, indo direto à unidade mais próxima."
+      },
+      {
+        "titulo": "Leve os documentos da família",
+        "texto": "Leve identificação e CPF de todas as pessoas da família que moram na mesma casa."
+      },
+      {
+        "titulo": "Peça o CadÚnico e a orientação sobre o BPC",
+        "texto": "Peça a inscrição ou a atualização do CadÚnico e a orientação sobre o BPC. Em Vitória, o CRAS faz a pré-habilitação para o BPC."
+      }
+    ],
+    "documentos": [
+      "Documento de identificação (RG, CIN, CNH ou CTPS) e CPF de todas as pessoas da família que moram na mesma casa"
+    ],
+    "onde": "CRAS mais próximo da sua casa.",
+    "custo_prazo": "Gratuito.",
+    "atencao": "Para o BPC, o CadÚnico precisa estar atualizado há menos de 2 anos.",
+    "contatos": [
+      "cras-vitoria",
+      "cras-serra",
+      "cras-vila-velha"
+    ],
+    "links": [
+      {
+        "titulo": "CRAS de Vitória – lista de unidades (Prefeitura de Vitória)",
+        "url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+      },
+      {
+        "titulo": "CRAS da Serra – unidades e bairros atendidos (Prefeitura da Serra)",
+        "url": "https://www.serra.es.gov.br/site/pagina/centro-de-referencia-de-assistencia-social-cras"
+      },
+      {
+        "titulo": "Contatos dos CRAS do Espírito Santo (SETADES, PDF)",
+        "url": "https://setades.es.gov.br/media/Cras/Contatos_CRAS.pdf"
+      }
+    ],
+    "tags": [
+      "cras",
+      "cadunico",
+      "cadastro unico",
+      "assistencia social",
+      "bolsa familia",
+      "bpc",
+      "beneficio",
+      "vulnerabilidade",
+      "renda",
+      "familia"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social",
+    "titulo_curto": "CRAS e Cadastro Único"
+  },
+  {
+    "id": "defensoria-es",
+    "titulo": "Defensoria Pública do Espírito Santo: ajuda jurídica gratuita",
+    "tipo": "servico",
+    "esfera": "estadual",
+    "municipio": null,
+    "resumo": "A Defensoria Pública orienta e defende, sem custo, quem não pode pagar advogado. É o caminho quando um direito é negado (por exemplo, apoio na escola, benefício ou tratamento). O atendimento é agendado, pelo site ou nas unidades.",
+    "quem_pode": "Pessoas que não têm condições de pagar um advogado.",
+    "passos": [
+      {
+        "titulo": "Agende pelo site",
+        "texto": "Agende pelo site: em defensoria.es.def.br, faça o cadastro no Agendamento Virtual, preencha as informações até o fim e guarde o número de protocolo. Envie a documentação do caso e aguarde o contato da Defensoria."
+      },
+      {
+        "titulo": "Ou agende presencialmente",
+        "texto": "Se preferir, agende presencialmente em uma das unidades. Você recebe uma senha, é cadastrado, tem os documentos analisados e sai com o atendimento agendado. A espera pode ser maior que no agendamento virtual."
+      },
+      {
+        "titulo": "Se faltar documento, explique o motivo",
+        "texto": "Se não tiver todos os documentos, explique o motivo no próprio agendamento virtual; a justificativa é analisada no dia do atendimento."
+      },
+      {
+        "titulo": "Em urgência no fim de semana, use o plantão",
+        "texto": "Em urgências aos sábados, domingos e feriados, mande mensagem pelo WhatsApp do plantão (das 12h às 18h), com nome completo, endereço e município de residência e o motivo do contato."
+      }
+    ],
+    "documentos": [
+      "A lista básica muda conforme o tipo de ação e está no site da Defensoria; é uma lista prévia, não definitiva."
+    ],
+    "onde": "Site defensoria.es.def.br (Agendamento Virtual) ou unidades da Defensoria em todo o estado; sede em Vitória (Praça Manoel Silvino Monjardim, 54, Centro).",
+    "custo_prazo": "Gratuito.",
+    "atencao": null,
+    "contatos": [
+      "defensoria-es"
+    ],
+    "links": [
+      {
+        "titulo": "Como funciona o atendimento na Defensoria Pública (DPES)",
+        "url": "https://www.defensoria.es.def.br/como-funciona-o-atendimento-na-defensoria-publica/"
+      },
+      {
+        "titulo": "Plantão de atendimento da Defensoria (fins de semana e feriados)",
+        "url": "https://www.defensoria.es.def.br/plantao-de-atendimento-dpes/"
+      }
+    ],
+    "tags": [
+      "defensoria",
+      "defensoria publica",
+      "juridico",
+      "advogado gratuito",
+      "direito negado",
+      "negativa",
+      "justica",
+      "acao",
+      "processo",
+      "gratuito",
+      "nega",
+      "negou",
+      "negar",
+      "negado",
+      "negaram",
+      "recusar",
+      "recusou",
+      "recusa",
+      "nao aceitou"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.defensoria.es.def.br/como-funciona-o-atendimento-na-defensoria-publica/",
+    "titulo_curto": "Ajuda jurídica gratuita (Defensoria)"
+  },
+  {
+    "id": "disque-100",
+    "titulo": "Disque 100: denúncia de violação de direitos humanos",
+    "tipo": "servico",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "O Disque 100 é um canal gratuito do Ministério dos Direitos Humanos que recebe denúncias de violações de direitos de pessoas com deficiência, idosos, crianças e outros grupos. Funciona 24 horas, todos os dias, por telefone, WhatsApp e site (com atendimento em Libras).",
+    "quem_pode": "Qualquer pessoa, vítima ou não, que saiba de uma violação de direitos humanos (como discriminação ou negativa de direito de pessoa com deficiência).",
+    "passos": [
+      {
+        "titulo": "Ligue 100 ou use o WhatsApp",
+        "texto": "Ligue 100, de qualquer telefone, sem custo, a qualquer hora. Também dá para usar o WhatsApp (61) 99611-0100 ou o site, que tem chat e videochamada em Libras."
+      },
+      {
+        "titulo": "Conte o que aconteceu",
+        "texto": "Conte o que aconteceu. A denúncia é registrada e encaminhada aos órgãos de proteção e responsabilização."
+      },
+      {
+        "titulo": "Acompanhe com o protocolo",
+        "texto": "Para acompanhar, ligue de novo para o 100 e informe o número de protocolo."
+      }
+    ],
+    "documentos": [],
+    "onde": "Telefone 100, WhatsApp e site do Disque Direitos Humanos.",
+    "custo_prazo": "Gratuito. Atendimento imediato.",
+    "atencao": "É um canal de denúncia. Para pedir um serviço ou benefício, use os órgãos indicados nos outros passos.",
+    "contatos": [
+      "disque-100"
+    ],
+    "links": [
+      {
+        "titulo": "Denunciar violação de direitos humanos – Disque 100 (gov.br)",
+        "url": "https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos"
+      }
+    ],
+    "tags": [
+      "disque 100",
+      "denuncia",
+      "violacao",
+      "direitos humanos",
+      "discriminacao",
+      "deficiencia",
+      "libras",
+      "ouvidoria"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos",
+    "titulo_curto": "Denúncia pelo Disque 100"
+  },
+  {
+    "id": "educacao-apoio-escolar-vitoria",
+    "titulo": "Educação Especial e apoio escolar na rede municipal de Vitória",
+    "tipo": "servico",
+    "esfera": "municipal",
+    "municipio": "Vitória",
+    "resumo": "A Secretaria Municipal de Educação (Seme) atende estudantes com autismo pela Coordenação de Formação e Acompanhamento à Educação Especial. O acompanhamento acontece todos os dias, durante a jornada escolar, com professores especializados e os demais profissionais da escola, e há Atendimento Educacional Especializado (AEE) no contraturno.",
+    "quem_pode": "Estudantes da rede municipal de Vitória com deficiência ou transtorno do espectro autista.",
+    "passos": [
+      {
+        "titulo": "Matricule a criança",
+        "texto": "Matricule a criança na escola pública da sua região (EMEF ou CMEI)."
+      },
+      {
+        "titulo": "Peça a avaliação da necessidade de apoio",
+        "texto": "Leve o laudo médico e converse com a direção e a coordenação pedagógica: peça a avaliação da necessidade de apoio na sala de aula e a participação no AEE, no contraturno."
+      },
+      {
+        "titulo": "Procure a Seme se a escola não resolver",
+        "texto": "Se a escola não resolver, ligue para o 156 (ou para o Protocolo Geral da Prefeitura, (27) 3382-6000) e peça para falar com a Coordenação de Formação e Acompanhamento à Educação Especial da Seme."
+      },
+      {
+        "titulo": "Se negarem, procure a Defensoria",
+        "texto": "Se o direito for negado, procure a Defensoria Pública (atendimento gratuito) ou o Disque 100."
+      }
+    ],
+    "documentos": [],
+    "onde": "Na escola da criança e na Secretaria Municipal de Educação (Seme).",
+    "custo_prazo": "Gratuito.",
+    "atencao": "A página oficial não lista documentos nem descreve como pedir um profissional de apoio: leve o laudo médico mais recente e os documentos da criança e do responsável, e confirme com a escola. Não encontrei uma lista de escolas com suporte específico.",
+    "contatos": [
+      "pref-vitoria-156",
+      "pref-vitoria-geral",
+      "defensoria-es"
+    ],
+    "links": [
+      {
+        "titulo": "Estudantes com autismo têm atendimento em horário regular e no contraturno (Seme Vitória)",
+        "url": "https://www.vitoria.es.gov.br/seme/estudantes-com-autismo-tem-atendimento-em-horario-regular-e-no-contraturno"
+      },
+      {
+        "titulo": "Educação Especial – Prefeitura de Vitória",
+        "url": "https://www.vitoria.es.gov.br/cidadao/educacao-especial"
+      }
+    ],
+    "tags": [
+      "mediador escolar",
+      "mediador",
+      "acompanhante especializado",
+      "profissional de apoio escolar",
+      "cuidador escolar",
+      "educacao especial",
+      "educacao inclusiva",
+      "aee",
+      "autismo",
+      "tea",
+      "escola publica",
+      "escola",
+      "matricula",
+      "seme",
+      "vitoria",
+      "cadeirante",
+      "acessibilidade escolar"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vitoria.es.gov.br/seme/estudantes-com-autismo-tem-atendimento-em-horario-regular-e-no-contraturno",
+    "titulo_curto": "Apoio escolar: rede municipal de Vitória",
+    "topico": "apoio-escolar",
+    "cobertura": "parcial"
+  },
+  {
+    "id": "educacao-apoio-escolar-serra",
+    "titulo": "Educação Especial e apoio escolar na rede municipal da Serra",
+    "tipo": "servico",
+    "esfera": "municipal",
+    "municipio": "Serra",
+    "resumo": "A Secretaria Municipal de Educação da Serra tem a Gerência de Educação Especial (GEE), que organiza o atendimento educacional especializado e orienta diretores, pedagogos, professores, cuidadores e estagiários. Há um canal exclusivo para as famílias de estudantes da Educação Especial.",
+    "quem_pode": "Estudantes da rede municipal da Serra que são público-alvo da Educação Especial.",
+    "passos": [
+      {
+        "titulo": "Matricule e apresente o laudo",
+        "texto": "Matricule a criança em uma escola da rede municipal e apresente o laudo médico à direção e ao pedagogo da escola."
+      },
+      {
+        "titulo": "Fale com a Gerência de Educação Especial",
+        "texto": "Fale com a Gerência de Educação Especial: WhatsApp (27) 98166-0903, telefone (27) 3291-4210 ou e-mail gee.sedu@serra.es.gov.br, das 7h às 18h. É o canal exclusivo para as famílias."
+      },
+      {
+        "titulo": "Registre na Ouvidoria se não houver resposta",
+        "texto": "Se não tiver resposta, registre na Ouvidoria da Prefeitura (162, 0800 283 9780 ou (27) 3291-2011, de segunda a sexta, das 8h às 16h)."
+      },
+      {
+        "titulo": "Se negarem, procure a Defensoria",
+        "texto": "Se o direito for negado, procure a Defensoria Pública (atendimento gratuito) ou o Disque 100."
+      }
+    ],
+    "documentos": [],
+    "onde": "Na escola da criança e na Gerência de Educação Especial da Secretaria Municipal de Educação.",
+    "custo_prazo": "Gratuito.",
+    "atencao": "A página oficial não descreve como pedir um cuidador ou profissional de apoio nem lista escolas: leve o laudo médico mais recente e confirme o passo a passo com a Gerência de Educação Especial.",
+    "contatos": [
+      "serra-gee",
+      "serra-ouvidoria",
+      "defensoria-es"
+    ],
+    "links": [
+      {
+        "titulo": "Educação Especial – Gerência de Educação Especial (Prefeitura da Serra)",
+        "url": "https://www.serra.es.gov.br/pagina/educacao-especial"
+      }
+    ],
+    "tags": [
+      "mediador escolar",
+      "mediador",
+      "acompanhante especializado",
+      "profissional de apoio escolar",
+      "cuidador escolar",
+      "educacao especial",
+      "educacao inclusiva",
+      "aee",
+      "autismo",
+      "tea",
+      "escola publica",
+      "escola",
+      "matricula",
+      "serra",
+      "cadeirante",
+      "acessibilidade escolar"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.serra.es.gov.br/pagina/educacao-especial",
+    "titulo_curto": "Apoio escolar: rede municipal da Serra",
+    "topico": "apoio-escolar",
+    "cobertura": "parcial"
+  },
+  {
+    "id": "educacao-apoio-escolar-vila-velha",
+    "titulo": "Educação Especial e apoio escolar na rede municipal de Vila Velha",
+    "tipo": "servico",
+    "esfera": "municipal",
+    "municipio": "Vila Velha",
+    "resumo": "A rede municipal de Vila Velha atende cerca de 1.800 estudantes da Educação Especial, com professores capacitados, salas de recursos multifuncionais (AEE), polos de Educação Especial e cuidadores escolares.",
+    "quem_pode": "Estudantes da rede municipal de Vila Velha com deficiência ou autismo.",
+    "passos": [
+      {
+        "titulo": "Matricule e apresente o laudo",
+        "texto": "Matricule a criança na escola da rede municipal e apresente o laudo médico à direção."
+      },
+      {
+        "titulo": "Peça o AEE e a avaliação de cuidador escolar",
+        "texto": "Peça a participação no Atendimento Educacional Especializado (AEE), nas salas de recursos multifuncionais, e a avaliação da necessidade de cuidador escolar."
+      },
+      {
+        "titulo": "Ligue para a Educação Especial da Semed",
+        "texto": "Para orientação, ligue para a Educação Especial da Secretaria Municipal de Educação: (27) 3389-9397, (27) 3389-7266 ou (27) 3229-1617. O endereço é Av. Luciano das Neves, 328, Prainha."
+      },
+      {
+        "titulo": "Se negarem, registre na Ouvidoria ou procure a Defensoria",
+        "texto": "Se o direito for negado, registre na Ouvidoria da Prefeitura (162) ou procure a Defensoria Pública (atendimento gratuito)."
+      }
+    ],
+    "documentos": [],
+    "onde": "Na escola da criança e na Educação Especial da Secretaria Municipal de Educação (Av. Luciano das Neves, 328, Prainha).",
+    "custo_prazo": "Gratuito.",
+    "atencao": "A página oficial não descreve como pedir um cuidador nem lista escolas: leve o laudo médico mais recente e confirme o passo a passo por telefone.",
+    "contatos": [
+      "vv-educacao-especial",
+      "pref-vv-geral",
+      "defensoria-es"
+    ],
+    "links": [
+      {
+        "titulo": "Educação Especial – Prefeitura de Vila Velha",
+        "url": "https://www.vilavelha.es.gov.br/setor/educacao/educacao-especial"
+      }
+    ],
+    "tags": [
+      "mediador escolar",
+      "mediador",
+      "acompanhante especializado",
+      "profissional de apoio escolar",
+      "cuidador escolar",
+      "educacao especial",
+      "educacao inclusiva",
+      "aee",
+      "autismo",
+      "tea",
+      "escola publica",
+      "escola",
+      "matricula",
+      "vila velha",
+      "cadeirante",
+      "acessibilidade escolar"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vilavelha.es.gov.br/setor/educacao/educacao-especial",
+    "titulo_curto": "Apoio escolar: rede municipal de Vila Velha",
+    "topico": "apoio-escolar",
+    "cobertura": "parcial"
+  },
+  {
+    "id": "educacao-apoio-escolar-estadual",
+    "titulo": "Educação Especial e apoio escolar na rede estadual (Sedu-ES)",
+    "tipo": "servico",
+    "esfera": "estadual",
+    "municipio": null,
+    "resumo": "A Secretaria de Estado da Educação (Sedu) tem a Gerência de Educação Especial e os Núcleos Estaduais de Apoio Pedagógico à Inclusão Escolar (NEAPIEs), que assessoram as escolas estaduais. Estudantes com deficiência ou autismo têm Atendimento Educacional Especializado (AEE), e a Sedu contrata Profissionais de Apoio Escolar (cuidadores) para quem precisa.",
+    "quem_pode": "Estudantes de escolas estaduais com deficiência, transtorno do espectro autista ou altas habilidades/superdotação.",
+    "passos": [
+      {
+        "titulo": "Matricule e apresente o laudo",
+        "texto": "Matricule o estudante na escola estadual e apresente o laudo médico à direção."
+      },
+      {
+        "titulo": "Peça a avaliação de AEE e de apoio escolar",
+        "texto": "Peça a avaliação da necessidade de Atendimento Educacional Especializado (AEE) e de Profissional de Apoio Escolar (cuidador)."
+      },
+      {
+        "titulo": "Ligue para a Gerência de Educação Especial",
+        "texto": "Para orientação, ligue para a Gerência de Educação Especial da Sedu, (27) 3636-7862, ou para a sede da Sedu, (27) 3636-7600 ou 3636-7601 (segunda a sexta, das 8h às 18h)."
+      },
+      {
+        "titulo": "Se negarem, procure a Defensoria",
+        "texto": "Se o direito for negado, procure a Defensoria Pública (atendimento gratuito) ou o Disque 100."
+      }
+    ],
+    "documentos": [],
+    "onde": "Na escola estadual do estudante e na Sedu (Av. Cezar Hilal, 1111, Santa Lúcia, Vitória).",
+    "custo_prazo": "Gratuito.",
+    "atencao": "As páginas da Sedu não detalham o pedido do Profissional de Apoio Escolar pelas famílias (a contratação dos profissionais é por edital): confirme o passo a passo com a Gerência de Educação Especial.",
+    "contatos": [
+      "sedu-educacao-especial",
+      "sedu-central",
+      "defensoria-es"
+    ],
+    "links": [
+      {
+        "titulo": "Educação Especial na perspectiva da Educação Inclusiva – Sedu-ES",
+        "url": "https://sedu.es.gov.br/educacao-especial-2"
+      },
+      {
+        "titulo": "Contatos das gerências da Sedu",
+        "url": "https://sedu.es.gov.br/gerentes"
+      }
+    ],
+    "tags": [
+      "mediador escolar",
+      "mediador",
+      "acompanhante especializado",
+      "profissional de apoio escolar",
+      "cuidador escolar",
+      "educacao especial",
+      "educacao inclusiva",
+      "aee",
+      "neapie",
+      "autismo",
+      "tea",
+      "escola estadual",
+      "sedu",
+      "escola publica",
+      "matricula",
+      "cadeirante",
+      "acessibilidade escolar"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://sedu.es.gov.br/educacao-especial-2",
+    "titulo_curto": "Apoio escolar: rede estadual",
+    "topico": "apoio-escolar",
+    "cobertura": "parcial"
   }
 ]
