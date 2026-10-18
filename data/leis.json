@@ -1,74 +1,324 @@
 [
   {
-    "id": "lei-13146-2015",
-    "titulo": "Estatuto da Pessoa com Deficiência",
-    "esfera": "federal",
-    "municipio": null,
+    "id": "lbi-13146-2015",
+    "titulo": "Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência)",
+    "tipo": "lei",
     "numero": "Lei nº 13.146/2015",
-    "resumo": "Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência, garantindo direitos em educação, saúde, trabalho, acessibilidade e atendimento prioritário.",
-    "tags": ["deficiencia", "pcd", "inclusao", "direitos", "acessibilidade", "educacao inclusiva"]
-  },
-  {
-    "id": "lei-12764-2012",
-    "titulo": "Lei Berenice Piana - Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista",
     "esfera": "federal",
     "municipio": null,
+    "resumo": "A Lei Brasileira de Inclusão garante direitos às pessoas com deficiência, como educação inclusiva, com oferta de profissionais de apoio escolar, e vagas reservadas de estacionamento com credencial.",
+    "trechos": [
+      "Art. 3º, XIII: profissional de apoio escolar é a pessoa que exerce atividades de alimentação, higiene e locomoção do estudante com deficiência e atua em todas as atividades escolares em que for necessária, em todos os níveis e modalidades de ensino, em instituições públicas e privadas.",
+      "Art. 28, XVII: entre as incumbências do poder público na educação inclusiva está a oferta de profissionais de apoio escolar.",
+      "Art. 47: em estacionamentos abertos ao público e em vias públicas devem ser reservadas vagas, próximas aos acessos dos pedestres e sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade. As vagas devem equivaler a 2% do total, com no mínimo 1 vaga, e os veículos devem exibir a credencial de beneficiário, fornecida pelos órgãos de trânsito."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei 13.146/2015 (Planalto)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+      }
+    ],
+    "tags": [
+      "lbi",
+      "estatuto da pessoa com deficiencia",
+      "deficiencia",
+      "pcd",
+      "educacao inclusiva",
+      "profissional de apoio escolar",
+      "mediador escolar",
+      "apoio escolar",
+      "vaga de estacionamento",
+      "credencial",
+      "acessibilidade"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+  },
+  {
+    "id": "berenice-piana-12764-2012",
+    "titulo": "Lei Berenice Piana – Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista",
+    "tipo": "lei",
     "numero": "Lei nº 12.764/2012",
-    "resumo": "Reconhece a pessoa com Transtorno do Espectro Autista (TEA) como pessoa com deficiência para todos os efeitos legais, garantindo acesso a educação, saúde e assistência social.",
-    "tags": ["autismo", "tea", "berenice piana", "deficiencia", "educacao inclusiva", "saude"]
-  },
-  {
-    "id": "isencao-impostos-veiculos-pcd",
-    "titulo": "Isenção de impostos para aquisição de veículos por PCD",
     "esfera": "federal",
     "municipio": null,
-    "numero": "Lei nº 8.989/1995 (IPI) e legislações estaduais de ICPVA/ICMS",
-    "resumo": "Pessoas com deficiência física, visual, mental severa/profunda ou autistas têm direito a isenção de IPI, ICMS e IPVA na compra de veículo adaptado, mediante laudo médico e processo junto à Receita Federal/Sefaz estadual.",
-    "tags": ["isencao", "ipva", "icms", "ipi", "veiculo", "deficiencia", "autismo"]
+    "resumo": "A Lei Berenice Piana reconhece a pessoa com autismo (TEA) como pessoa com deficiência para todos os efeitos legais e garante acesso à saúde, à educação e à assistência social. Prevê acompanhante especializado na escola, em caso de comprovada necessidade, e pune a recusa de matrícula.",
+    "trechos": [
+      "Art. 1º, § 2º: a pessoa com transtorno do espectro autista é considerada pessoa com deficiência, para todos os efeitos legais.",
+      "Art. 3º, IV, a: é direito da pessoa com TEA o acesso à educação e ao ensino profissionalizante.",
+      "Art. 3º, § 1º (redação dada pela Lei 15.131/2025): em casos de comprovada necessidade, a pessoa com TEA incluída nas classes comuns de ensino regular tem direito a acompanhante especializado.",
+      "Art. 7º: o gestor escolar ou a autoridade competente que recusar a matrícula de aluno com TEA, ou com qualquer outro tipo de deficiência, será punido com multa de 3 a 20 salários mínimos; em caso de reincidência, perde o cargo."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei 12.764/2012 (Planalto)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12764.htm"
+      }
+    ],
+    "tags": [
+      "berenice piana",
+      "autismo",
+      "tea",
+      "transtorno do espectro autista",
+      "acompanhante especializado",
+      "mediador escolar",
+      "educacao inclusiva",
+      "matricula",
+      "recusa de matricula",
+      "escola",
+      "deficiencia",
+      "saude"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12764.htm"
   },
   {
-    "id": "passe-livre",
-    "titulo": "Passe Livre Intermunicipal e Federal para Pessoas com Deficiência",
+    "id": "romeo-mion-13977-2020",
+    "titulo": "Lei Romeo Mion – Carteira de Identificação da Pessoa com Autismo (CIPTEA)",
+    "tipo": "lei",
+    "numero": "Lei nº 13.977/2020",
     "esfera": "federal",
     "municipio": null,
-    "numero": "Lei nº 8.899/1994",
-    "resumo": "Garante gratuidade no transporte coletivo interestadual para pessoas com deficiência comprovadamente carentes. Passes intermunicipais/municipais variam por estado/prefeitura.",
-    "tags": ["passe livre", "transporte", "deficiencia", "gratuidade"]
+    "resumo": "A Lei Romeo Mion cria a Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA), de expedição gratuita, para garantir atenção integral, pronto atendimento e prioridade em serviços públicos e privados, em especial de saúde, educação e assistência social.",
+    "trechos": [
+      "A CIPTEA é expedida pelos órgãos responsáveis pela política de proteção da pessoa com TEA dos Estados, do Distrito Federal e dos Municípios, mediante requerimento acompanhado de relatório médico com o CID.",
+      "A CIPTEA tem validade de 5 anos e deve ser revalidada com o mesmo número."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei 13.977/2020 (Planalto)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13977.htm"
+      }
+    ],
+    "tags": [
+      "romeo mion",
+      "ciptea",
+      "carteira",
+      "carteirinha",
+      "autismo",
+      "tea",
+      "identificacao",
+      "prioridade",
+      "atendimento prioritario"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13977.htm"
   },
   {
-    "id": "laudo-perpetuo-tea-tdah-es",
-    "titulo": "Laudo perpétuo para TEA/TDAH no Espírito Santo",
+    "id": "lei-14254-2021-tdah",
+    "titulo": "Lei do acompanhamento escolar a estudantes com dislexia ou TDAH",
+    "tipo": "lei",
+    "numero": "Lei nº 14.254/2021",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "A Lei 14.254/2021 obriga o poder público e as escolas, públicas e privadas, a manter acompanhamento integral a estudantes com dislexia, TDAH ou outro transtorno de aprendizagem: identificação precoce, encaminhamento para diagnóstico, apoio educacional na escola e apoio terapêutico na rede de saúde.",
+    "trechos": [
+      "Art. 1º: o poder público deve desenvolver e manter programa de acompanhamento integral para educandos com dislexia, Transtorno do Deficit de Atenção com Hiperatividade (TDAH) ou outro transtorno de aprendizagem.",
+      "Parágrafo único do art. 1º: o acompanhamento integral compreende a identificação precoce do transtorno, o encaminhamento do educando para diagnóstico, o apoio educacional na rede de ensino e o apoio terapêutico especializado na rede de saúde.",
+      "Art. 2º: as escolas da educação básica das redes pública e privada devem garantir o cuidado e a proteção ao educando com dislexia, TDAH ou outro transtorno de aprendizagem.",
+      "Art. 3º: esses educandos devem ter assegurado o acompanhamento específico direcionado à sua dificuldade, da forma mais precoce possível, pelos seus educadores, no âmbito da escola em que estão matriculados."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei 14.254/2021 (Planalto)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14254.htm"
+      }
+    ],
+    "tags": [
+      "tdah",
+      "deficit de atencao",
+      "hiperatividade",
+      "dislexia",
+      "transtorno de aprendizagem",
+      "transtorno de aprendizado"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14254.htm"
+  },
+  {
+    "id": "prioridade-10048-2000",
+    "titulo": "Lei do Atendimento Prioritário",
+    "tipo": "lei",
+    "numero": "Lei nº 10.048/2000",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "A Lei 10.048/2000 garante atendimento prioritário a pessoas com deficiência, pessoas com autismo, idosos, gestantes, lactantes, pessoas com criança de colo e obesos. Repartições públicas, empresas concessionárias e instituições financeiras devem oferecer atendimento diferenciado e imediato.",
+    "trechos": [
+      "Art. 1º: têm atendimento prioritário as pessoas com deficiência, as pessoas com transtorno do espectro autista, as pessoas idosas com 60 anos ou mais, as gestantes, as lactantes, as pessoas com criança de colo e os obesos.",
+      "Os acompanhantes ou atendentes pessoais das pessoas com prioridade são atendidos junto com elas.",
+      "Art. 2º: repartições públicas e empresas concessionárias de serviços públicos devem dar atendimento prioritário, por meio de serviços individualizados que assegurem tratamento diferenciado e atendimento imediato; nas instituições financeiras a prioridade também é assegurada."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei 10.048/2000 (Planalto)",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm"
+      }
+    ],
+    "tags": [
+      "atendimento prioritario",
+      "prioridade",
+      "fila",
+      "preferencial",
+      "deficiencia",
+      "autismo",
+      "tea",
+      "idoso",
+      "banco",
+      "repartição publica"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm"
+  },
+  {
+    "id": "es-lei-11601-2022",
+    "titulo": "Lei estadual do laudo de autismo com validade indeterminada (Espírito Santo)",
+    "tipo": "lei",
+    "numero": "Lei estadual nº 11.601/2022 (altera a Lei nº 11.134/2020)",
     "esfera": "estadual",
     "municipio": null,
-    "numero": "Legislação estadual ES sobre laudo perene",
-    "resumo": "Dispensa a renovação periódica de laudos médicos para pessoas com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH) em condições permanentes, simplificando o acesso contínuo a direitos e benefícios.",
-    "tags": ["laudo perpetuo", "tea", "tdah", "autismo", "espirito santo"]
+    "resumo": "No Espírito Santo, os laudos e perícias médicas que atestam o autismo (TEA), emitidos por médicos especialistas particulares ou do setor público, têm validade indeterminada. Não é preciso renovar o laudo só para provar o diagnóstico.",
+    "trechos": [
+      "Art. 1º da Lei 11.134/2020, na redação da Lei 11.601/2022: os laudos e perícias médicas que atestam o Transtorno do Espectro Autista (TEA), emitidos por médicos especialistas particulares ou do setor público, terão validade indeterminada no âmbito do Estado do Espírito Santo.",
+      "A Lei 11.601/2022 foi sancionada em 3 de maio de 2022 e publicada no Diário Oficial do Estado em 4 de maio de 2022."
+    ],
+    "links": [
+      {
+        "titulo": "Texto da Lei estadual 11.601/2022 (LegisWeb)",
+        "url": "https://www.legisweb.com.br/legislacao/?id=431087"
+      }
+    ],
+    "tags": [
+      "laudo",
+      "laudo permanente",
+      "laudo perpetuo",
+      "validade indeterminada",
+      "renovacao",
+      "autismo",
+      "tea",
+      "espirito santo",
+      "lei estadual",
+      "burocracia"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.legisweb.com.br/legislacao/?id=431087"
   },
   {
-    "id": "vagas-reservadas-serra",
-    "titulo": "Vagas reservadas de estacionamento para PCD - Serra/ES",
-    "esfera": "municipal",
-    "municipio": "Serra",
-    "numero": "Legislação municipal de Serra sobre vagas reservadas",
-    "resumo": "Estabelece a obrigatoriedade de vagas reservadas para PCD e idosos em estabelecimentos públicos e privados, com concessão de credencial de estacionamento pela prefeitura mediante laudo médico.",
-    "tags": ["vaga reservada", "estacionamento", "credencial", "serra", "deficiencia"]
-  },
-  {
-    "id": "atendimento-prioritario-vitoria",
-    "titulo": "Atendimento prioritário em órgãos públicos - Vitória/ES",
+    "id": "vitoria-lei-9797-2021",
+    "titulo": "Lei municipal de Vitória: laudo de autismo com validade indeterminada",
+    "tipo": "lei",
+    "numero": "Lei municipal nº 9.797/2021 (Vitória)",
     "esfera": "municipal",
     "municipio": "Vitória",
-    "numero": "Legislação municipal de Vitória sobre atendimento prioritário",
-    "resumo": "Garante atendimento prioritário efetivo (não apenas placas) para PCD, idosos, gestantes e pessoas com TEA/TDAH em repartições públicas municipais, com fila e guichê exclusivos quando possível.",
-    "tags": ["atendimento prioritario", "vitoria", "deficiencia", "autismo", "tdah"]
+    "resumo": "Segundo a Prefeitura de Vitória, o laudo que atesta o autismo (TEA), emitido por médicos especialistas particulares ou do setor público, tem validade indeterminada no município (Lei 9.797, de 8 de novembro de 2021).",
+    "trechos": [
+      "A Prefeitura de Vitória cita a Lei nº 9.797, de 8 de novembro de 2021, ao informar que o laudo de TEA emitido por médicos especialistas, particulares ou do setor público, tem validade indeterminada."
+    ],
+    "links": [
+      {
+        "titulo": "Notícia oficial da Prefeitura de Vitória que cita a lei",
+        "url": "https://m.vitoria.es.gov.br/noticia/vitoria-inicia-emissao-das-carteiras-de-identificacao-para-pessoas-com-autismo-48364"
+      }
+    ],
+    "tags": [
+      "laudo",
+      "laudo permanente",
+      "laudo perpetuo",
+      "validade indeterminada",
+      "renovacao",
+      "autismo",
+      "tea",
+      "vitoria",
+      "lei municipal"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://m.vitoria.es.gov.br/noticia/vitoria-inicia-emissao-das-carteiras-de-identificacao-para-pessoas-com-autismo-48364"
   },
   {
-    "id": "credencial-estacionamento-vila-velha",
-    "titulo": "Concessão de credencial de estacionamento para PCD - Vila Velha/ES",
-    "esfera": "municipal",
-    "municipio": "Vila Velha",
-    "numero": "Legislação municipal de Vila Velha sobre credencial de estacionamento",
-    "resumo": "Define o processo, documentos e prazos para solicitação da credencial de estacionamento para pessoas com deficiência junto à Secretaria Municipal de Transporte de Vila Velha.",
-    "tags": ["credencial", "estacionamento", "vila velha", "deficiencia"]
+    "id": "pl-3749-2020-laudo-tea",
+    "titulo": "Projeto de lei federal do laudo de autismo com validade indeterminada (PL 3.749/2020)",
+    "tipo": "projeto",
+    "numero": "PL 3.749/2020",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "O PL 3.749/2020 é um projeto que dá validade indeterminada ao laudo de autismo em todo o país. Foi aprovado no Senado em 2024 e enviado à Câmara dos Deputados. Não confirmei que já tenha virado lei federal; por enquanto valem as leis do Espírito Santo (11.601/2022) e de Vitória (9.797/2021).",
+    "trechos": [
+      "Em 14/03/2024, o Senado enviou o PL 3.749/2020 à Câmara dos Deputados para revisão."
+    ],
+    "links": [
+      {
+        "titulo": "PL 3.749/2020 – Senado Federal",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/143375"
+      }
+    ],
+    "tags": [
+      "laudo",
+      "laudo permanente",
+      "laudo perpetuo",
+      "validade indeterminada",
+      "autismo",
+      "tea",
+      "projeto de lei",
+      "federal",
+      "renovacao"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/143375"
+  },
+  {
+    "id": "lei-8899-1994-passe-livre",
+    "titulo": "Lei do Passe Livre Interestadual para pessoas com deficiência",
+    "tipo": "lei",
+    "numero": "Lei nº 8.899/1994",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "A Lei 8.899/1994 concede gratuidade no transporte coletivo interestadual à pessoa com deficiência comprovadamente carente.",
+    "trechos": [
+      "A gratuidade no transporte coletivo interestadual de passageiros é concedida à pessoa com deficiência comprovadamente carente, nos termos da Lei nº 8.899, de 29 de junho de 1994."
+    ],
+    "links": [
+      {
+        "titulo": "Como obter o Passe Livre Interestadual (gov.br)",
+        "url": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital"
+      }
+    ],
+    "tags": [
+      "passe livre",
+      "interestadual",
+      "transporte",
+      "gratuidade",
+      "deficiencia",
+      "lei 8.899"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital"
+  },
+  {
+    "id": "contran-965-2022",
+    "titulo": "Resolução do Contran sobre vagas reservadas e credenciais de estacionamento",
+    "tipo": "lei",
+    "numero": "Resolução Contran nº 965/2022",
+    "esfera": "federal",
+    "municipio": null,
+    "resumo": "A Resolução 965/2022 do Contran atualiza as regras das vagas reservadas para pessoas com deficiência e idosos e das credenciais de estacionamento, que passam a ter prazo de validade. Cada município emite a credencial.",
+    "trechos": [
+      "A Prefeitura de Vila Velha informa que a Resolução Contran nº 965, de 17 de maio de 2022, mudou, entre outros pontos, o prazo de validade das credenciais de estacionamento de pessoas com deficiência e idosos."
+    ],
+    "links": [
+      {
+        "titulo": "Notícia da Prefeitura de Vila Velha sobre a resolução",
+        "url": "https://www.vilavelha.es.gov.br/noticias/2022/06/credencial-de-estacionamento-para-idoso-e-pcd-terao-prazo-de-validade-38907"
+      }
+    ],
+    "tags": [
+      "contran",
+      "credencial",
+      "estacionamento",
+      "vaga",
+      "validade",
+      "deficiencia",
+      "idoso",
+      "resolucao"
+    ],
+    "verificado_em": "2026-09-21",
+    "fonte_url": "https://www.vilavelha.es.gov.br/noticias/2022/06/credencial-de-estacionamento-para-idoso-e-pcd-terao-prazo-de-validade-38907"
   }
 ]

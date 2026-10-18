@@ -1,0 +1,352 @@
+<title>DivergentIA — Próximas Etapas</title>
+<meta name="description" content="Diagnóstico honesto do que já está pronto no DivergentIA e a lista de tarefas para o grupo até a entrega final.">
+<style>
+  :root {
+    --bg: #faf9fc;
+    --bg-alt: #f1eef8;
+    --surface: #ffffff;
+    --ink: #211f2e;
+    --ink-soft: #55506b;
+    --line: #e3ddf0;
+    --primary: #5a35d6;
+    --primary-ink: #ffffff;
+    --primary-soft: #efe9fc;
+    --accent: #0f9d78;
+    --accent-soft: #e2f6ee;
+    --warn: #b5680a;
+    --warn-soft: #fbecd6;
+    --crit: #c23b3b;
+    --crit-soft: #fbe4e4;
+    --done: #0f9d78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17151f;
+      --bg-alt: #1e1b29;
+      --surface: #221f2e;
+      --ink: #f1eefb;
+      --ink-soft: #b8b1cf;
+      --line: #363050;
+      --primary: #a48af2;
+      --primary-ink: #1a1626;
+      --primary-soft: #2c2545;
+      --accent: #59d3a8;
+      --accent-soft: #163a2e;
+      --warn: #e3a856;
+      --warn-soft: #3a2c14;
+      --crit: #e88686;
+      --crit-soft: #3a1f1f;
+      --done: #59d3a8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17151f;
+    --bg-alt: #1e1b29;
+    --surface: #221f2e;
+    --ink: #f1eefb;
+    --ink-soft: #b8b1cf;
+    --line: #363050;
+    --primary: #a48af2;
+    --primary-ink: #1a1626;
+    --primary-soft: #2c2545;
+    --accent: #59d3a8;
+    --accent-soft: #163a2e;
+    --warn: #e3a856;
+    --warn-soft: #3a2c14;
+    --crit: #e88686;
+    --crit-soft: #3a1f1f;
+    --done: #59d3a8;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.55;
+    padding-block: 40px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding-inline: 20px; }
+  h1, h2, h3 { font-family: "Lexend", "Segoe UI", system-ui, sans-serif; line-height: 1.2; text-wrap: balance; }
+  h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 6px; }
+  h2 { font-size: 1.35rem; margin: 0; }
+  p { margin: 0 0 12px; }
+  a { color: var(--primary); }
+
+  header.top {
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  .kicker {
+    font-family: "Lexend", sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--primary);
+  }
+  .meta { color: var(--ink-soft); font-size: 0.92rem; }
+
+  .verdict {
+    margin-top: 22px; padding: 22px 24px; border-radius: 16px;
+    background: var(--primary-soft); border: 1px solid var(--line);
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .verdict .badge {
+    flex: none; width: 46px; height: 46px; border-radius: 50%;
+    background: var(--primary); color: var(--primary-ink);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Lexend", sans-serif; font-weight: 700; font-size: 1.3rem;
+  }
+  .verdict h2 { margin-bottom: 6px; }
+  .verdict p:last-child { margin-bottom: 0; color: var(--ink-soft); }
+
+  .snapshot {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px; margin: 28px 0;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .stat .n { font-family: "Lexend", sans-serif; font-size: 1.7rem; font-weight: 700; }
+  .stat .l { font-size: 0.85rem; color: var(--ink-soft); }
+  .stat.done .n { color: var(--done); }
+  .stat.pend .n { color: var(--warn); }
+
+  details.feito {
+    margin: 24px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+    overflow: hidden;
+  }
+  details.feito summary {
+    cursor: pointer; padding: 14px 18px; font-family: "Lexend", sans-serif; font-weight: 600;
+    display: flex; align-items: center; gap: 8px; list-style: none;
+  }
+  details.feito summary::-webkit-details-marker { display: none; }
+  details.feito summary::before { content: "▸"; color: var(--primary); transition: transform .15s; }
+  details.feito[open] summary::before { transform: rotate(90deg); }
+  .feito-lista { padding: 0 18px 16px; display: grid; gap: 8px; }
+  .feito-item { display: flex; gap: 10px; align-items: flex-start; font-size: 0.94rem; color: var(--ink-soft); }
+  .feito-item .ok { flex: none; color: var(--done); font-weight: 700; }
+
+  .fase {
+    margin: 34px 0 18px; padding-top: 18px; border-top: 2px solid var(--line);
+  }
+  .fase-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .fase-quando {
+    font-size: 0.82rem; font-family: "Lexend", sans-serif; font-weight: 600; color: var(--ink-soft);
+    background: var(--bg-alt); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line);
+  }
+  .fase-porque { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 18px; }
+
+  .tarefa {
+    display: grid; grid-template-columns: 26px 1fr; gap: 12px;
+    padding: 14px 0; border-bottom: 1px solid var(--line);
+  }
+  .tarefa:last-child { border-bottom: none; }
+  .tarefa .check {
+    width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--line);
+    margin-top: 2px;
+  }
+  .tarefa-corpo h3 { font-size: 1rem; margin-bottom: 4px; }
+  .tarefa-tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 8px; }
+  .tag {
+    font-family: "Lexend", sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em;
+    padding: 2px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .tag.critico { background: var(--crit-soft); color: var(--crit); }
+  .tag.alta { background: var(--warn-soft); color: var(--warn); }
+  .tag.media { background: var(--primary-soft); color: var(--primary); }
+  .tag.area { background: var(--accent-soft); color: var(--accent); }
+  .tarefa-porque { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .tarefa-porque b { color: var(--ink); font-weight: 600; }
+
+  footer {
+    margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--line);
+    font-size: 0.88rem; color: var(--ink-soft);
+  }
+  footer .aviso {
+    background: var(--warn-soft); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; margin-bottom: 16px; color: var(--ink);
+  }
+  footer .aviso b { color: var(--warn); }
+
+  @media print {
+    body { padding: 0; background: #fff; color: #000; }
+    details.feito { break-inside: avoid; }
+    .fase { break-inside: avoid-page; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="kicker">DivergentIA · PIE, 6º semestre</div>
+      <h1>Próximas etapas até a entrega</h1>
+    </div>
+    <div class="meta">Diagnóstico em 22/09/2026 · cronograma do projeto: 21/09 – 11/12/2026</div>
+  </header>
+
+  <div class="verdict">
+    <div class="badge">✕</div>
+    <div>
+      <h2>Não é a versão final</h2>
+      <p>O que existe hoje é um <b>MVP técnico avançado e testado</b>: chat que monta um roteiro (checklist) com passos oficiais, links do gov.br, contatos reais e PDF — tudo com uma base de dados conferida nas páginas oficiais. Isso é a base sólida do projeto, não o produto acabado.</p>
+      <p>Falta o que dá nome à disciplina — a <b>extensão</b> (validação com as associações e com usuários reais), a <b>ampliação de conteúdo</b>, alguns pontos de <b>segurança</b> antes de qualquer exposição pública, e os <b>entregáveis acadêmicos</b> do cronograma. Estamos no dia 2 de um cronograma de ~12 semanas — não seria coerente já estar pronto.</p>
+    </div>
+  </div>
+
+  <div class="snapshot">
+    <div class="stat done"><div class="n">✓</div><div class="l">Chat, roteiro e PDF funcionando e testados</div></div>
+    <div class="stat done"><div class="n">✓</div><div class="l">Base de dados conferida com fonte oficial</div></div>
+    <div class="stat pend"><div class="n">0</div><div class="l">Associações parceiras contatadas até agora</div></div>
+    <div class="stat pend"><div class="n">0</div><div class="l">Testes com usuários reais (PCD/famílias)</div></div>
+  </div>
+
+  <details class="feito">
+    <summary>O que já está pronto (clique para ver)</summary>
+    <div class="feito-lista">
+      <div class="feito-item"><span class="ok">✓</span> Chat multi-turno que monta o roteiro aos poucos, sem inventar fatos: o modelo de IA só escreve uma frase de reconhecimento, o resto vem de uma base verificada.</div>
+      <div class="feito-item"><span class="ok">✓</span> Roteiro com passos oficiais, documentos, links do gov.br e telefones reais, organizados por assunto.</div>
+      <div class="feito-item"><span class="ok">✓</span> Quando a base não tem a resposta (ex.: "quais escolas têm rampa?"), o assistente admite e indica o contato certo, em vez de inventar.</div>
+      <div class="feito-item"><span class="ok">✓</span> "Fontes consultadas" com link para a página oficial e data de verificação, para a pessoa se aprofundar.</div>
+      <div class="feito-item"><span class="ok">✓</span> Geração de PDF do roteiro para levar ao atendimento.</div>
+      <div class="feito-item"><span class="ok">✓</span> Frontend com identidade visual própria, alto contraste, ajuste de texto, "modo calmo" e navegação por teclado.</div>
+      <div class="feito-item"><span class="ok">✓</span> Base de leis/serviços/contatos conferida manualmente em 21/09/2026, com script que verifica se links e telefones continuam válidos.</div>
+      <div class="feito-item"><span class="ok">✓</span> Roda 100% local e gratuito (Ollama), com opção de trocar para a Claude API sem mexer no código.</div>
+    </div>
+  </details>
+
+  <!-- FASE 1 -->
+  <div class="fase">
+    <div class="fase-head"><h2>Fase 1 — Fechar o técnico e abrir o contato externo</h2>
+      <span class="fase-quando">sugestão: 22/09 – 05/10</span></div>
+    <p class="fase-porque">Antes de mostrar a ferramenta pra fora, alguns riscos precisam ser resolvidos — e o contato com as associações (que é o cerne da "extensão") deve começar já, porque agendar e coletar feedback delas leva tempo.</p>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Corrigir a citação no formulário acadêmico</h3>
+      <div class="tarefa-tags"><span class="tag critico">crítico</span><span class="tag area">documentação</span></div>
+      <p class="tarefa-porque">O texto do formulário cita a Lei 12.764 art. 3º <b>"parágrafo único"</b> sobre o acompanhante especializado — isso mudou para <b>art. 3º §1º</b> pela Lei 15.131/2025. É rápido de ajustar, mas passa despercebido se ninguém revisar.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Proteger o cadastro de "locais acessíveis"</h3>
+      <div class="tarefa-tags"><span class="tag critico">crítico antes de expor publicamente</span><span class="tag area">backend</span></div>
+      <p class="tarefa-porque">Hoje qualquer pessoa pode cadastrar um local e marcá-lo como "verificado" sem login. Enquanto só roda na sua máquina não tem risco, mas <b>não pode ir para a internet assim</b>.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Decidir onde a ferramenta vai rodar de fato</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">infraestrutura</span></div>
+      <p class="tarefa-porque">Hoje só funciona na máquina de quem instalou o Ollama. Para as associações ou a banca acessarem sem instalar nada, o grupo precisa decidir: hospedar em algum serviço (o que normalmente exige pagar por GPU para manter o Ollama, ou trocar para a Claude API só nesse ambiente) ou aceitar que a demonstração será sempre local/por vídeo.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Primeiro contato com as associações parceiras</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">extensão</span></div>
+      <p class="tarefa-porque">É o componente de extensão do projeto. Marcar uma apresentação inicial da ferramenta e já perguntar: que perguntas frequentes elas recebem, que erros elas veem os pais cometerem, que dados elas confirmariam ou corrigiriam.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Organizar o controle de versão (Git)</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">processo</span></div>
+      <p class="tarefa-porque">Hoje existe só o commit inicial; todo o trabalho recente ainda não foi versionado. Sem isso, o grupo não consegue dividir tarefas em paralelo nem mostrar o histórico de evolução no relatório final.</p>
+    </div></div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="fase">
+    <div class="fase-head"><h2>Fase 2 — Validar e ampliar</h2>
+      <span class="fase-quando">sugestão: 06/10 – 02/11</span></div>
+    <p class="fase-porque">Com o básico protegido, o foco vira ouvir gente de verdade e cobrir mais casos — é o que separa um MVP de algo que ajuda pessoas de fato.</p>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Testar com usuários reais</h3>
+      <div class="tarefa-tags"><span class="tag critico">crítico</span><span class="tag area">extensão</span></div>
+      <p class="tarefa-porque">Ninguém de fora do grupo usou a ferramenta ainda. Sentar com pais/cuidadores de autistas e TDAH, e se possível com uma pessoa com deficiência que use leitor de tela, e observar onde travam — isso vale mais do que qualquer teste automatizado.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Revisão jurídica do conteúdo</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">conteúdo</span></div>
+      <p class="tarefa-porque">Os trechos de lei foram conferidos contra a fonte oficial, mas por um estudante, não por alguém com formação jurídica. Vale pedir para o orientador (ou alguém de Direito) revisar antes de a ferramenta ser usada por famílias de verdade.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Ampliar a cobertura da base</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">conteúdo</span></div>
+      <p class="tarefa-porque">Hoje só Vitória, Serra e Vila Velha têm dados municipais; Cariacica, Viana, Guarapari e Fundão caem em "fora de cobertura". Vila Velha também tem menos detalhe (2 serviços sem página oficial disponível). Cada novo item precisa seguir o mesmo padrão: fonte oficial + data de verificação.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Povoar o mapa colaborativo de locais acessíveis</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">conteúdo</span></div>
+      <p class="tarefa-porque">A funcionalidade existe, mas está vazia. Sem alguns locais reais cadastrados (com a ajuda das associações), essa parte da ferramenta não tem o que mostrar.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Checar a promessa de privacidade</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">backend</span></div>
+      <p class="tarefa-porque">A tela do assistente afirma "suas perguntas não são gravadas no servidor". Vale conferir no código se isso é 100% verdade (nenhum log grava o conteúdo da conversa) antes de manter essa promessa por escrito.</p>
+    </div></div>
+  </div>
+
+  <!-- FASE 3 -->
+  <div class="fase">
+    <div class="fase-head"><h2>Fase 3 — Iterar com o feedback</h2>
+      <span class="fase-quando">sugestão: 03/11 – 23/11</span></div>
+    <p class="fase-porque">Depois de ouvir associações e usuários, é hora de corrigir o que apareceu e formalizar o processo de teste, para o resultado não depender só de "parecer que funciona".</p>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Aplicar as correções que vieram do teste com usuários</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">produto</span></div>
+      <p class="tarefa-porque">Prioridade natural: o que mais confundiu as pessoas na Fase 2 é o que mais precisa mudar primeiro.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Transformar os testes soltos numa suíte versionada</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">qualidade</span></div>
+      <p class="tarefa-porque">Os testes de conversa e o teste de ponta a ponta no navegador existem, mas hoje são scripts avulsos fora do repositório. Formalizá-los evita que uma mudança futura quebre algo sem ninguém perceber.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Definir e testar um plano de moderação do conteúdo colaborativo</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">extensão</span></div>
+      <p class="tarefa-porque">Depois de resolver a autenticação (Fase 1), falta decidir quem aprova um local cadastrado por um desconhecido — provavelmente alguém indicado pelas associações parceiras.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Avaliar a entrada por áudio</h3>
+      <div class="tarefa-tags"><span class="tag media">baixa</span><span class="tag area">produto</span></div>
+      <p class="tarefa-porque">Pode ajudar quem tem dificuldade de digitar, mas exige mandar áudio a um serviço de reconhecimento de voz de terceiro — decisão de privacidade que vale discutir com o grupo antes de implementar.</p>
+    </div></div>
+  </div>
+
+  <!-- FASE 4 -->
+  <div class="fase">
+    <div class="fase-head"><h2>Fase 4 — Fechar o projeto</h2>
+      <span class="fase-quando">sugestão: 24/11 – 11/12</span></div>
+    <p class="fase-porque">Consolidar o que foi feito e produzir os entregáveis que a disciplina pede.</p>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Reunir as evidências de extensão para o relatório</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">documentação</span></div>
+      <p class="tarefa-porque">Registros do contato com as associações, dos testes com usuários e do que mudou por causa deles são o que mostra que houve extensão de verdade, não só desenvolvimento de software.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Escrever o relatório final e preparar a apresentação</h3>
+      <div class="tarefa-tags"><span class="tag alta">alta</span><span class="tag area">documentação</span></div>
+      <p class="tarefa-porque">Conferir o que a disciplina exige de formato (relatório, banca, pôster) e começar com antecedência — normalmente é subestimado no fim do cronograma.</p>
+    </div></div>
+
+    <div class="tarefa"><div class="check"></div><div class="tarefa-corpo">
+      <h3>Revisão final de conteúdo e last-check da base</h3>
+      <div class="tarefa-tags"><span class="tag media">média</span><span class="tag area">qualidade</span></div>
+      <p class="tarefa-porque">Rodar de novo o script de verificação da base perto da entrega, porque telefones e páginas de prefeitura mudam com o tempo.</p>
+    </div></div>
+  </div>
+
+  <footer>
+    <div class="aviso"><b>Antes de dividir as tarefas:</b> nada do código atual foi commitado no Git além do commit inicial do projeto — combinem quem faz esse commit e como vão trabalhar em paralelo sem sobrescrever o trabalho um do outro.</div>
+    <p>As datas de cada fase são só uma sugestão de ritmo dentro do cronograma já proposto (21/09–11/12/2026); ajustem para o calendário real da disciplina e para a disponibilidade de cada um.</p>
+  </footer>
+</div>

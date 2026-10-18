@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recuperar senha – DivergentIA</title>
+  <meta name="description" content="Peça um link para redefinir a senha da sua conta no DivergentIA.">
+  <meta name="theme-color" content="#1e1b4b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 24'%3E%3Crect width='48' height='24' rx='6' fill='%231e1b4b'/%3E%3Cpath d='M24 12C20 6 16 5 13 5 8.500 5 5.500 8 5.500 12S8.500 19 13 19C16 19 20 18 24 12 28 6 32 5 35 5 39.500 5 42.500 8 42.500 12S39.500 19 35 19C32 19 28 18 24 12Z' fill='none' stroke='%232dd4bf' stroke-width='2.600' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/lexend-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="comum.js" defer></script>
+  <script src="recuperar-senha.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="grad-infinito" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#a5b4fc"/><stop offset="0.55" stop-color="#5eead4"/><stop offset="1" stop-color="#fcd34d"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-infinito" viewBox="0 0 48 24"><path d="M24 12C20 6 16 5 13 5 8.5 5 5.5 8 5.5 12S8.5 19 13 19C16 19 20 18 24 12 28 6 32 5 35 5 39.5 5 42.5 8 42.5 12S39.5 19 35 19C32 19 28 18 24 12Z" fill="none" stroke="url(#grad-infinito)" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-acesso" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="m4 8.5 8 1.5 8-1.5M12 10v5M8.5 21l3.5-6 3.5 6"/></symbol>
+    <symbol id="i-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo-conta">Pular para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="container topo__linha">
+      <a class="logo" href="/" aria-label="DivergentIA, início">
+        <span class="logo__marca" aria-hidden="true"><svg class="logo__icone"><use href="#i-infinito"/></svg></span>
+        <span class="logo__nome">Divergent<span>IA</span></span>
+      </a>
+      <nav class="topo__nav" aria-label="Navegação"><a href="/">Assistente</a></nav>
+      <div class="a11y">
+        <button type="button" id="btn-a11y" class="btn btn--suave" aria-expanded="false" aria-controls="menu-a11y">
+          <svg class="icone" aria-hidden="true"><use href="#i-acesso"/></svg>
+          <span>Acessibilidade</span>
+        </button>
+        <div id="menu-a11y" class="a11y__menu" role="group" aria-labelledby="titulo-a11y" hidden>
+          <p id="titulo-a11y" class="a11y__titulo">Ajustes de leitura</p>
+          <div class="a11y__linha">
+            <span id="rotulo-tamanho">Tamanho do texto</span>
+            <div class="a11y__tamanho">
+              <button type="button" id="a11y-menos" class="btn btn--icone" aria-label="Diminuir o texto">A−</button>
+              <output id="a11y-tamanho" for="a11y-menos a11y-mais" aria-live="polite">112%</output>
+              <button type="button" id="a11y-mais" class="btn btn--icone" aria-label="Aumentar o texto">A+</button>
+            </div>
+          </div>
+          <div class="a11y__linha"><span id="rot-contraste">Alto contraste</span><button type="button" class="chave" id="sw-contraste" role="switch" aria-checked="false" aria-labelledby="rot-contraste"><span></span></button></div>
+          <div class="a11y__linha"><span id="rot-espaco">Mais espaço entre linhas e letras</span><button type="button" class="chave" id="sw-espaco" role="switch" aria-checked="false" aria-labelledby="rot-espaco"><span></span></button></div>
+          <div class="a11y__linha"><span id="rot-calmo">Modo calmo <small>(sem animações e sem enfeites)</small></span><button type="button" class="chave" id="sw-calmo" role="switch" aria-checked="false" aria-labelledby="rot-calmo"><span></span></button></div>
+          <button type="button" id="a11y-reset" class="btn btn--texto">Restaurar padrão</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-conta" class="auth">
+    <div class="auth__cartao">
+      <div class="auth__cabeca">
+        <a class="logo" href="/" aria-label="DivergentIA, início"><span class="logo__marca" aria-hidden="true"><svg class="logo__icone"><use href="#i-infinito"/></svg></span></a>
+        <h1>Recuperar senha</h1>
+        <p>Informe o e-mail da sua conta. Se ele estiver cadastrado, enviamos um link para redefinir a senha.</p>
+      </div>
+
+      <form id="form-recuperar" novalidate>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" maxlength="200">
+        </div>
+        <div id="captcha-recuperar" class="auth__captcha g-recaptcha" hidden></div>
+        <button type="submit" id="btn-recuperar" class="btn btn--primario" style="width:100%">Enviar link de redefinição</button>
+        <p id="status-recuperar" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth__rodape"><a href="entrar.html">← Voltar para o login</a></p>
+    </div>
+  </main>
+
+  <noscript><p class="sem-js">O DivergentIA precisa de JavaScript para funcionar. Ative o JavaScript no navegador e recarregue a página.</p></noscript>
+</body>
+</html>
