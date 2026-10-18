@@ -20,6 +20,14 @@ async function entrarComCredencial(payload) {
   window.location.href = "/";
 }
 
+async function entrarComoAdmin(senha) {
+  const status = $("#status-entrar");
+  status.textContent = "Entrando…";
+  const resposta = await fetch("/auth/admin-login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ usuario: "admin", senha }) });
+  if (!resposta.ok) throw await erroDaApi(resposta);
+  window.location.href = "/";
+}
+
 async function entrarComGoogle(credential) {
   const status = $("#status-entrar");
   status.textContent = "Entrando com o Google…";
@@ -44,11 +52,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     evento.preventDefault();
     const botao = $("#btn-entrar");
     const status = $("#status-entrar");
+    const identificador = $("#email").value.trim();
     botao.setAttribute("aria-disabled", "true");
     try {
-      await entrarComCredencial({
-        email: $("#email").value.trim(), senha: $("#senha").value, captcha_token: tokenCaptcha(),
-      });
+      if (identificador.toLowerCase() === "admin") {
+        await entrarComoAdmin($("#senha").value);
+      } else {
+        await entrarComCredencial({ email: identificador, senha: $("#senha").value, captcha_token: tokenCaptcha() });
+      }
     } catch (erro) {
       status.textContent = mensagemDeErro(erro);
       botao.setAttribute("aria-disabled", "false");

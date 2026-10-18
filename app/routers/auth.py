@@ -13,7 +13,8 @@ from sqlalchemy.orm import Session
 from app.config import settings
 from app.db import TokenContaDB, UsuarioDB, get_db
 from app.models.schemas import (
-    CadastroRequest, LoginGoogleRequest, LoginRequest, RecuperarSenhaRequest, RedefinirSenhaRequest, UsuarioOut,
+    AdminLoginRequest, CadastroRequest, LoginGoogleRequest, LoginRequest, RecuperarSenhaRequest,
+    RedefinirSenhaRequest, UsuarioOut,
 )
 from app.services import auth_service
 from app.services.email_sender import enviar_email
@@ -143,12 +144,30 @@ def login_google(payload: LoginGoogleRequest, response: Response, db: Session = 
 @router.post("/logout")
 def logout(response: Response) -> dict:
     auth_service.limpar_cookie_sessao(response)
+    auth_service.limpar_cookie_admin(response)
     return {"ok": True}
 
 
 @router.get("/eu", response_model=UsuarioOut)
 def eu(usuario: UsuarioDB = Depends(_usuario_logado)) -> UsuarioDB:
     return usuario
+
+
+@router.post("/admin-login")
+def admin_login(payload: AdminLoginRequest, response: Response) -> dict:
+    """Login do painel de administração (cadastrar/verificar locais acessíveis) — usuário e senha
+    fixos no .env, sem relação com as contas de usuário comuns."""
+    if not auth_service.credenciais_admin_corretas(payload.usuario, payload.senha):
+        raise HTTPException(status_code=401, detail="Usuário ou senha de administrador incorretos.")
+    auth_service.definir_cookie_admin(response)
+    return {"admin": True}
+
+
+@router.get("/admin-eu")
+def admin_eu(request: Request) -> dict:
+    if not auth_service.admin_logado(request):
+        raise HTTPException(status_code=401, detail="Não autenticado como administrador.")
+    return {"admin": True}
 
 
 @router.get("/verificar-email")

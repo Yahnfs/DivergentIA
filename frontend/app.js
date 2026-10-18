@@ -729,7 +729,7 @@ async function cadastrarLocal(evento) {
     form.reset();
     $("#dlg-local").close();
     await carregarLocais();
-    $("#status-locais").textContent = "Local cadastrado! Ele aparece como “aguardando verificação” até ser conferido por uma associação parceira.";
+    $("#status-locais").textContent = "Local cadastrado e já está visível no mapa.";
   } catch (erro) {
     status.textContent = `Não foi possível cadastrar o local. ${mensagemDeErro(erro)}`;
   } finally {
@@ -789,22 +789,34 @@ function ligarEventos() {
 }
 
 // Conta (opcional): troca "Entrar" por "Sair" quando já existe uma sessão, sem exigir login para o chat.
+// Também decide se o botão "Cadastrar um local" aparece (só para quem entrou como admin).
 async function verificarConta() {
   const link = $("#link-conta");
+  const botaoCadastrar = $("#btn-cadastrar");
+  let rotulo = null;
+  let ehAdmin = false;
   try {
     const resposta = await fetch("/auth/eu");
-    if (!resposta.ok) return;
-    const usuario = await resposta.json();
-    link.textContent = `Sair (${usuario.nome_completo.split(" ")[0]})`;
-    link.removeAttribute("href");
-    link.tabIndex = 0;
-    link.setAttribute("role", "button");
-    link.addEventListener("click", async (e) => {
-      e.preventDefault();
-      await fetch("/auth/logout", { method: "POST" });
-      window.location.reload();
-    });
+    if (resposta.ok) rotulo = (await resposta.json()).nome_completo.split(" ")[0];
   } catch (_) { /* servidor de contas indisponível: mantém "Entrar" */ }
+  if (!rotulo) {
+    try {
+      const respostaAdmin = await fetch("/auth/admin-eu");
+      ehAdmin = respostaAdmin.ok;
+      if (ehAdmin) rotulo = "admin";
+    } catch (_) { /* ignora */ }
+  }
+  if (botaoCadastrar) botaoCadastrar.hidden = !ehAdmin;
+  if (!rotulo) return;
+  link.textContent = `Sair (${rotulo})`;
+  link.removeAttribute("href");
+  link.tabIndex = 0;
+  link.setAttribute("role", "button");
+  link.addEventListener("click", async (e) => {
+    e.preventDefault();
+    await fetch("/auth/logout", { method: "POST" });
+    window.location.reload();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

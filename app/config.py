@@ -48,6 +48,12 @@ class Settings(BaseSettings):
     # Usado para montar os links enviados por e-mail (ex.: http://localhost:8000).
     app_base_url: str = "http://localhost:8000"
 
+    # Painel de administração: só quem entra com esse usuário/senha pode cadastrar ou verificar locais
+    # acessíveis (ver /auth/admin-login). Não é uma conta de usuário comum. Troque a senha padrão antes
+    # de expor o servidor fora da sua máquina.
+    admin_usuario: str = "admin"
+    admin_senha: str = "UniSales2026"
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 

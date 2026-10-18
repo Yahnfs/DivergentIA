@@ -9,13 +9,14 @@ import secrets
 import bcrypt
 import httpx
 import jwt
-from fastapi import Request
+from fastapi import HTTPException, Request
 
 from app.config import settings
 
 log = logging.getLogger("divergentia.auth")
 
 COOKIE_SESSAO = "dv_sessao"
+COOKIE_ADMIN = "dv_admin"
 
 # ---------------------------------------------------------------------------
 # Senha
@@ -62,6 +63,45 @@ def definir_cookie_sessao(response, usuario_id: int) -> None:
 
 def limpar_cookie_sessao(response) -> None:
     response.delete_cookie(COOKIE_SESSAO, path="/")
+
+
+# ---------------------------------------------------------------------------
+# Painel de administração (usuário/senha fixos no .env — não é uma conta de usuário comum).
+# Protege quem pode cadastrar/verificar locais acessíveis: ver app/routers/locais.py.
+# ---------------------------------------------------------------------------
+
+def credenciais_admin_corretas(usuario: str, senha: str) -> bool:
+    return secrets.compare_digest(usuario, settings.admin_usuario) and secrets.compare_digest(senha, settings.admin_senha)
+
+
+def definir_cookie_admin(response) -> None:
+    expira = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=settings.access_token_expire_minutes)
+    token = jwt.encode({"admin": True, "exp": expira}, settings.secret_key, algorithm="HS256")
+    response.set_cookie(
+        COOKIE_ADMIN, token,
+        max_age=settings.access_token_expire_minutes * 60, httponly=True,
+        secure=settings.cookie_secure, samesite="lax", path="/",
+    )
+
+
+def limpar_cookie_admin(response) -> None:
+    response.delete_cookie(COOKIE_ADMIN, path="/")
+
+
+def admin_logado(request: Request) -> bool:
+    token = request.cookies.get(COOKIE_ADMIN)
+    if not token:
+        return False
+    try:
+        payload = jwt.decode(token, settings.secret_key, algorithms=["HS256"])
+        return bool(payload.get("admin"))
+    except jwt.PyJWTError:
+        return False
+
+
+def exigir_admin(request: Request) -> None:
+    if not admin_logado(request):
+        raise HTTPException(status_code=401, detail="Só o administrador pode fazer isso.")
 
 
 # ---------------------------------------------------------------------------

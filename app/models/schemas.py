@@ -214,6 +214,11 @@ class LoginGoogleRequest(BaseModel):
     credential: str  # token assinado que o botão "Entrar com Google" devolve
 
 
+class AdminLoginRequest(BaseModel):
+    usuario: str = Field(..., max_length=60)
+    senha: str = Field(..., max_length=72)
+
+
 class RecuperarSenhaRequest(BaseModel):
     email: EmailStr
     captcha_token: Optional[str] = None

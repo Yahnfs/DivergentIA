@@ -5,13 +5,15 @@ from sqlalchemy.orm import Session
 
 from app.db import LocalAcessivelDB, get_db
 from app.models.schemas import LocalAcessivelCreate, LocalAcessivelOut
+from app.services import auth_service
 
 router = APIRouter(prefix="/locais", tags=["locais-acessiveis"])
 
 
-@router.post("", response_model=LocalAcessivelOut)
+@router.post("", response_model=LocalAcessivelOut, dependencies=[Depends(auth_service.exigir_admin)])
 def cadastrar_local(payload: LocalAcessivelCreate, db: Session = Depends(get_db)) -> LocalAcessivelDB:
-    novo_local = LocalAcessivelDB(**payload.model_dump(), verificado=False)
+    # Só o admin cadastra (ver /auth/admin-login), então o local já entra verificado.
+    novo_local = LocalAcessivelDB(**payload.model_dump(), verificado=True)
     db.add(novo_local)
     db.commit()
     db.refresh(novo_local)
@@ -35,7 +37,7 @@ def listar_locais(
     return query.all()
 
 
-@router.patch("/{local_id}/verificar", response_model=LocalAcessivelOut)
+@router.patch("/{local_id}/verificar", response_model=LocalAcessivelOut, dependencies=[Depends(auth_service.exigir_admin)])
 def verificar_local(local_id: int, db: Session = Depends(get_db)) -> LocalAcessivelDB:
     local = db.query(LocalAcessivelDB).filter(LocalAcessivelDB.id == local_id).first()
     if local is None:
