@@ -1,0 +1,2444 @@
+[
+  {
+    "id": "cras_cruzamento_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Maria da Glória Monteiro Alves",
+    "municipio": "Vitória",
+    "bairro": "Cruzamento",
+    "endereco": "Av. Vitória, 1419, Cruzamento, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3132-8359"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "cruzamento",
+      "fradinhos",
+      "forte sao joao",
+      "jucutuquara",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_da_penha_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Edelson Alves Batista",
+    "municipio": "Vitória",
+    "bairro": "Da Penha",
+    "endereco": "Rua João José de Souza, s/n, Da Penha, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3215-3132"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "da penha",
+      "bonfim",
+      "itarare",
+      "sao benedito",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_gurigica_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS José dos Santos",
+    "municipio": "Vitória",
+    "bairro": "Gurigica",
+    "endereco": "Rua Pedro Lima do Rosário, 186, Gurigica, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3235-2605"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "gurigica",
+      "consolacao",
+      "horto",
+      "nazareth",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_ilha_das_caieiras_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Izaltino Alves",
+    "municipio": "Vitória",
+    "bairro": "Ilha das Caieiras",
+    "endereco": "Rua Vinte e Três de Abril, 35, Ilha das Caieiras, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3332-6889"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "ilha das caieiras",
+      "sao pedro",
+      "redencao",
+      "santo andre",
+      "santos reis",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_maruipe_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Claudionor Lopes Pereira",
+    "municipio": "Vitória",
+    "bairro": "Maruípe",
+    "endereco": "Rua Marechal Floriano, 427, Maruípe, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3314-5311"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "maruipe",
+      "santa cecilia",
+      "santos dumont",
+      "tabuazeiro",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_parque_moscoso_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Parque Moscoso",
+    "municipio": "Vitória",
+    "bairro": "Parque Moscoso",
+    "endereco": "Rua Loren Reno, 115, Parque Moscoso, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3132-8190"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "parque moscoso",
+      "centro",
+      "vila rubim",
+      "fonte grande",
+      "piedade",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_praia_do_sua_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Olga Maria da Penha Ribeiro",
+    "municipio": "Vitória",
+    "bairro": "Praia do Suá",
+    "endereco": "Rua Desembargador Ferreira Coelho, 284, Praia do Suá, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3382-5473"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "praia do sua",
+      "enseada do sua",
+      "praia do canto",
+      "bento ferreira",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_resistencia_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Judite Francisca Venâncio",
+    "municipio": "Vitória",
+    "bairro": "Resistência",
+    "endereco": "Rua Tancredo Neves, 79, Resistência, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3225-2713"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "resistencia",
+      "conquista",
+      "nova palestina",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_santa_martha_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Alaides dos Anjos",
+    "municipio": "Vitória",
+    "bairro": "Santa Martha",
+    "endereco": "Rua da Integração, s/n, Santa Martha, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3332-7942"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "santa martha",
+      "andorinhas",
+      "joana d'arc",
+      "mangue seco",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_seguranca_do_lar_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Adriana dos Santos Alves",
+    "municipio": "Vitória",
+    "bairro": "Segurança do Lar",
+    "endereco": "Av. Professor Fernando Duarte Rabelo, 70, Segurança do Lar, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3317-8792"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "seguranca do lar",
+      "jardim camburi",
+      "jardim da penha",
+      "goiabeiras",
+      "mata da praia",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_universitario_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Emilio Francisco da Vitória",
+    "municipio": "Vitória",
+    "bairro": "Universitário",
+    "endereco": "Rua Flamboyans, 176, Universitário, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3233-9692"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "universitario",
+      "inhangueta",
+      "estrelinha",
+      "grande vitoria",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social"
+  },
+  {
+    "id": "cras_centro_vitoria",
+    "categoria": "Assistência Social e Cidadania",
+    "nome": "CRAS Centro",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Rua Loren Reno, 115, Centro, Vitória - ES, CEP 29010-620",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3132-8075"
+    ],
+    "publico_alvo": [
+      "Famílias em situação de vulnerabilidade social", 
+      "Pessoas com Deficiência (PCD)", 
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Cadastro e atualização do CadÚnico",
+      "Orientação e encaminhamento para o BPC (Benefício de Prestação Continuada)",
+      "Atendimento e acompanhamento psicossocial"
+    ],
+    "etiquetas": [
+      "cras",
+      "centro",
+      "vitoria",
+      "assistencia social",
+      "cadunico",
+      "bpc",
+      "atendimento",
+      "beneficio"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://m.vitoria.es.gov.br/cidade/cras"
+  },
+  {
+    "id": "ubs_jardim_camburi_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Jardim Camburi",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Rua Carlos Martins, 1969, Jardim Camburi, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3337-2300"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "jardim camburi",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_praia_do_sua_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde da Praia do Suá",
+    "municipio": "Vitória",
+    "bairro": "Praia do Suá",
+    "endereco": "Rua Almirante Tamandaré, 155, Praia do Suá, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5060"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "praia do sua",
+      "enseada do sua",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_centro_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde Vitória (Centro)",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Parque Moscoso, s/n (Entrada pela Rua 23 de Maio), Centro, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5026"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "centro",
+      "parque moscoso",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_maruipe_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Maruípe",
+    "municipio": "Vitória",
+    "bairro": "Maruípe",
+    "endereco": "Rua Engenheiro Rubens Bley, s/n, Maruípe, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3314-5310"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "maruipe",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_sao_pedro_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de São Pedro",
+    "municipio": "Vitória",
+    "bairro": "São Pedro",
+    "endereco": "Rodovia Serafim Derenzi, 4618, São Pedro, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5080"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "sao pedro",
+      "ilha das caieiras",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_jardim_da_penha_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Jardim da Penha",
+    "municipio": "Vitória",
+    "bairro": "Jardim da Penha",
+    "endereco": "Rua Doutor Moacyr Gonçalves, s/n, Jardim da Penha, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3137-2900"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "jardim da penha",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_forte_sao_joao_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde do Forte São João",
+    "municipio": "Vitória",
+    "bairro": "Forte São João",
+    "endereco": "Rua Hermes Curry Carneiro, 160, Forte São João, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5020"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "forte sao joao",
+      "cruzamento",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_santo_antonio_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Santo Antônio",
+    "municipio": "Vitória",
+    "bairro": "Santo Antônio",
+    "endereco": "Rua Ernesto Bassini, 43, Santo Antônio, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5100"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "santo antonio",
+      "mario cypreste",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_ilha_de_santa_maria_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde da Ilha de Santa Maria",
+    "municipio": "Vitória",
+    "bairro": "Ilha de Santa Maria",
+    "endereco": "Rua João de Oliveira, s/n, Ilha de Santa Maria, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5040"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "ilha de santa maria",
+      "jucutuquara",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_bairro_republica_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde do Bairro República",
+    "municipio": "Vitória",
+    "bairro": "Bairro República",
+    "endereco": "Avenida Presidente Costa e Silva, s/n, Bairro República, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3327-0200"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "bairro republica",
+      "goiabeiras",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_andorinhas_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Andorinhas",
+    "municipio": "Vitória",
+    "bairro": "Andorinhas",
+    "endereco": "Rua Emílio Ferreira da Silva, s/n, Andorinhas, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5120"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "andorinhas",
+      "mangue seco",
+      "santa martha",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_conquista_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Conquista",
+    "municipio": "Vitória",
+    "bairro": "Conquista",
+    "endereco": "Rua São José, s/n, Conquista, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5111"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "conquista",
+      "sao pedro",
+      "nova palestina",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_consolacao_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Consolação",
+    "municipio": "Vitória",
+    "bairro": "Consolação",
+    "endereco": "Rua Desembargador Gilson Mendonça, s/n, Consolação, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5064"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "consolacao",
+      "gurigica",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_do_quadro_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde Do Quadro",
+    "municipio": "Vitória",
+    "bairro": "Do Quadro",
+    "endereco": "Rua São João, s/n, Do Quadro, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5034"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "do quadro",
+      "santa tereza",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_fonte_grande_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde da Fonte Grande",
+    "municipio": "Vitória",
+    "bairro": "Fonte Grande",
+    "endereco": "Rua Antônio Pinto de Aguiar, s/n, Fonte Grande, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5047"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "fonte grande",
+      "piedade",
+      "centro",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_ilha_do_principe_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde da Ilha do Príncipe",
+    "municipio": "Vitória",
+    "bairro": "Ilha do Príncipe",
+    "endereco": "Rua José de Carvalho, s/n, Ilha do Príncipe, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5069"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "ilha do principe",
+      "vila rubim",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_itarare_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Itararé",
+    "municipio": "Vitória",
+    "bairro": "Itararé",
+    "endereco": "Rua das Palmeiras, 300, Itararé, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5095"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "itarare",
+      "sao benedito",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_jesus_de_nazareth_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Jesus de Nazareth",
+    "municipio": "Vitória",
+    "bairro": "Jesus de Nazareth",
+    "endereco": "Rua Helena Muller, s/n, Jesus de Nazareth, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5072"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "jesus de nazareth",
+      "praia do sua",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_maria_ortiz_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Maria Ortiz",
+    "municipio": "Vitória",
+    "bairro": "Maria Ortiz",
+    "endereco": "Rua Professor Renato Ribeiro dos Santos, s/n, Maria Ortiz, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5115"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "maria ortiz",
+      "jabour",
+      "antonio honorio",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_resistencia_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Resistência",
+    "municipio": "Vitória",
+    "bairro": "Resistência",
+    "endereco": "Rodovia Serafim Derenzi, s/n, Resistência, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5098"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "resistencia",
+      "sao pedro",
+      "santo andre",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_alagoano_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde do Alagoano",
+    "municipio": "Vitória",
+    "bairro": "Alagoano",
+    "endereco": "Rua Engenheiro Manoel dos Passos Barros, s/n, Alagoano, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5032"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "alagoano",
+      "caratoira",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_bairro_da_penha_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde do Bairro da Penha",
+    "municipio": "Vitória",
+    "bairro": "Bairro da Penha",
+    "endereco": "Avenida Coronel José Martins de Figueiredo, s/n, Bairro da Penha, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5058"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "bairro da penha",
+      "sao benedito",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_grande_vitoria_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Grande Vitória",
+    "municipio": "Vitória",
+    "bairro": "Grande Vitória",
+    "endereco": "Rua Vinte e Três de Agosto, s/n, Grande Vitória, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5102"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "grande vitoria",
+      "inhangueta",
+      "estrelinha",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_ilha_das_caieiras_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde da Ilha das Caieiras",
+    "municipio": "Vitória",
+    "bairro": "Ilha das Caieiras",
+    "endereco": "Rua Nova Esperança, s/n, Ilha das Caieiras, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5107"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "ilha das caieiras",
+      "sao pedro",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_jabour_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Jabour",
+    "municipio": "Vitória",
+    "bairro": "Jabour",
+    "endereco": "Rua Professor Olímpio Lyrio, s/n, Jabour, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5117"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "jabour",
+      "maria ortiz",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_santa_luiza_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Santa Luiza",
+    "municipio": "Vitória",
+    "bairro": "Santa Luiza",
+    "endereco": "Rua Doutor Guilherme Serrano, s/n, Santa Luiza, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5089"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "santa luiza",
+      "praia do canto",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_santa_martha_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Santa Martha",
+    "municipio": "Vitória",
+    "bairro": "Santa Martha",
+    "endereco": "Rua Joana D'Arc, s/n, Santa Martha, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5085"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "santa martha",
+      "andorinhas",
+      "joana d'arc",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_santo_andre_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de Santo André",
+    "municipio": "Vitória",
+    "bairro": "Santo André",
+    "endereco": "Rua da Coragem, s/n, Santo André, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5110"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "santo andre",
+      "sao pedro",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "ubs_sao_cristovao_vitoria",
+    "categoria": "Saúde Básica e Urgência",
+    "nome": "Unidade de Saúde de São Cristóvão",
+    "municipio": "Vitória",
+    "bairro": "São Cristóvão",
+    "endereco": "Rua Engenheiro Rubem Bley, s/n, São Cristóvão, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3132-5092"
+    ],
+    "publico_alvo": [
+      "População em geral",
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário (Lei Federal nº 10.048/2000)"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento prioritário para autistas (apresentando laudo ou CIPTEA)"
+    ],
+    "servicos_oferecidos": [
+      "Consultas médicas e de enfermagem",
+      "Vacinação de rotina e campanhas",
+      "Dispensação de medicamentos na farmácia básica",
+      "Encaminhamento para especialidades e reabilitação"
+    ],
+    "etiquetas": [
+      "ubs",
+      "posto de saude",
+      "sao cristovao",
+      "maruipe",
+      "vitoria",
+      "vacina",
+      "medico",
+      "saude"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "cer_ii_sao_pedro_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "Centro Especializado em Reabilitação Física e Intelectual (CER II)",
+    "municipio": "Vitória",
+    "bairro": "São Pedro",
+    "endereco": "Rodovia Serafim Derenzi, 4618, Policlínica de São Pedro, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5080"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física",
+      "Pessoas com Deficiência Intelectual",
+      "Neurodivergentes (TEA)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso adaptadas",
+      "Banheiros acessíveis",
+      "Salas de fisioterapia e reabilitação motora equipadas",
+      "Vagas exclusivas para PCD"
+    ],
+    "acessibilidade_sensorial": [
+      "Consultórios e salas de estimulação com controle de ruído"
+    ],
+    "servicos_oferecidos": [
+      "Reabilitação física e motora",
+      "Estimulação precoce e terapias multidisciplinares",
+      "Fonoaudiologia, terapia ocupacional e fisioterapia",
+      "Prescrição e concessão de meios auxiliares de locomoção (órteses e cadeiras de rodas)"
+    ],
+    "etiquetas": [
+      "cer",
+      "cer ii",
+      "reabilitacao",
+      "sao pedro",
+      "policlinica",
+      "fisioterapia",
+      "terapia ocupacional",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "apae_bento_ferreira_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "APAE Vitória - Associação de Pais e Amigos dos Excepcionais",
+    "municipio": "Vitória",
+    "bairro": "Bento Ferreira",
+    "endereco": "Rua Gal. Osório, s/n (ou Av. Cezar Hilal, 1180), Bento Ferreira, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h30 às 17h",
+    "telefones": [
+      "(27) 2104-4000"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Intelectual",
+      "Neurodivergentes (TEA)",
+      "Bebês e crianças com atraso no neurodesenvolvimento"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso",
+      "Elevadores adaptados",
+      "Banheiros acessíveis",
+      "Vagas exclusivas de estacionamento"
+    ],
+    "acessibilidade_sensorial": [
+      "Salas de integração sensorial",
+      "Ambientes estruturados para indivíduos com TEA",
+      "Profissionais capacitados em comunicação aumentativa/alternativa"
+    ],
+    "servicos_oferecidos": [
+      "Atendimento Educacional Especializado (AEE)",
+      "Intervenção precoce e avaliação diagnóstica global",
+      "Terapias multidisciplinares (psicologia, fonoaudiologia, TO)",
+      "Acolhimento e orientação a familiares e cuidadores"
+    ],
+    "etiquetas": [
+      "apae",
+      "apae vitoria",
+      "bento ferreira",
+      "neurodesenvolvimento",
+      "tea",
+      "autismo",
+      "deficiencia intelectual",
+      "terapia",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://vitoria.apaebrasil.org.br"
+  },
+  {
+    "id": "crpd_seguranca_do_lar_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "Centro de Referência para a Pessoa com Deficiência (CRPD)",
+    "municipio": "Vitória",
+    "bairro": "Segurança do Lar",
+    "endereco": "Avenida Professor Fernando Duarte Rabelo, 70, Segurança do Lar, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3327-5236"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física",
+      "Pessoas com Deficiência Intelectual",
+      "Pessoas com Deficiência Sensorial",
+      "Neurodivergentes (TEA)"
+    ],
+    "acessibilidade_fisica": [
+      "Totalmente acessível para cadeirantes",
+      "Piso tátil",
+      "Banheiros adaptados"
+    ],
+    "acessibilidade_sensorial": [
+      "Espaços de convivência com baixo estímulo sensorial",
+      "Intérprete de Libras disponível para atendimento"
+    ],
+    "servicos_oferecidos": [
+      "Oficinas de convivência e inclusão social",
+      "Apoio ao desenvolvimento da autonomia pessoal",
+      "Orientações sobre direitos e encaminhamentos socioassistenciais",
+      "Cursos e atividades adaptadas para PCDs"
+    ],
+    "etiquetas": [
+      "crpd",
+      "centro de referencia",
+      "seguranca do lar",
+      "jardim da penha",
+      "inclusao",
+      "convivencia",
+      "direitos pcd",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-para-a-pessoa-com-deficiencia"
+  },
+  {
+    "id": "capsi_forte_sao_joao_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "Centro de Atenção Psicossocial Infantojuvenil (CAPSi)",
+    "municipio": "Vitória",
+    "bairro": "Forte São João",
+    "endereco": "Rua Hermes Curry Carneiro, 160, Forte São João, Vitória - ES",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 19h",
+    "telefones": [
+      "(27) 3132-5024"
+    ],
+    "publico_alvo": [
+      "Crianças e adolescentes com sofrimento psíquico grave",
+      "Neurodivergentes (TEA, TDAH com comorbidades)"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso",
+      "Banheiro adaptado",
+      "Atendimento prioritário legal"
+    ],
+    "acessibilidade_sensorial": [
+      "Salas de acolhimento com baixo estímulo sonoro e visual",
+      "Equipe especializada em regulação de crises e desorganização sensorial"
+    ],
+    "servicos_oferecidos": [
+      "Acompanhamento em saúde mental infantojuvenil",
+      "Atendimento psiquiátrico e psicológico especializado",
+      "Oficinas terapêuticas e suporte multiprofissional",
+      "Suporte à família e ao cuidador"
+    ],
+    "etiquetas": [
+      "caps",
+      "capsi",
+      "saude mental",
+      "infantojuvenil",
+      "forte sao joao",
+      "psicologia",
+      "psiquiatria",
+      "autismo",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude"
+  },
+  {
+    "id": "hucam_neuropediatria_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "Ambulatório de Neuropediatria e Genética - HUCAM (Hospital Universitário Cassiano Antônio Moraes)",
+    "municipio": "Vitória",
+    "bairro": "Santos Dumont",
+    "endereco": "Avenida Marechal Campos, 1355, Santos Dumont, Vitória - ES, CEP 29040-091",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 17h",
+    "telefones": [
+      "(27) 3335-7100",
+      "(27) 3335-7199"
+    ],
+    "publico_alvo": [
+      "Crianças e adolescentes com atraso no neurodesenvolvimento",
+      "Neurodivergentes (TEA, TDAH de difícil controle)",
+      "Pessoas com Doenças Raras e Síndromes Genéticas"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso em todos os blocos",
+      "Elevadores adaptados",
+      "Sanitários acessíveis com barras de apoio",
+      "Vagas reservadas para PCD no estacionamento interno"
+    ],
+    "acessibilidade_sensorial": [
+      "Sinalização tátil no piso dos corredores principais",
+      "Atendimento prioritário na triagem ambulatorial"
+    ],
+    "servicos_oferecidos": [
+      "Investigação diagnóstica multidisciplinar e emissão de laudos de alta complexidade",
+      "Consultas médicas especializadas em Neuropediatria, Genética Médica e Pediatria do Desenvolvimento",
+      "Exames de neuroimagem, eletroencefalograma e triagem genética pelo SUS"
+    ],
+    "etiquetas": [
+      "hucam",
+      "hospital das clinicas",
+      "neuropediatria",
+      "maruipe",
+      "santos dumont",
+      "laudo",
+      "diagnostico",
+      "genetica",
+      "tea",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hucam-ufes"
+  },
+  {
+    "id": "crefes_reabilitacao_estadual",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "CREFES - Centro de Reabilitação Física do Espírito Santo",
+    "municipio": "Vila Velha",
+    "bairro": "Praia da Costa",
+    "endereco": "Rua Gastão Roubach, s/n, Praia da Costa, Vila Velha - ES, CEP 29101-020",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h às 18h",
+    "telefones": [
+      "(27) 3636-6150",
+      "(27) 3636-6170"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física e Motora",
+      "Pacientes amputados ou com sequelas neurológicas graves",
+      "Munícipes de Vitória e demais cidades da Grande Vitória"
+    ],
+    "acessibilidade_fisica": [
+      "Total conformidade com normas de acessibilidade motora",
+      "Piscina e ginásio terapêuticos adaptados",
+      "Banheiros acessíveis em todas as alas",
+      "Plataformas e rampas para cadeiras de rodas"
+    ],
+    "acessibilidade_sensorial": [
+      "Comunicação visual contrastante",
+      "Equipe de acolhimento especializada em reabilitação física"
+    ],
+    "servicos_oferecidos": [
+      "Prescrição, confecção, ajuste e entrega de órteses, próteses e calçados ortopédicos",
+      "Concessão de cadeiras de rodas manuais e motorizadas pelo SUS",
+      "Reabilitação neuromotora intensiva, fisioterapia e terapia ocupacional"
+    ],
+    "etiquetas": [
+      "crefes",
+      "ortese",
+      "protese",
+      "cadeira de rodas",
+      "cadeira motorizada",
+      "reabilitacao fisica",
+      "referencia estadual",
+      "sus es"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://saude.es.gov.br/crefes"
+  },
+  {
+    "id": "pestalozzi_grande_vitoria",
+    "categoria": "Reabilitação e Apoio Especializado",
+    "nome": "Associação Pestalozzi (Referência Regional)",
+    "municipio": "Cariacica",
+    "bairro": "Jardim América",
+    "endereco": "Rua Padre Gabriel, 18, Jardim América, Cariacica - ES, CEP 29140-190",
+    "horario_funcionamento": "Segunda a sexta-feira, das 7h30 às 17h",
+    "telefones": [
+      "(27) 3388-3800"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Intelectual e Múltipla",
+      "Neurodivergentes (TEA)",
+      "Famílias de Vitória e região metropolitana conveniadas ao atendimento"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso niveladas",
+      "Banheiros amplos e adaptados",
+      "Vagas exclusivas em frente à unidade"
+    ],
+    "acessibilidade_sensorial": [
+      "Salas pedagógicas e terapêuticas com iluminação difusa",
+      "Recursos de comunicação aumentativa e alternativa"
+    ],
+    "servicos_oferecidos": [
+      "Atendimento socioassistencial e psicopedagógico especializado",
+      "Terapias de estimulação e desenvolvimento de autonomia",
+      "Oficinas de preparação e inclusão no mercado de trabalho para PCDs"
+    ],
+    "etiquetas": [
+      "pestalozzi",
+      "deficiencia intelectual",
+      "autismo",
+      "estimulacao",
+      "apoio especializado",
+      "inclusao social",
+      "grande vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://pestalozzies.org.br"
+  },
+  {
+    "id": "defensoria_publica_vitoria_saude_civel",
+    "categoria": "Garantia de Direitos",
+    "nome": "Defensoria Pública do Estado do Espírito Santo (Núcleo de Vitória e SANES)",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": "Rua Pedro Palácios, 60, Edifício Dinamite, Enseada do Suá, Vitória - ES, CEP 29050-320",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3198-3300",
+      "(27) 99837-4775"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)",
+      "Famílias de baixa renda que necessitam de assistência jurídica gratuita"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso na entrada",
+      "Elevadores com sinalização sonora e em Braille",
+      "Sanitários totalmente adaptados para cadeirantes",
+      "Atendimento prioritário legal garantido"
+    ],
+    "acessibilidade_sensorial": [
+      "Ambiente administrativo com atendimento individualizado em guichês/salas reservadas"
+    ],
+    "servicos_oferecidos": [
+      "Ajuizamento de ações para obtenção de medicamentos, fraldas e insumos negados pelo SUS",
+      "Ações judiciais para fornecimento de terapias multidisciplinares (fonoaudiologia, TO, ABA)",
+      "Garantia de vaga escolar com professor auxiliar/mediador de inclusão",
+      "Orientação jurídica gratuita e tutela dos direitos fundamentais da PCD"
+    ],
+    "etiquetas": [
+      "defensoria publica",
+      "dpes",
+      "advogado gratuito",
+      "medicamento",
+      "terapia",
+      "mediador escolar",
+      "sanes",
+      "enseada do sua",
+      "direitos pcd",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.defensoria.es.def.br"
+  },
+  {
+    "id": "mpes_promotoria_pcd_vitoria",
+    "categoria": "Garantia de Direitos",
+    "nome": "Ministério Público do Estado do Espírito Santo (Promotoria da Pessoa com Deficiência)",
+    "municipio": "Vitória",
+    "bairro": "Santa Helena",
+    "endereco": "Rua Procurador Antônio Benedicto Amancio Pereira, 121, Edifício Procurador-Geral de Justiça, Santa Helena, Vitória - ES, CEP 29055-036",
+    "horario_funcionamento": "Segunda a sexta-feira, das 12h às 18h",
+    "telefones": [
+      "(27) 3194-4500",
+      "127"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)",
+      "Coletividade, associações representativas e cidadãos em geral"
+    ],
+    "acessibilidade_fisica": [
+      "Total conformidade com normas de acessibilidade física",
+      "Rampas, portas automáticas e elevadores adaptados",
+      "Sanitários acessíveis em todos os andares",
+      "Vagas exclusivas para PCD no estacionamento"
+    ],
+    "acessibilidade_sensorial": [
+      "Sinalização podotátil nos acessos principais",
+      "Painéis informativos com alto contraste"
+    ],
+    "servicos_oferecidos": [
+      "Recepção de denúncias de discriminação, negligência ou violação de direitos da PCD",
+      "Fiscalização das condições de acessibilidade em prédios públicos, calçadas e transporte coletivo",
+      "Cobrança e instauração de inquéritos para contratação de cuidadores/estagiários na rede de ensino",
+      "Ações Civis Públicas em defesa dos direitos coletivos e difusos de pessoas com deficiência"
+    ],
+    "etiquetas": [
+      "ministerio publico",
+      "mpes",
+      "promotoria",
+      "denuncia",
+      "fiscalizacao",
+      "violacao de direitos",
+      "inclusao escolar",
+      "santa helena",
+      "enseada do sua",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.mpes.mp.br"
+  },
+  {
+    "id": "comped_conselho_pcd_vitoria",
+    "categoria": "Garantia de Direitos",
+    "nome": "COMPED - Conselho Municipal dos Direitos da Pessoa com Deficiência de Vitória",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Avenida Princesa Isabel, 54, Edifício Barão de Mauá, Sala 401 (Casa dos Conselhos), Centro, Vitória - ES, CEP 29010-360",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3382-6178",
+      "(27) 3382-6179"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes",
+      "Familiares, cuidadores e entidades de assistência à inclusão"
+    ],
+    "acessibilidade_fisica": [
+      "Acesso com rampa e elevador adaptado",
+      "Sanitário acessível no prédio",
+      "Atendimento prioritário garantido"
+    ],
+    "acessibilidade_sensorial": [
+      "Apoio para comunicação direta e encaminhamentos acessíveis"
+    ],
+    "servicos_oferecidos": [
+      "Controle social e fiscalização das políticas públicas municipais para PCDs",
+      "Acolhimento de demandas da comunidade e encaminhamento aos órgãos competentes da Prefeitura",
+      "Realização de conferências, assembleias e debates sobre acessibilidade e inclusão",
+      "Espaço para proposição de melhorias urbanas e serviços socioassistenciais"
+    ],
+    "etiquetas": [
+      "comped",
+      "conselho municipal",
+      "casa dos conselhos",
+      "controle social",
+      "politicas publicas",
+      "direitos pcd",
+      "centro",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://m.vitoria.es.gov.br/conselhos/comped"
+  },
+  {
+    "id": "gvbus_central_reta_da_penha_vitoria",
+    "categoria": "Mobilidade e Isenções",
+    "nome": "Central de Atendimento GVBus (CartãoGV Especial / Passe Livre)",
+    "municipio": "Vitória",
+    "bairro": "Santa Luíza",
+    "endereco": "Avenida Nossa Senhora da Penha, 570, Edifício Emec, Santa Luíza, Vitória - ES, CEP 29045-402",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 16h30",
+    "telefones": [
+      "(27) 2125-9500",
+      "0800 038 7058"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física, Sensorial ou Intelectual",
+      "Neurodivergentes (TEA)",
+      "Acompanhantes autorizados via laudo médico pericial"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso na portaria",
+      "Elevadores adaptados",
+      "Sanitários acessíveis",
+      "Guichês de atendimento rebaixados e preferenciais"
+    ],
+    "acessibilidade_sensorial": [
+      "Sistema de senhas com alerta sonoro e visual em telão contrastante",
+      "Atendimento prioritário legal garantido"
+    ],
+    "servicos_oferecidos": [
+      "Cadastramento e recadastramento do CartãoGV Especial (Gratuidade no Sistema Transcol)",
+      "Captura biométrica facial e emissão de segunda via do cartão",
+      "Inclusão e atualização de acompanhante no benefício do passe livre metropolitano"
+    ],
+    "etiquetas": [
+      "gvbus",
+      "passe livre",
+      "cartaogv",
+      "gratuidade",
+      "onibus",
+      "transcol",
+      "reta da penha",
+      "santa luiza",
+      "mobilidade",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.cartaogv.com.br"
+  },
+  {
+    "id": "casa_do_cidadao_itarare_vitoria",
+    "categoria": "Mobilidade e Isenções",
+    "nome": "Casa do Cidadão de Vitória (Setran / Credencial de Estacionamento)",
+    "municipio": "Vitória",
+    "bairro": "Itararé",
+    "endereco": "Avenida Maruípe, 2544, Itararé, Vitória - ES, CEP 29047-495",
+    "horario_funcionamento": "Segunda a sexta-feira, das 8h às 17h",
+    "telefones": [
+      "(27) 3382-6520",
+      "(27) 3382-6500"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência (PCD)",
+      "Neurodivergentes (TEA, TDAH)",
+      "Familiares, condutores autorizados e cuidadores"
+    ],
+    "acessibilidade_fisica": [
+      "Totalmente acessível para cadeirantes",
+      "Rampas de acesso externas e niveladas",
+      "Sanitários adaptados",
+      "Vagas exclusivas reservadas no estacionamento"
+    ],
+    "acessibilidade_sensorial": [
+      "Sinalização em piso tátil",
+      "Atendimento presencial prioritário para autistas e PCDs",
+      "Painéis de chamada com contraste e som"
+    ],
+    "servicos_oferecidos": [
+      "Emissão da Credencial de Estacionamento para Vaga Especial (Resoluções Contran para PCD/Autismo)",
+      "Requerimento e renovação do Passe Livre Municipal de Vitória",
+      "Emissão de documentos de identificação civil (RG) com inclusão do símbolo de acessibilidade/CID"
+    ],
+    "etiquetas": [
+      "casa do cidadao",
+      "credencial estacionamento",
+      "vaga especial",
+      "setran",
+      "itarare",
+      "maruipe",
+      "passe livre municipal",
+      "rg acessivel",
+      "mobilidade",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://m.vitoria.es.gov.br/cidade/casa-do-cidadao"
+  },
+  {
+    "id": "sefaz_es_agencia_receita_vitoria",
+    "categoria": "Mobilidade e Isenções",
+    "nome": "Agência da Receita Estadual de Vitória (Sefaz-ES / Isenção de IPVA e ICMS)",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Avenida Jerônimo Monteiro, 96, Centro, Vitória - ES, CEP 29010-002",
+    "horario_funcionamento": "Segunda a sexta-feira, das 9h às 17h",
+    "telefones": [
+      "(27) 3636-3900",
+      "(27) 3636-3901"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física, Sensorial, Intelectual e TEA",
+      "Condutores e não-condutores com representação legal"
+    ],
+    "acessibilidade_fisica": [
+      "Rampa de acesso à recepção principal",
+      "Elevador acessível para andares de atendimento",
+      "Sanitários adaptados para pessoas com deficiência motora",
+      "Atendimento prioritário garantido por lei"
+    ],
+    "acessibilidade_sensorial": [
+      "Atendimento individualizado para esclarecimento de exigências documentais"
+    ],
+    "servicos_oferecidos": [
+      "Orientações e recepção de pedidos presenciais de Isenção de IPVA para PCDs",
+      "Processamento de pedidos de isenção de ICMS para compra de veículos novos adaptados",
+      "Regularização cadastral e entrega de certidões de imunidade/não-incidência tributária"
+    ],
+    "etiquetas": [
+      "sefaz",
+      "sefaz es",
+      "receita estadual",
+      "isencao ipva",
+      "isencao icms",
+      "imposto",
+      "carro pcd",
+      "centro",
+      "mobilidade",
+      "vitoria"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://sefaz.es.gov.br"
+  },
+  {
+    "id": "praia_acessivel_curva_jurema_vitoria",
+    "categoria": "Lazer e Esporte",
+    "nome": "Projeto Praia Acessível - Curva da Jurema",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": "Av. José Miranda Machado, s/n, (Próximo ao quiosque do Alemão) - Vitória, ES",
+    "horario_funcionamento": "Sexta a Domingo e Feriados, das 08h às 13h",
+    "telefones": [
+      "(27) 3382-6178"
+    ],
+    "publico_alvo": [
+      "Pessoas com Deficiência Física", 
+      "Mobilidade Reduzida"
+    ],
+    "acessibilidade_fisica": [
+      "Cadeiras anfíbias para banho de mar",
+      "Rampa de acesso até a areia",
+      "Banheiro adaptado",
+      "Vagas de estacionamento exclusivas"
+    ],
+    "acessibilidade_sensorial": [],
+    "servicos_oferecidos": [
+      "Banho de mar assistido por profissionais de educação física e guarda-vidas"
+    ],
+    "etiquetas": [
+      "praia acessivel", 
+      "curva da jurema", 
+      "vitoria", 
+      "cadeira anfibia", 
+      "banho de mar", 
+      "lazer",
+      "cadeirante"
+    ],
+    "verificado_em": "2026-10-27",
+    "fonte_url": "https://m.vitoria.es.gov.br/cidade/praia-acessivel"
+  },
+  {
+    "id": "cinema_cinemark_sessao_azul_vitoria",
+    "categoria": "Cultura e Entretenimento",
+    "nome": "Cinemark - Sessão Azul (Shopping Vitória)",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": "Av. Américo Buaiz, 200 - Shopping Vitória - Vitória, ES",
+    "horario_funcionamento": "Sessões específicas (consultar programação no site Sessão Azul)",
+    "telefones": [
+      "(27) 3335-1000"
+    ],
+    "publico_alvo": [
+      "Autistas (TEA)", 
+      "TDAH", 
+      "Pessoas com distúrbios sensoriais"
+    ],
+    "acessibilidade_fisica": [
+      "Rampas de acesso e elevadores",
+      "Espaços reservados para cadeirantes nas salas",
+      "Banheiro familiar adaptado"
+    ],
+    "acessibilidade_sensorial": [
+      "Luzes da sala parcialmente acesas durante o filme",
+      "Volume do som reduzido",
+      "Liberdade para o público andar, falar e cantar durante a exibição",
+      "Ausência de trailers comerciais"
+    ],
+    "servicos_oferecidos": [
+      "Exibição de filmes adaptada para o público neurodivergente (Sessão Azul)",
+      "Meia-entrada para PCD e acompanhante"
+    ],
+    "etiquetas": [
+      "cinema", 
+      "sessao azul", 
+      "shopping vitoria", 
+      "tea", 
+      "autismo", 
+      "filme adaptado", 
+      "som baixo", 
+      "lazer inclusivo"
+    ],
+    "verificado_em": "2026-10-27",
+    "fonte_url": "https://www.sessaoazul.com.br"
+  }
+]

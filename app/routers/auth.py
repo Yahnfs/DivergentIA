@@ -22,16 +22,8 @@ from app.services.email_sender import enviar_email
 router = APIRouter(prefix="/auth", tags=["contas"])
 log = logging.getLogger("divergentia.auth")
 
-VERSAO_TERMO_LGPD = "2026-10-17"
+VERSAO_TERMO_LGPD = "2026-11-08"
 VALIDADE_TOKEN = {"verificar_email": datetime.timedelta(days=3), "redefinir_senha": datetime.timedelta(hours=2)}
-
-
-def _usuario_logado(request: Request, db: Session = Depends(get_db)) -> UsuarioDB:
-    usuario_id = auth_service.usuario_id_da_sessao(request)
-    usuario = db.query(UsuarioDB).filter(UsuarioDB.id == usuario_id).first() if usuario_id else None
-    if usuario is None:
-        raise HTTPException(status_code=401, detail="Faça login para continuar.")
-    return usuario
 
 
 def _criar_token(db: Session, usuario: UsuarioDB, tipo: str) -> str:
@@ -149,7 +141,7 @@ def logout(response: Response) -> dict:
 
 
 @router.get("/eu", response_model=UsuarioOut)
-def eu(usuario: UsuarioDB = Depends(_usuario_logado)) -> UsuarioDB:
+def eu(usuario: UsuarioDB = Depends(auth_service.usuario_logado)) -> UsuarioDB:
     return usuario
 
 
@@ -212,16 +204,20 @@ composição familiar e condição de acessibilidade) são usados apenas de form
 avaliar o impacto social do projeto de extensão DivergentIA junto ao público que ele atende. Nome, e-mail, \
 CPF/RG e endereço servem só para identificar e dar suporte à sua conta, e não entram nessa análise agregada.
 
-BASE LEGAL: consentimento (art. 7º, I) para a análise socioeconômica; execução de contrato (art. 7º, V) para \
-a criação e manutenção da conta. Sexo, etnia e condição de acessibilidade são dados sensíveis (art. 5º, II); \
-por isso este consentimento é específico para esse uso, e não serve para nenhuma outra finalidade.
+Enquanto você estiver logado, as conversas que tiver com o assistente (perguntas e o roteiro gerado) ficam \
+salvas na sua conta, só para você poder reabrir esse histórico depois. Sem login, nada do chat é gravado.
+
+BASE LEGAL: consentimento (art. 7º, I) para a análise socioeconômica e para guardar o histórico de conversas; \
+execução de contrato (art. 7º, V) para a criação e manutenção da conta. Sexo, etnia, condição de acessibilidade \
+e o conteúdo das conversas (que pode revelar sua condição de saúde ou deficiência) são dados sensíveis (art. \
+5º, II); por isso este consentimento é específico para esses usos, e não serve para nenhuma outra finalidade.
 
 COMPARTILHAMENTO: seus dados não são vendidos nem repassados a terceiros. Resultados de pesquisa são sempre \
 divulgados de forma agregada, sem identificar nenhuma pessoa.
 
 SEUS DIREITOS: a qualquer momento você pode pedir para ver, corrigir ou apagar seus dados, ou revogar este \
-consentimento, falando com a equipe do projeto. Revogar o consentimento não apaga dados de conversas que \
-você já teve com o assistente, pois essas conversas não ficam gravadas no servidor.
+consentimento, falando com a equipe do projeto. Você também pode apagar uma conversa do seu histórico a \
+qualquer momento, direto na tela do assistente.
 
 ARMAZENAMENTO: os dados ficam no banco do projeto (ainda em fase de desenvolvimento e extensão universitária) \
 enquanto sua conta existir ou até você pedir a exclusão.

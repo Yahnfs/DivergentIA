@@ -9,9 +9,11 @@ import secrets
 import bcrypt
 import httpx
 import jwt
-from fastapi import HTTPException, Request
+from fastapi import Depends, HTTPException, Request
+from sqlalchemy.orm import Session
 
 from app.config import settings
+from app.db import UsuarioDB, get_db
 
 log = logging.getLogger("divergentia.auth")
 
@@ -63,6 +65,15 @@ def definir_cookie_sessao(response, usuario_id: int) -> None:
 
 def limpar_cookie_sessao(response) -> None:
     response.delete_cookie(COOKIE_SESSAO, path="/")
+
+
+def usuario_logado(request: Request, db: Session = Depends(get_db)) -> UsuarioDB:
+    """Dependência de rota: exige login (401 sem sessão válida). Usada por /auth/eu e pelo histórico do chat."""
+    usuario_id = usuario_id_da_sessao(request)
+    usuario = db.query(UsuarioDB).filter(UsuarioDB.id == usuario_id).first() if usuario_id else None
+    if usuario is None:
+        raise HTTPException(status_code=401, detail="Faça login para continuar.")
+    return usuario
 
 
 # ---------------------------------------------------------------------------

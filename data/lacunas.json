@@ -185,9 +185,60 @@
         "onde ha"
       ]
     ],
-    "mensagem": "Não tenho uma lista fixa de restaurantes, lojas ou passeios acessíveis. Mas esta página tem um mapa colaborativo de locais acessíveis, cadastrados pela própria comunidade: veja a seção “Locais acessíveis” logo abaixo. Se você conhece um lugar com rampa, banheiro adaptado ou ambiente de baixo estímulo, cadastre para ajudar outras famílias.",
+    "mensagem": "Não tenho uma lista fixa de restaurantes, lojas ou passeios acessíveis no texto da conversa, mas o DivergentIA tem uma página \"Locais acessíveis\" (no menu ao lado), com lugares já conferidos (rampa, banheiro adaptado, Braille, ambiente de baixo estímulo e outros recursos) — dá para filtrar por tipo de local.",
     "contatos": [],
     "perguntas": [],
     "sugestoes": []
+  },
+  {
+    "id": "lacuna-beneficios-comerciais",
+    "titulo": "Comércios com desconto ou benefício para cliente PCD",
+    "gatilhos": [
+      [
+        "comercio",
+        "comercios",
+        "loja",
+        "lojas",
+        "estabelecimento",
+        "estabelecimentos",
+        "shopping",
+        "mercado",
+        "supermercado",
+        "restaurante",
+        "empresa",
+        "empresas",
+        "cliente",
+        "clientes"
+      ],
+      [
+        "beneficio",
+        "beneficios",
+        "desconto",
+        "descontos",
+        "vantagem",
+        "vantagens",
+        "gratuidade",
+        "meia entrada",
+        "promocao",
+        "promocoes",
+        "isencao"
+      ],
+      [
+        "pcd",
+        "pcds",
+        "deficien",
+        "autis",
+        "tdah",
+        "neurodiverg",
+        "cadeirante"
+      ]
+    ],
+    "mensagem": "Não tenho uma lista de comércios que dão desconto ou outro benefício para clientes com deficiência: cada estabelecimento decide por conta própria se oferece algo assim, não é uma lista oficial que eu possa consultar. Se for sobre um direito garantido por lei (não uma escolha do comércio), me diga qual — por exemplo, meia-entrada em cinema e shows, ou isenção de impostos na compra de um carro — que eu te oriento certinho.",
+    "contatos": [],
+    "perguntas": [],
+    "sugestoes": [
+      "Como funciona a meia-entrada para PCD?",
+      "Como pedir isenção de impostos na compra de um carro?"
+    ]
   }
 ]

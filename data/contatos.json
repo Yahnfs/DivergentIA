@@ -3,8 +3,18 @@
     "id": "disque-100",
     "nome": "Disque 100 (Disque Direitos Humanos)",
     "municipio": null,
-    "telefones": [{"numero": "100", "rotulo": "Ligação gratuita, de qualquer telefone"}],
-    "whatsapp": [{"numero": "(61) 99611-0100", "rotulo": "Atendimento por WhatsApp"}],
+    "telefones": [
+      {
+        "numero": "100",
+        "rotulo": "Ligação gratuita, de qualquer telefone"
+      }
+    ],
+    "whatsapp": [
+      {
+        "numero": "(61) 99611-0100",
+        "rotulo": "Atendimento por WhatsApp"
+      }
+    ],
     "email": "ouvidoria@mdh.gov.br",
     "site": "https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos",
     "endereco": null,
@@ -18,7 +28,12 @@
     "id": "inss-135",
     "nome": "Central 135 (INSS)",
     "municipio": null,
-    "telefones": [{"numero": "135", "rotulo": "Atendimento e agendamento"}],
+    "telefones": [
+      {
+        "numero": "135",
+        "rotulo": "Atendimento e agendamento"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://meu.inss.gov.br",
@@ -33,7 +48,12 @@
     "id": "antt-passe-livre",
     "nome": "ANTT – Passe Livre Interestadual",
     "municipio": null,
-    "telefones": [{"numero": "166", "rotulo": "Ouvidoria da ANTT"}],
+    "telefones": [
+      {
+        "numero": "166",
+        "rotulo": "Ouvidoria da ANTT"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://passelivre.antt.gov.br/",
@@ -48,10 +68,21 @@
     "id": "defensoria-es",
     "nome": "Defensoria Pública do Espírito Santo",
     "municipio": null,
-    "telefones": [{"numero": "(27) 3198-3300", "rotulo": "Sede, em Vitória"}],
+    "telefones": [
+      {
+        "numero": "(27) 3198-3300",
+        "rotulo": "Sede, em Vitória"
+      }
+    ],
     "whatsapp": [
-      {"numero": "(27) 99695-5352", "rotulo": "Plantão de urgência (Grande Vitória) – sábados, domingos e feriados, das 12h às 18h"},
-      {"numero": "(27) 99709-5080", "rotulo": "Plantão de urgência (interior) – sábados, domingos e feriados, das 12h às 18h"}
+      {
+        "numero": "(27) 99695-5352",
+        "rotulo": "Plantão de urgência (Grande Vitória) – sábados, domingos e feriados, das 12h às 18h"
+      },
+      {
+        "numero": "(27) 99709-5080",
+        "rotulo": "Plantão de urgência (interior) – sábados, domingos e feriados, das 12h às 18h"
+      }
     ],
     "email": null,
     "site": "https://www.defensoria.es.def.br/",
@@ -66,7 +97,12 @@
     "id": "pref-vitoria-156",
     "nome": "Fala Vitória 156 (Prefeitura de Vitória)",
     "municipio": "Vitória",
-    "telefones": [{"numero": "156", "rotulo": "Só funciona ligando de dentro do município de Vitória"}],
+    "telefones": [
+      {
+        "numero": "156",
+        "rotulo": "Só funciona ligando de dentro do município de Vitória"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://cartadeservicos.vitoria.es.gov.br/areas/26-Ouvidoria/servicos/361-Fala-Vitoria-156/",
@@ -81,7 +117,12 @@
     "id": "pref-vitoria-geral",
     "nome": "Prefeitura de Vitória – Protocolo Geral",
     "municipio": "Vitória",
-    "telefones": [{"numero": "(27) 3382-6000", "rotulo": "Protocolo Geral"}],
+    "telefones": [
+      {
+        "numero": "(27) 3382-6000",
+        "rotulo": "Protocolo Geral"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://www.vitoria.es.gov.br",
@@ -111,7 +152,12 @@
     "id": "vitoria-ciptea",
     "nome": "Prefeitura de Vitória – Carteira do Autista (CIPTEA)",
     "municipio": "Vitória",
-    "telefones": [{"numero": "(27) 3382-5484", "rotulo": "Recepção Central"}],
+    "telefones": [
+      {
+        "numero": "(27) 3382-5484",
+        "rotulo": "Recepção Central"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://m.vitoria.es.gov.br/noticia/vitoria-inicia-emissao-das-carteiras-de-identificacao-para-pessoas-com-autismo-48364",
@@ -136,24 +182,114 @@
     "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-de-assistencia-social",
     "verificado_em": "2026-09-21",
     "unidades": [
-      {"nome": "CRAS Maria da Glória Monteiro Alves", "endereco": "Av. Vitória, 1419 – Cruzamento", "telefones": ["(27) 3132-8359"], "bairros": "Fradinhos, Cruzamento, Forte São João, Jucutuquara, Romão"},
-      {"nome": "CRAS Edelson Alves Batista", "endereco": "Rua João José de Souza, s/n – Da Penha", "telefones": ["(27) 3215-3132"], "bairros": "Bonfim, Itararé, São Benedito, Bairro da Penha"},
-      {"nome": "CRAS Olga Maria da Penha Ribeiro", "endereco": "Tv. Manoel Messias das Neves, 25 – Enseada do Suá", "telefones": ["(27) 3382-5473"], "bairros": "Barro Vermelho, Bento Ferreira, Enseada do Suá, Praia do Canto, Praia do Suá, Santa Helena, Santa Lúcia, Santa Luíza e outros"},
-      {"nome": "CRAS José dos Santos", "endereco": "Rua Pedro Lima do Rosário, 186 – Gurigica", "telefones": ["(27) 3235-2605"], "bairros": "Consolação, Gurigica (Jaburu), Horto, De Lourdes, Nazareth"},
-      {"nome": "CRAS Izaltino Alves", "endereco": "Rua Vinte e Três de Abril, 35 – Ilha das Caieiras", "telefones": ["(27) 3332-6889"], "bairros": "Comdusa, Ilha das Caieiras, São Pedro I a IV, São José"},
-      {"nome": "CRAS Claudionor Lopes Pereira", "endereco": "Rua Marechal Floriano, 427 – Maruípe", "telefones": ["(27) 3314-5311"], "bairros": "Eucalipto, Engenharia, Maruípe, Santa Cecília, Santos Dumont, São Cristóvão, Tabuazeiro"},
-      {"nome": "CRAS Parque Moscoso", "endereco": "Rua Loren Reno, 115 – Parque Moscoso", "telefones": ["(27) 3132-8190"], "bairros": "Cabral, Cidade Alta, Fonte Grande, Ilha do Príncipe, Moscoso, Piedade, Quadro, Santa Clara, Vila Rubim"},
-      {"nome": "CRAS Judite Francisca Venâncio", "endereco": "Rua Tancredo Neves, 79 – Resistência", "telefones": ["(27) 3225-2713"], "bairros": "Conquista, São Pedro V (Nova Palestina), Resistência"},
-      {"nome": "CRAS Alaides dos Anjos", "endereco": "Rua da Integração, s/n – Santa Martha", "telefones": ["(27) 3332-7942"], "bairros": "Andorinhas, Joana D'Arc, Mangue Seco, Santa Martha"},
-      {"nome": "CRAS Adriana dos Santos Alves", "endereco": "Av. Prof. Fernando Duarte Rabelo, 70 – Segurança do Lar", "telefones": ["(27) 3317-8792"], "bairros": "Aeroporto, Antônio Honório, Boa Vista, Goiabeiras, Jardim da Penha, Jardim Camburi, Jabour, Maria Ortiz, Mata da Praia, Morada de Camburi, Pontal de Camburi, República, Segurança do Lar, Sólon Borges"},
-      {"nome": "CRAS Emilio Francisco da Vitória", "endereco": "Rua Flamboyans, 176 – Universitário", "telefones": ["(27) 3233-9692"], "bairros": "Bela Vista, Estrelinha, Grande Vitória, Universitário, Inhanguetá"}
+      {
+        "nome": "CRAS Maria da Glória Monteiro Alves",
+        "endereco": "Av. Vitória, 1419 – Cruzamento",
+        "telefones": [
+          "(27) 3132-8359"
+        ],
+        "bairros": "Fradinhos, Cruzamento, Forte São João, Jucutuquara, Romão"
+      },
+      {
+        "nome": "CRAS Edelson Alves Batista",
+        "endereco": "Rua João José de Souza, s/n – Da Penha",
+        "telefones": [
+          "(27) 3215-3132"
+        ],
+        "bairros": "Bonfim, Itararé, São Benedito, Bairro da Penha"
+      },
+      {
+        "nome": "CRAS Olga Maria da Penha Ribeiro",
+        "endereco": "Tv. Manoel Messias das Neves, 25 – Enseada do Suá",
+        "telefones": [
+          "(27) 3382-5473"
+        ],
+        "bairros": "Barro Vermelho, Bento Ferreira, Enseada do Suá, Praia do Canto, Praia do Suá, Santa Helena, Santa Lúcia, Santa Luíza e outros"
+      },
+      {
+        "nome": "CRAS José dos Santos",
+        "endereco": "Rua Pedro Lima do Rosário, 186 – Gurigica",
+        "telefones": [
+          "(27) 3235-2605"
+        ],
+        "bairros": "Consolação, Gurigica (Jaburu), Horto, De Lourdes, Nazareth"
+      },
+      {
+        "nome": "CRAS Izaltino Alves",
+        "endereco": "Rua Vinte e Três de Abril, 35 – Ilha das Caieiras",
+        "telefones": [
+          "(27) 3332-6889"
+        ],
+        "bairros": "Comdusa, Ilha das Caieiras, São Pedro I a IV, São José"
+      },
+      {
+        "nome": "CRAS Claudionor Lopes Pereira",
+        "endereco": "Rua Marechal Floriano, 427 – Maruípe",
+        "telefones": [
+          "(27) 3314-5311"
+        ],
+        "bairros": "Eucalipto, Engenharia, Maruípe, Santa Cecília, Santos Dumont, São Cristóvão, Tabuazeiro"
+      },
+      {
+        "nome": "CRAS Parque Moscoso",
+        "endereco": "Rua Loren Reno, 115 – Parque Moscoso",
+        "telefones": [
+          "(27) 3132-8190"
+        ],
+        "bairros": "Cabral, Cidade Alta, Fonte Grande, Ilha do Príncipe, Moscoso, Piedade, Quadro, Santa Clara, Vila Rubim"
+      },
+      {
+        "nome": "CRAS Judite Francisca Venâncio",
+        "endereco": "Rua Tancredo Neves, 79 – Resistência",
+        "telefones": [
+          "(27) 3225-2713"
+        ],
+        "bairros": "Conquista, São Pedro V (Nova Palestina), Resistência"
+      },
+      {
+        "nome": "CRAS Alaides dos Anjos",
+        "endereco": "Rua da Integração, s/n – Santa Martha",
+        "telefones": [
+          "(27) 3332-7942"
+        ],
+        "bairros": "Andorinhas, Joana D'Arc, Mangue Seco, Santa Martha"
+      },
+      {
+        "nome": "CRAS Adriana dos Santos Alves",
+        "endereco": "Av. Prof. Fernando Duarte Rabelo, 70 – Segurança do Lar",
+        "telefones": [
+          "(27) 3317-8792"
+        ],
+        "bairros": "Aeroporto, Antônio Honório, Boa Vista, Goiabeiras, Jardim da Penha, Jardim Camburi, Jabour, Maria Ortiz, Mata da Praia, Morada de Camburi, Pontal de Camburi, República, Segurança do Lar, Sólon Borges"
+      },
+      {
+        "nome": "CRAS Emilio Francisco da Vitória",
+        "endereco": "Rua Flamboyans, 176 – Universitário",
+        "telefones": [
+          "(27) 3233-9692"
+        ],
+        "bairros": "Bela Vista, Estrelinha, Grande Vitória, Universitário, Inhanguetá"
+      },
+      {
+        "nome": "CRAS Centro",
+        "endereco": "Rua Loren Reno, 115, Centro, Vitória - ES, CEP 29010-620",
+        "telefones": [
+          "(27) 3132-8075"
+        ],
+        "bairros": "Centro"
+      }
     ]
   },
   {
     "id": "serra-dot",
     "nome": "Serra – Departamento de Operações de Trânsito (credencial de estacionamento)",
     "municipio": "Serra",
-    "telefones": [{"numero": "(27) 3252-2937", "rotulo": "Departamento de Operações de Trânsito"}],
+    "telefones": [
+      {
+        "numero": "(27) 3252-2937",
+        "rotulo": "Departamento de Operações de Trânsito"
+      }
+    ],
     "whatsapp": [],
     "email": "dot.sedes@serra.es.gov.br",
     "site": "https://serra.es.gov.br/site/guiadeservicos/busca/241/CART%C3%83O%20PARA%20PESSOAS%20COM%20DEFICI%C3%8ANCIA",
@@ -168,8 +304,18 @@
     "id": "serra-gee",
     "nome": "Serra – Gerência de Educação Especial (Secretaria de Educação)",
     "municipio": "Serra",
-    "telefones": [{"numero": "(27) 3291-4210", "rotulo": "Gerência de Educação Especial"}],
-    "whatsapp": [{"numero": "(27) 98166-0903", "rotulo": "Canal para famílias de estudantes da Educação Especial"}],
+    "telefones": [
+      {
+        "numero": "(27) 3291-4210",
+        "rotulo": "Gerência de Educação Especial"
+      }
+    ],
+    "whatsapp": [
+      {
+        "numero": "(27) 98166-0903",
+        "rotulo": "Canal para famílias de estudantes da Educação Especial"
+      }
+    ],
     "email": "gee.sedu@serra.es.gov.br",
     "site": "https://www.serra.es.gov.br/pagina/educacao-especial",
     "endereco": null,
@@ -184,9 +330,15 @@
     "nome": "Serra – Ouvidoria geral da Prefeitura",
     "municipio": "Serra",
     "telefones": [
-      {"numero": "162"},
-      {"numero": "0800 283 9780"},
-      {"numero": "(27) 3291-2011"}
+      {
+        "numero": "162"
+      },
+      {
+        "numero": "0800 283 9780"
+      },
+      {
+        "numero": "(27) 3291-2011"
+      }
     ],
     "whatsapp": [],
     "email": "ouvidoria@serra.es.gov.br",
@@ -202,7 +354,12 @@
     "id": "serra-sedir-cimptea",
     "nome": "Serra – Secretaria de Direitos Humanos e Cidadania (Carteira do Autista)",
     "municipio": "Serra",
-    "telefones": [{"numero": "(27) 98182-0968", "rotulo": "Informações sobre a CIMPTEA"}],
+    "telefones": [
+      {
+        "numero": "(27) 98182-0968",
+        "rotulo": "Informações sobre a CIMPTEA"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://www.serra.es.gov.br/noticias/sedir-entre-carteira-de-identificacao-para-pessoas-com-tea",
@@ -227,17 +384,102 @@
     "fonte_url": "https://www.serra.es.gov.br/site/pagina/centro-de-referencia-de-assistencia-social-cras",
     "verificado_em": "2026-09-21",
     "unidades": [
-      {"nome": "CRAS Jacaraípe", "endereco": "Av. Guarani – Das Laranjeiras", "telefones": ["(27) 3245-2898", "(27) 3252-8090", "(27) 98166-0048"], "bairros": "Bairro das Laranjeiras, Castelândia, Conjunto Jacaraípe, Costa Bela, Enseada de Jacaraípe, Lagoa de Jacaraípe, Parque Jacaraípe, Portal de Jacaraípe, Praia da Baleia, São Patrício e outros"},
-      {"nome": "CRAS Jardim Carapina", "endereco": "Rua Salvador, s/n – Boa Vista", "telefones": ["(27) 3318-6111", "(27) 99886-3209"], "bairros": "André Carloni, Bairro de Fátima, Boa Vista II, Carapina Grande, Eurico Salles, Jardim Carapina e outros"},
-      {"nome": "CRAS Jardim Tropical", "endereco": "Rua Santa Rita, s/n – Jardim Tropical", "telefones": ["(27) 98166-0142", "(27) 98182-0568"], "bairros": "Cantinho do Céu, Central Carapina, Diamantina, Jardim Tropical, José de Anchieta, Planalto de Carapina e outros"},
-      {"nome": "CRAS Laranjeiras", "endereco": "Rua 3D, s/n – Civit II", "telefones": ["(27) 98166-0500"], "bairros": "Barcelona, Barro Branco, Camará, Civit II, Colina de Laranjeiras, Nova Carapina I e II, Taquara I e II, Valparaíso e outros"},
-      {"nome": "CRAS Nova Almeida", "endereco": "Av. Doutor Milton David, 758 – Centro", "telefones": ["(27) 3252-7042", "(27) 98182-1207", "(27) 98182-0417"], "bairros": "Bairro Novo, Boa Vista I, Marbella, Nova Almeida, Parque das Gaivotas, Praiamar, Reis Magos, São João, Serramar e outros"},
-      {"nome": "CRAS Novo Horizonte", "endereco": "Rua Leonardo da Vinci, s/n – Cidade Continental (Setor Europa)", "telefones": ["(27) 98182-0670", "(27) 3228-6889"], "bairros": "Balneário de Carapebus, Bicanga, Cidade Continental, Novo Horizonte, São Diogo I e II, São Geraldo e outros"},
-      {"nome": "CRAS Novo Porto Canoa", "endereco": "Av. Domingos José Martins, 142 – Eldorado", "telefones": ["(27) 98182-0760"], "bairros": "Cidade Pomar, Eldorado, Novo Porto Canoa, Porto Canoa"},
-      {"nome": "CRAS Planalto Serrano", "endereco": "Av. Bela Vista, s/n – Planalto Serrano, bloco A", "telefones": ["(27) 98166-0936"], "bairros": "Campinho da Serra I e II, Planalto Serrano, Vista da Serra I, II e III"},
-      {"nome": "CRAS Serra Dourada", "endereco": "Rua das Acácias, 53 – Serra Dourada II", "telefones": ["(27) 98166-0938"], "bairros": "Civit I, Maringá, Mata da Serra, Planície da Serra, Porto Dourado, Serra Dourada I, II e III e outros"},
-      {"nome": "CRAS Serra Sede", "endereco": "Rua Putiri, 138 – Caçaroca", "telefones": ["(27) 3251-7757"], "bairros": "Caçaroca, Cascata, Chapada Grande, Cidade Nova da Serra, Colina da Serra, Divinópolis, Jardim da Serra, Palmeiras, Serra Centro e outros"},
-      {"nome": "CRAS Vila Nova de Colares", "endereco": "Rua Pamplona, s/n – Vila Nova de Colares", "telefones": ["(27) 98166-0129", "(27) 98182-0382"], "bairros": "Alterosas, Boulevard Lagoa, Feu Rosa, Manguinhos, Nova Zelândia, Ourimar, Vila Nova de Colares"}
+      {
+        "nome": "CRAS Jacaraípe",
+        "endereco": "Av. Guarani – Das Laranjeiras",
+        "telefones": [
+          "(27) 3245-2898",
+          "(27) 3252-8090",
+          "(27) 98166-0048"
+        ],
+        "bairros": "Bairro das Laranjeiras, Castelândia, Conjunto Jacaraípe, Costa Bela, Enseada de Jacaraípe, Lagoa de Jacaraípe, Parque Jacaraípe, Portal de Jacaraípe, Praia da Baleia, São Patrício e outros"
+      },
+      {
+        "nome": "CRAS Jardim Carapina",
+        "endereco": "Rua Salvador, s/n – Boa Vista",
+        "telefones": [
+          "(27) 3318-6111",
+          "(27) 99886-3209"
+        ],
+        "bairros": "André Carloni, Bairro de Fátima, Boa Vista II, Carapina Grande, Eurico Salles, Jardim Carapina e outros"
+      },
+      {
+        "nome": "CRAS Jardim Tropical",
+        "endereco": "Rua Santa Rita, s/n – Jardim Tropical",
+        "telefones": [
+          "(27) 98166-0142",
+          "(27) 98182-0568"
+        ],
+        "bairros": "Cantinho do Céu, Central Carapina, Diamantina, Jardim Tropical, José de Anchieta, Planalto de Carapina e outros"
+      },
+      {
+        "nome": "CRAS Laranjeiras",
+        "endereco": "Rua 3D, s/n – Civit II",
+        "telefones": [
+          "(27) 98166-0500"
+        ],
+        "bairros": "Barcelona, Barro Branco, Camará, Civit II, Colina de Laranjeiras, Nova Carapina I e II, Taquara I e II, Valparaíso e outros"
+      },
+      {
+        "nome": "CRAS Nova Almeida",
+        "endereco": "Av. Doutor Milton David, 758 – Centro",
+        "telefones": [
+          "(27) 3252-7042",
+          "(27) 98182-1207",
+          "(27) 98182-0417"
+        ],
+        "bairros": "Bairro Novo, Boa Vista I, Marbella, Nova Almeida, Parque das Gaivotas, Praiamar, Reis Magos, São João, Serramar e outros"
+      },
+      {
+        "nome": "CRAS Novo Horizonte",
+        "endereco": "Rua Leonardo da Vinci, s/n – Cidade Continental (Setor Europa)",
+        "telefones": [
+          "(27) 98182-0670",
+          "(27) 3228-6889"
+        ],
+        "bairros": "Balneário de Carapebus, Bicanga, Cidade Continental, Novo Horizonte, São Diogo I e II, São Geraldo e outros"
+      },
+      {
+        "nome": "CRAS Novo Porto Canoa",
+        "endereco": "Av. Domingos José Martins, 142 – Eldorado",
+        "telefones": [
+          "(27) 98182-0760"
+        ],
+        "bairros": "Cidade Pomar, Eldorado, Novo Porto Canoa, Porto Canoa"
+      },
+      {
+        "nome": "CRAS Planalto Serrano",
+        "endereco": "Av. Bela Vista, s/n – Planalto Serrano, bloco A",
+        "telefones": [
+          "(27) 98166-0936"
+        ],
+        "bairros": "Campinho da Serra I e II, Planalto Serrano, Vista da Serra I, II e III"
+      },
+      {
+        "nome": "CRAS Serra Dourada",
+        "endereco": "Rua das Acácias, 53 – Serra Dourada II",
+        "telefones": [
+          "(27) 98166-0938"
+        ],
+        "bairros": "Civit I, Maringá, Mata da Serra, Planície da Serra, Porto Dourado, Serra Dourada I, II e III e outros"
+      },
+      {
+        "nome": "CRAS Serra Sede",
+        "endereco": "Rua Putiri, 138 – Caçaroca",
+        "telefones": [
+          "(27) 3251-7757"
+        ],
+        "bairros": "Caçaroca, Cascata, Chapada Grande, Cidade Nova da Serra, Colina da Serra, Divinópolis, Jardim da Serra, Palmeiras, Serra Centro e outros"
+      },
+      {
+        "nome": "CRAS Vila Nova de Colares",
+        "endereco": "Rua Pamplona, s/n – Vila Nova de Colares",
+        "telefones": [
+          "(27) 98166-0129",
+          "(27) 98182-0382"
+        ],
+        "bairros": "Alterosas, Boulevard Lagoa, Feu Rosa, Manguinhos, Nova Zelândia, Ourimar, Vila Nova de Colares"
+      }
     ]
   },
   {
@@ -245,8 +487,14 @@
     "nome": "Prefeitura de Vila Velha",
     "municipio": "Vila Velha",
     "telefones": [
-      {"numero": "(27) 3149-7400", "rotulo": "Prefeitura"},
-      {"numero": "162", "rotulo": "Ouvidoria"}
+      {
+        "numero": "(27) 3149-7400",
+        "rotulo": "Prefeitura"
+      },
+      {
+        "numero": "162",
+        "rotulo": "Ouvidoria"
+      }
     ],
     "whatsapp": [],
     "email": null,
@@ -263,9 +511,15 @@
     "nome": "Vila Velha – Educação Especial (Secretaria Municipal de Educação)",
     "municipio": "Vila Velha",
     "telefones": [
-      {"numero": "(27) 3389-9397"},
-      {"numero": "(27) 3389-7266"},
-      {"numero": "(27) 3229-1617"}
+      {
+        "numero": "(27) 3389-9397"
+      },
+      {
+        "numero": "(27) 3389-7266"
+      },
+      {
+        "numero": "(27) 3229-1617"
+      }
     ],
     "whatsapp": [],
     "email": null,
@@ -291,19 +545,66 @@
     "fonte_url": "https://setades.es.gov.br/media/Cras/Contatos_CRAS.pdf",
     "verificado_em": "2026-09-21",
     "unidades": [
-      {"nome": "CRAS Alvorada", "endereco": "Rua Augusto Clóvis dos Santos, 1 – Alvorada", "telefones": ["(27) 99264-9982"], "bairros": null},
-      {"nome": "CRAS Centro", "endereco": "Rua Araribóia, 124 – Centro", "telefones": ["(27) 99281-7789"], "bairros": null},
-      {"nome": "CRAS Ilha das Flores", "endereco": "Rua Pedrolino Nascimento, 1 – Ilha das Flores", "telefones": ["(27) 99247-4143"], "bairros": null},
-      {"nome": "CRAS Jabaeté", "endereco": "Av. Líbano, 1 – Jabaeté", "telefones": ["(27) 99283-8577"], "bairros": null},
-      {"nome": "CRAS Jardim Asteca", "endereco": "Rua Açucena, s/n – Jardim Asteca", "telefones": ["(27) 99281-2438"], "bairros": null},
-      {"nome": "CRAS Morada da Barra", "endereco": "Estrada Ayrton Senna, Quadra L4, 1 – Morada da Barra", "telefones": ["(27) 99256-7385"], "bairros": null}
+      {
+        "nome": "CRAS Alvorada",
+        "endereco": "Rua Augusto Clóvis dos Santos, 1 – Alvorada",
+        "telefones": [
+          "(27) 99264-9982"
+        ],
+        "bairros": null
+      },
+      {
+        "nome": "CRAS Centro",
+        "endereco": "Rua Araribóia, 124 – Centro",
+        "telefones": [
+          "(27) 99281-7789"
+        ],
+        "bairros": null
+      },
+      {
+        "nome": "CRAS Ilha das Flores",
+        "endereco": "Rua Pedrolino Nascimento, 1 – Ilha das Flores",
+        "telefones": [
+          "(27) 99247-4143"
+        ],
+        "bairros": null
+      },
+      {
+        "nome": "CRAS Jabaeté",
+        "endereco": "Av. Líbano, 1 – Jabaeté",
+        "telefones": [
+          "(27) 99283-8577"
+        ],
+        "bairros": null
+      },
+      {
+        "nome": "CRAS Jardim Asteca",
+        "endereco": "Rua Açucena, s/n – Jardim Asteca",
+        "telefones": [
+          "(27) 99281-2438"
+        ],
+        "bairros": null
+      },
+      {
+        "nome": "CRAS Morada da Barra",
+        "endereco": "Estrada Ayrton Senna, Quadra L4, 1 – Morada da Barra",
+        "telefones": [
+          "(27) 99256-7385"
+        ],
+        "bairros": null
+      }
     ]
   },
   {
     "id": "sedu-educacao-especial",
     "nome": "SEDU – Gerência de Educação Especial (rede estadual)",
     "municipio": null,
-    "telefones": [{"numero": "(27) 3636-7862", "rotulo": "Gerência de Educação Especial na Perspectiva da Educação Inclusiva"}],
+    "telefones": [
+      {
+        "numero": "(27) 3636-7862",
+        "rotulo": "Gerência de Educação Especial na Perspectiva da Educação Inclusiva"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://sedu.es.gov.br/educacao-especial-2",
@@ -318,7 +619,14 @@
     "id": "sedu-central",
     "nome": "SEDU – Secretaria de Estado da Educação (sede)",
     "municipio": null,
-    "telefones": [{"numero": "(27) 3636-7600"}, {"numero": "(27) 3636-7601"}],
+    "telefones": [
+      {
+        "numero": "(27) 3636-7600"
+      },
+      {
+        "numero": "(27) 3636-7601"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://sedu.es.gov.br/local-e-horario-de-atendimento-2",
@@ -333,7 +641,12 @@
     "id": "ceturb",
     "nome": "Ceturb-ES – Passe Livre PCD do Transcol",
     "municipio": null,
-    "telefones": [{"numero": "(27) 3232-4500", "rotulo": "Sede da Ceturb"}],
+    "telefones": [
+      {
+        "numero": "(27) 3232-4500",
+        "rotulo": "Sede da Ceturb"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://ceturb.es.gov.br/passe-livre-pcd",
@@ -348,7 +661,12 @@
     "id": "sefaz-es",
     "nome": "Sefaz-ES – Receita Estadual (isenção de IPVA)",
     "municipio": null,
-    "telefones": [{"numero": "(27) 3347-5102", "rotulo": "Sede da Sefaz"}],
+    "telefones": [
+      {
+        "numero": "(27) 3347-5102",
+        "rotulo": "Sede da Sefaz"
+      }
+    ],
     "whatsapp": [],
     "email": null,
     "site": "https://sefaz.es.gov.br/isencao-de-ipva",
@@ -357,6 +675,481 @@
     "observacao": "O pedido é analisado pela Agência da Receita Estadual da sua região.",
     "fonte_url": "https://sefaz.es.gov.br/isencao-de-ipva",
     "verificado_em": "2026-09-21",
+    "unidades": []
+  },
+  {
+    "id": "ubs-vitoria",
+    "nome": "Unidades de Saúde (UBS) de Vitória (29 unidades)",
+    "municipio": "Vitória",
+    "telefones": [],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.vitoria.es.gov.br/municipe/saude",
+    "endereco": null,
+    "horario": "Segunda a sexta-feira, das 7h às 19h (varia por unidade)",
+    "observacao": "Todas as unidades têm rampa, banheiro adaptado e atendimento prioritário (Lei Federal nº 10.048/2000), inclusive para autistas com laudo ou CIPTEA.",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude",
+    "verificado_em": "2026-11-08",
+    "unidades": [
+      {
+        "nome": "Unidade de Saúde de Jardim Camburi",
+        "endereco": "Rua Carlos Martins, 1969, Jardim Camburi, Vitória - ES",
+        "telefones": [
+          "(27) 3337-2300"
+        ],
+        "bairros": "Jardim Camburi"
+      },
+      {
+        "nome": "Unidade de Saúde da Praia do Suá",
+        "endereco": "Rua Almirante Tamandaré, 155, Praia do Suá, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5060"
+        ],
+        "bairros": "Praia do Suá"
+      },
+      {
+        "nome": "Unidade de Saúde Vitória (Centro)",
+        "endereco": "Parque Moscoso, s/n (Entrada pela Rua 23 de Maio), Centro, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5026"
+        ],
+        "bairros": "Centro"
+      },
+      {
+        "nome": "Unidade de Saúde de Maruípe",
+        "endereco": "Rua Engenheiro Rubens Bley, s/n, Maruípe, Vitória - ES",
+        "telefones": [
+          "(27) 3314-5310"
+        ],
+        "bairros": "Maruípe"
+      },
+      {
+        "nome": "Unidade de Saúde de São Pedro",
+        "endereco": "Rodovia Serafim Derenzi, 4618, São Pedro, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5080"
+        ],
+        "bairros": "São Pedro"
+      },
+      {
+        "nome": "Unidade de Saúde de Jardim da Penha",
+        "endereco": "Rua Doutor Moacyr Gonçalves, s/n, Jardim da Penha, Vitória - ES",
+        "telefones": [
+          "(27) 3137-2900"
+        ],
+        "bairros": "Jardim da Penha"
+      },
+      {
+        "nome": "Unidade de Saúde do Forte São João",
+        "endereco": "Rua Hermes Curry Carneiro, 160, Forte São João, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5020"
+        ],
+        "bairros": "Forte São João"
+      },
+      {
+        "nome": "Unidade de Saúde de Santo Antônio",
+        "endereco": "Rua Ernesto Bassini, 43, Santo Antônio, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5100"
+        ],
+        "bairros": "Santo Antônio"
+      },
+      {
+        "nome": "Unidade de Saúde da Ilha de Santa Maria",
+        "endereco": "Rua João de Oliveira, s/n, Ilha de Santa Maria, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5040"
+        ],
+        "bairros": "Ilha de Santa Maria"
+      },
+      {
+        "nome": "Unidade de Saúde do Bairro República",
+        "endereco": "Avenida Presidente Costa e Silva, s/n, Bairro República, Vitória - ES",
+        "telefones": [
+          "(27) 3327-0200"
+        ],
+        "bairros": "Bairro República"
+      },
+      {
+        "nome": "Unidade de Saúde de Andorinhas",
+        "endereco": "Rua Emílio Ferreira da Silva, s/n, Andorinhas, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5120"
+        ],
+        "bairros": "Andorinhas"
+      },
+      {
+        "nome": "Unidade de Saúde de Conquista",
+        "endereco": "Rua São José, s/n, Conquista, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5111"
+        ],
+        "bairros": "Conquista"
+      },
+      {
+        "nome": "Unidade de Saúde de Consolação",
+        "endereco": "Rua Desembargador Gilson Mendonça, s/n, Consolação, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5064"
+        ],
+        "bairros": "Consolação"
+      },
+      {
+        "nome": "Unidade de Saúde Do Quadro",
+        "endereco": "Rua São João, s/n, Do Quadro, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5034"
+        ],
+        "bairros": "Do Quadro"
+      },
+      {
+        "nome": "Unidade de Saúde da Fonte Grande",
+        "endereco": "Rua Antônio Pinto de Aguiar, s/n, Fonte Grande, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5047"
+        ],
+        "bairros": "Fonte Grande"
+      },
+      {
+        "nome": "Unidade de Saúde da Ilha do Príncipe",
+        "endereco": "Rua José de Carvalho, s/n, Ilha do Príncipe, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5069"
+        ],
+        "bairros": "Ilha do Príncipe"
+      },
+      {
+        "nome": "Unidade de Saúde de Itararé",
+        "endereco": "Rua das Palmeiras, 300, Itararé, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5095"
+        ],
+        "bairros": "Itararé"
+      },
+      {
+        "nome": "Unidade de Saúde de Jesus de Nazareth",
+        "endereco": "Rua Helena Muller, s/n, Jesus de Nazareth, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5072"
+        ],
+        "bairros": "Jesus de Nazareth"
+      },
+      {
+        "nome": "Unidade de Saúde de Maria Ortiz",
+        "endereco": "Rua Professor Renato Ribeiro dos Santos, s/n, Maria Ortiz, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5115"
+        ],
+        "bairros": "Maria Ortiz"
+      },
+      {
+        "nome": "Unidade de Saúde de Resistência",
+        "endereco": "Rodovia Serafim Derenzi, s/n, Resistência, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5098"
+        ],
+        "bairros": "Resistência"
+      },
+      {
+        "nome": "Unidade de Saúde do Alagoano",
+        "endereco": "Rua Engenheiro Manoel dos Passos Barros, s/n, Alagoano, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5032"
+        ],
+        "bairros": "Alagoano"
+      },
+      {
+        "nome": "Unidade de Saúde do Bairro da Penha",
+        "endereco": "Avenida Coronel José Martins de Figueiredo, s/n, Bairro da Penha, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5058"
+        ],
+        "bairros": "Bairro da Penha"
+      },
+      {
+        "nome": "Unidade de Saúde de Grande Vitória",
+        "endereco": "Rua Vinte e Três de Agosto, s/n, Grande Vitória, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5102"
+        ],
+        "bairros": "Grande Vitória"
+      },
+      {
+        "nome": "Unidade de Saúde da Ilha das Caieiras",
+        "endereco": "Rua Nova Esperança, s/n, Ilha das Caieiras, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5107"
+        ],
+        "bairros": "Ilha das Caieiras"
+      },
+      {
+        "nome": "Unidade de Saúde de Jabour",
+        "endereco": "Rua Professor Olímpio Lyrio, s/n, Jabour, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5117"
+        ],
+        "bairros": "Jabour"
+      },
+      {
+        "nome": "Unidade de Saúde de Santa Luiza",
+        "endereco": "Rua Doutor Guilherme Serrano, s/n, Santa Luiza, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5089"
+        ],
+        "bairros": "Santa Luiza"
+      },
+      {
+        "nome": "Unidade de Saúde de Santa Martha",
+        "endereco": "Rua Joana D'Arc, s/n, Santa Martha, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5085"
+        ],
+        "bairros": "Santa Martha"
+      },
+      {
+        "nome": "Unidade de Saúde de Santo André",
+        "endereco": "Rua da Coragem, s/n, Santo André, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5110"
+        ],
+        "bairros": "Santo André"
+      },
+      {
+        "nome": "Unidade de Saúde de São Cristóvão",
+        "endereco": "Rua Engenheiro Rubem Bley, s/n, São Cristóvão, Vitória - ES",
+        "telefones": [
+          "(27) 3132-5092"
+        ],
+        "bairros": "São Cristóvão"
+      }
+    ]
+  },
+  {
+    "id": "cer_ii_sao_pedro_vitoria",
+    "nome": "Centro Especializado em Reabilitação Física e Intelectual (CER II)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3132-5080"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.vitoria.es.gov.br/municipe/saude",
+    "endereco": "Rodovia Serafim Derenzi, 4618, Policlínica de São Pedro, Vitória - ES",
+    "horario": "Segunda a sexta-feira, das 7h às 19h",
+    "observacao": "Reabilitação física e motora. Estimulação precoce e terapias multidisciplinares. Fonoaudiologia, terapia ocupacional e fisioterapia. Prescrição e concessão de meios auxiliares de locomoção (órteses e cadeiras de rodas). Acessibilidade: Rampas de acesso adaptadas; Banheiros acessíveis; Salas de fisioterapia e reabilitação motora equipadas; Vagas exclusivas para PCD; Consultórios e salas de estimulação com controle de ruído.",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "apae_bento_ferreira_vitoria",
+    "nome": "APAE Vitória - Associação de Pais e Amigos dos Excepcionais",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 2104-4000"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://vitoria.apaebrasil.org.br",
+    "endereco": "Rua Gal. Osório, s/n (ou Av. Cezar Hilal, 1180), Bento Ferreira, Vitória - ES",
+    "horario": "Segunda a sexta-feira, das 7h30 às 17h",
+    "observacao": "Atendimento Educacional Especializado (AEE). Intervenção precoce e avaliação diagnóstica global. Terapias multidisciplinares (psicologia, fonoaudiologia, TO). Acolhimento e orientação a familiares e cuidadores. Acessibilidade: Rampas de acesso; Elevadores adaptados; Banheiros acessíveis; Vagas exclusivas de estacionamento; Salas de integração sensorial; Ambientes estruturados para indivíduos com TEA; Profissionais capacitados em comunicação aumentativa/alternativa.",
+    "fonte_url": "https://vitoria.apaebrasil.org.br",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "crpd_seguranca_do_lar_vitoria",
+    "nome": "Centro de Referência para a Pessoa com Deficiência (CRPD)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3327-5236"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-para-a-pessoa-com-deficiencia",
+    "endereco": "Avenida Professor Fernando Duarte Rabelo, 70, Segurança do Lar, Vitória - ES",
+    "horario": "Segunda a sexta-feira, das 8h às 17h",
+    "observacao": "Oficinas de convivência e inclusão social. Apoio ao desenvolvimento da autonomia pessoal. Orientações sobre direitos e encaminhamentos socioassistenciais. Cursos e atividades adaptadas para PCDs. Acessibilidade: Totalmente acessível para cadeirantes; Piso tátil; Banheiros adaptados; Espaços de convivência com baixo estímulo sensorial; Intérprete de Libras disponível para atendimento.",
+    "fonte_url": "https://www.vitoria.es.gov.br/semas/centro-de-referencia-para-a-pessoa-com-deficiencia",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "capsi_forte_sao_joao_vitoria",
+    "nome": "Centro de Atenção Psicossocial Infantojuvenil (CAPSi)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3132-5024"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.vitoria.es.gov.br/municipe/saude",
+    "endereco": "Rua Hermes Curry Carneiro, 160, Forte São João, Vitória - ES",
+    "horario": "Segunda a sexta-feira, das 7h às 19h",
+    "observacao": "Acompanhamento em saúde mental infantojuvenil. Atendimento psiquiátrico e psicológico especializado. Oficinas terapêuticas e suporte multiprofissional. Suporte à família e ao cuidador. Acessibilidade: Rampa de acesso; Banheiro adaptado; Atendimento prioritário legal; Salas de acolhimento com baixo estímulo sonoro e visual; Equipe especializada em regulação de crises e desorganização sensorial.",
+    "fonte_url": "https://www.vitoria.es.gov.br/municipe/saude",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "hucam_neuropediatria_vitoria",
+    "nome": "Ambulatório de Neuropediatria e Genética - HUCAM (Hospital Universitário Cassiano Antônio Moraes)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3335-7100"
+      },
+      {
+        "numero": "(27) 3335-7199"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hucam-ufes",
+    "endereco": "Avenida Marechal Campos, 1355, Santos Dumont, Vitória - ES, CEP 29040-091",
+    "horario": "Segunda a sexta-feira, das 7h às 17h",
+    "observacao": "Investigação diagnóstica multidisciplinar e emissão de laudos de alta complexidade. Consultas médicas especializadas em Neuropediatria, Genética Médica e Pediatria do Desenvolvimento. Exames de neuroimagem, eletroencefalograma e triagem genética pelo SUS. Acessibilidade: Rampas de acesso em todos os blocos; Elevadores adaptados; Sanitários acessíveis com barras de apoio; Vagas reservadas para PCD no estacionamento interno; Sinalização tátil no piso dos corredores principais; Atendimento prioritário na triagem ambulatorial.",
+    "fonte_url": "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hucam-ufes",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "crefes_reabilitacao_estadual",
+    "nome": "CREFES - Centro de Reabilitação Física do Espírito Santo",
+    "municipio": "Vila Velha",
+    "telefones": [
+      {
+        "numero": "(27) 3636-6150"
+      },
+      {
+        "numero": "(27) 3636-6170"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://saude.es.gov.br/crefes",
+    "endereco": "Rua Gastão Roubach, s/n, Praia da Costa, Vila Velha - ES, CEP 29101-020",
+    "horario": "Segunda a sexta-feira, das 7h às 18h",
+    "observacao": "Prescrição, confecção, ajuste e entrega de órteses, próteses e calçados ortopédicos. Concessão de cadeiras de rodas manuais e motorizadas pelo SUS. Reabilitação neuromotora intensiva, fisioterapia e terapia ocupacional. Acessibilidade: Total conformidade com normas de acessibilidade motora; Piscina e ginásio terapêuticos adaptados; Banheiros acessíveis em todas as alas; Plataformas e rampas para cadeiras de rodas; Comunicação visual contrastante; Equipe de acolhimento especializada em reabilitação física.",
+    "fonte_url": "https://saude.es.gov.br/crefes",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "pestalozzi_grande_vitoria",
+    "nome": "Associação Pestalozzi (Referência Regional)",
+    "municipio": "Cariacica",
+    "telefones": [
+      {
+        "numero": "(27) 3388-3800"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://pestalozzies.org.br",
+    "endereco": "Rua Padre Gabriel, 18, Jardim América, Cariacica - ES, CEP 29140-190",
+    "horario": "Segunda a sexta-feira, das 7h30 às 17h",
+    "observacao": "Atendimento socioassistencial e psicopedagógico especializado. Terapias de estimulação e desenvolvimento de autonomia. Oficinas de preparação e inclusão no mercado de trabalho para PCDs. Acessibilidade: Rampas de acesso niveladas; Banheiros amplos e adaptados; Vagas exclusivas em frente à unidade; Salas pedagógicas e terapêuticas com iluminação difusa; Recursos de comunicação aumentativa e alternativa.",
+    "fonte_url": "https://pestalozzies.org.br",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "defensoria_publica_vitoria_saude_civel",
+    "nome": "Defensoria Pública do Estado do Espírito Santo (Núcleo de Vitória e SANES)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3198-3300"
+      },
+      {
+        "numero": "(27) 99837-4775"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.defensoria.es.def.br",
+    "endereco": "Rua Pedro Palácios, 60, Edifício Dinamite, Enseada do Suá, Vitória - ES, CEP 29050-320",
+    "horario": "Segunda a sexta-feira, das 8h às 17h",
+    "observacao": "Ajuizamento de ações para obtenção de medicamentos, fraldas e insumos negados pelo SUS. Ações judiciais para fornecimento de terapias multidisciplinares (fonoaudiologia, TO, ABA). Garantia de vaga escolar com professor auxiliar/mediador de inclusão. Orientação jurídica gratuita e tutela dos direitos fundamentais da PCD. Acessibilidade: Rampas de acesso na entrada; Elevadores com sinalização sonora e em Braille; Sanitários totalmente adaptados para cadeirantes; Atendimento prioritário legal garantido; Ambiente administrativo com atendimento individualizado em guichês/salas reservadas.",
+    "fonte_url": "https://www.defensoria.es.def.br",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "mpes_promotoria_pcd_vitoria",
+    "nome": "Ministério Público do Estado do Espírito Santo (Promotoria da Pessoa com Deficiência)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3194-4500"
+      },
+      {
+        "numero": "127"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.mpes.mp.br",
+    "endereco": "Rua Procurador Antônio Benedicto Amancio Pereira, 121, Edifício Procurador-Geral de Justiça, Santa Helena, Vitória - ES, CEP 29055-036",
+    "horario": "Segunda a sexta-feira, das 12h às 18h",
+    "observacao": "Recepção de denúncias de discriminação, negligência ou violação de direitos da PCD. Fiscalização das condições de acessibilidade em prédios públicos, calçadas e transporte coletivo. Cobrança e instauração de inquéritos para contratação de cuidadores/estagiários na rede de ensino. Ações Civis Públicas em defesa dos direitos coletivos e difusos de pessoas com deficiência. Acessibilidade: Total conformidade com normas de acessibilidade física; Rampas, portas automáticas e elevadores adaptados; Sanitários acessíveis em todos os andares; Vagas exclusivas para PCD no estacionamento; Sinalização podotátil nos acessos principais; Painéis informativos com alto contraste.",
+    "fonte_url": "https://www.mpes.mp.br",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "comped_conselho_pcd_vitoria",
+    "nome": "COMPED - Conselho Municipal dos Direitos da Pessoa com Deficiência de Vitória",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 3382-6178"
+      },
+      {
+        "numero": "(27) 3382-6179"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://m.vitoria.es.gov.br/conselhos/comped",
+    "endereco": "Avenida Princesa Isabel, 54, Edifício Barão de Mauá, Sala 401 (Casa dos Conselhos), Centro, Vitória - ES, CEP 29010-360",
+    "horario": "Segunda a sexta-feira, das 8h às 17h",
+    "observacao": "Controle social e fiscalização das políticas públicas municipais para PCDs. Acolhimento de demandas da comunidade e encaminhamento aos órgãos competentes da Prefeitura. Realização de conferências, assembleias e debates sobre acessibilidade e inclusão. Espaço para proposição de melhorias urbanas e serviços socioassistenciais. Acessibilidade: Acesso com rampa e elevador adaptado; Sanitário acessível no prédio; Atendimento prioritário garantido; Apoio para comunicação direta e encaminhamentos acessíveis.",
+    "fonte_url": "https://m.vitoria.es.gov.br/conselhos/comped",
+    "verificado_em": "2026-11-08",
+    "unidades": []
+  },
+  {
+    "id": "gvbus_central_reta_da_penha_vitoria",
+    "nome": "Central de Atendimento GVBus (CartãoGV Especial / Passe Livre)",
+    "municipio": "Vitória",
+    "telefones": [
+      {
+        "numero": "(27) 2125-9500"
+      },
+      {
+        "numero": "0800 038 7058"
+      }
+    ],
+    "whatsapp": [],
+    "email": null,
+    "site": "https://www.cartaogv.com.br",
+    "endereco": "Avenida Nossa Senhora da Penha, 570, Edifício Emec, Santa Luíza, Vitória - ES, CEP 29045-402",
+    "horario": "Segunda a sexta-feira, das 8h às 16h30",
+    "observacao": "Cadastramento e recadastramento do CartãoGV Especial (Gratuidade no Sistema Transcol). Captura biométrica facial e emissão de segunda via do cartão. Inclusão e atualização de acompanhante no benefício do passe livre metropolitano. Acessibilidade: Rampas de acesso na portaria; Elevadores adaptados; Sanitários acessíveis; Guichês de atendimento rebaixados e preferenciais; Sistema de senhas com alerta sonoro e visual em telão contrastante; Atendimento prioritário legal garantido.",
+    "fonte_url": "https://www.cartaogv.com.br",
+    "verificado_em": "2026-11-08",
     "unidades": []
   }
 ]

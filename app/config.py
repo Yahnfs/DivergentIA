@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     ollama_num_predict: int = 1400  # limite de tokens da resposta
 
     anthropic_api_key: str | None = None
-    anthropic_model: str = "claude-sonnet-5"
+    anthropic_model: str = "claude-sonnet-5-5"
 
     database_url: str = "sqlite:///./data/locais.db"
 

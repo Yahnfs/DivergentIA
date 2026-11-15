@@ -19,12 +19,17 @@ class LocalAcessivelDB(Base):
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String, nullable=False)
     municipio = Column(String, nullable=False, index=True)
+    bairro = Column(String, nullable=True)
     endereco = Column(String, nullable=False)
     tipo = Column(String, nullable=False, index=True)
     recursos_acessibilidade = Column(JSON, default=list)
+    telefones = Column(JSON, default=list)
+    horario_funcionamento = Column(String, nullable=True)
     observacoes = Column(String, nullable=True)
     reportado_por = Column(String, nullable=True)
     verificado = Column(Boolean, default=False)
+    fonte_url = Column(String, nullable=True)
+    verificado_em = Column(String, nullable=True)  # data (ex.: "2026-11-08"), não a sessão de login
 
 
 class UsuarioDB(Base):
@@ -58,6 +63,7 @@ class UsuarioDB(Base):
     criado_em = Column(DateTime, default=datetime.datetime.utcnow)
 
     tokens = relationship("TokenContaDB", back_populates="usuario", cascade="all, delete-orphan")
+    conversas = relationship("ConversaDB", back_populates="usuario", cascade="all, delete-orphan")
 
 
 class TokenContaDB(Base):
@@ -75,8 +81,60 @@ class TokenContaDB(Base):
     usuario = relationship("UsuarioDB", back_populates="tokens")
 
 
+class ConversaDB(Base):
+    """Histórico de chat — só existe para quem está logado (ver app/routers/chat.py). Sem conta, o chat
+    continua funcionando normalmente e nada é gravado."""
+    __tablename__ = "conversas"
+
+    id = Column(Integer, primary_key=True, index=True)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False, index=True)
+    titulo = Column(String, nullable=False)
+    roteiro_final = Column(JSON, nullable=True)  # último roteiro (RoteiroOut) devolvido nesta conversa
+    criada_em = Column(DateTime, default=datetime.datetime.utcnow)
+    atualizada_em = Column(DateTime, default=datetime.datetime.utcnow)
+
+    usuario = relationship("UsuarioDB", back_populates="conversas")
+    mensagens = relationship(
+        "MensagemConversaDB", back_populates="conversa", cascade="all, delete-orphan",
+        order_by="MensagemConversaDB.id",
+    )
+
+
+class MensagemConversaDB(Base):
+    __tablename__ = "mensagens_conversa"
+
+    id = Column(Integer, primary_key=True, index=True)
+    conversa_id = Column(Integer, ForeignKey("conversas.id"), nullable=False, index=True)
+    papel = Column(String, nullable=False)  # "usuario" | "assistente"
+    conteudo = Column(String, nullable=False)
+    criada_em = Column(DateTime, default=datetime.datetime.utcnow)
+
+    conversa = relationship("ConversaDB", back_populates="mensagens")
+
+
+def _adicionar_colunas_novas() -> None:
+    """create_all() só cria tabela que não existe; se o arquivo .db já existia antes de uma coluna
+    ser adicionada ao modelo acima, ela precisa entrar "na mão" — o SQLite aceita ADD COLUMN simples."""
+    colunas_novas = {
+        "locais_acessiveis": {
+            "bairro": "VARCHAR", "telefones": "JSON", "horario_funcionamento": "VARCHAR",
+            "fonte_url": "VARCHAR", "verificado_em": "VARCHAR",
+        },
+    }
+    with engine.connect() as conn:
+        for tabela, colunas in colunas_novas.items():
+            existentes = {linha[1] for linha in conn.exec_driver_sql(f"PRAGMA table_info({tabela})")}
+            if not existentes:
+                continue  # tabela ainda não existe: create_all() já vai criá-la completa
+            for nome, tipo in colunas.items():
+                if nome not in existentes:
+                    conn.exec_driver_sql(f"ALTER TABLE {tabela} ADD COLUMN {nome} {tipo}")
+        conn.commit()
+
+
 def init_db() -> None:
     Base.metadata.create_all(bind=engine)
+    _adicionar_colunas_novas()
 
 
 def get_db():

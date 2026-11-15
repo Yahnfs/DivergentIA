@@ -43,207 +43,236 @@
     <symbol id="i-lista" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
     <symbol id="i-acesso" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="m4 8.5 8 1.5 8-1.5M12 10v5M8.5 21l3.5-6 3.5 6"/></symbol>
     <symbol id="i-ajuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+    <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
     <symbol id="i-imprimir" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-painel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 9l-3 3 3 3"/></symbol>
+    <symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
   </svg>
 
-  <a class="pular" href="#assistente">Pular para o assistente</a>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topo" id="topo">
-    <div class="container topo__linha">
-      <a class="logo" href="#topo" aria-label="DivergentIA, início">
-        <span class="logo__marca" aria-hidden="true"><svg class="logo__icone"><use href="#i-infinito"/></svg></span>
-        <span class="logo__nome">Divergent<span>IA</span></span>
-      </a>
-      <nav class="topo__nav" aria-label="Seções da página">
-        <a href="#assistente">Assistente</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#locais">Locais acessíveis</a>
-        <a href="entrar.html" id="link-conta">Entrar</a>
-      </nav>
-      <div class="a11y">
-        <button type="button" id="btn-a11y" class="btn btn--suave" aria-expanded="false" aria-controls="menu-a11y">
-          <svg class="icone" aria-hidden="true"><use href="#i-acesso"/></svg>
-          <span>Acessibilidade</span>
-        </button>
-        <div id="menu-a11y" class="a11y__menu" role="group" aria-labelledby="titulo-a11y" hidden>
-          <p id="titulo-a11y" class="a11y__titulo">Ajustes de leitura</p>
-          <div class="a11y__linha">
-            <span id="rotulo-tamanho">Tamanho do texto</span>
-            <div class="a11y__tamanho">
-              <button type="button" id="a11y-menos" class="btn btn--icone" aria-label="Diminuir o texto">A−</button>
-              <output id="a11y-tamanho" for="a11y-menos a11y-mais" aria-live="polite">112%</output>
-              <button type="button" id="a11y-mais" class="btn btn--icone" aria-label="Aumentar o texto">A+</button>
-            </div>
-          </div>
-          <div class="a11y__linha"><span id="rot-contraste">Alto contraste</span><button type="button" class="chave" id="sw-contraste" role="switch" aria-checked="false" aria-labelledby="rot-contraste"><span></span></button></div>
-          <div class="a11y__linha"><span id="rot-espaco">Mais espaço entre linhas e letras</span><button type="button" class="chave" id="sw-espaco" role="switch" aria-checked="false" aria-labelledby="rot-espaco"><span></span></button></div>
-          <div class="a11y__linha"><span id="rot-calmo">Modo calmo <small>(sem animações e sem enfeites)</small></span><button type="button" class="chave" id="sw-calmo" role="switch" aria-checked="false" aria-labelledby="rot-calmo"><span></span></button></div>
-          <button type="button" id="a11y-reset" class="btn btn--texto">Restaurar padrão</button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="conteudo">
-    <!-- ======================= HERO ======================= -->
-    <section class="hero" aria-labelledby="titulo-hero">
-      <div class="hero__fundo" aria-hidden="true"><svg class="hero__infinito"><use href="#i-infinito"/></svg></div>
-      <div class="container hero__grade">
-        <div class="hero__texto">
-          <p class="etiqueta">Projeto de extensão · Grande Vitória (ES)</p>
-          <h1 id="titulo-hero">Seus direitos, do papel para a prática.</h1>
-          <p class="hero__lead">Conte sua situação com as suas palavras. O DivergentIA monta um passo a passo com <strong>documentos, links oficiais e o telefone de quem pode ajudar</strong> — para pessoas com deficiência, pessoas neurodivergentes e seus cuidadores.</p>
-          <div class="hero__acoes">
-            <a class="btn btn--claro btn--grande" href="#assistente"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Começar a conversa</a>
-            <a class="btn btn--fantasma btn--grande" href="#locais"><svg class="icone" aria-hidden="true"><use href="#i-pino"/></svg>Ver locais acessíveis</a>
-          </div>
-          <ul class="hero__garantias">
-            <li><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg><span><strong>Fontes oficiais</strong> com data de verificação</span></li>
-            <li><svg class="icone" aria-hidden="true"><use href="#i-fone"/></svg><span><strong>Telefones conferidos</strong> na página do órgão</span></li>
-            <li><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg><span><strong>Suas perguntas</strong> não são gravadas no servidor</span></li>
-          </ul>
-        </div>
-        <div class="hero__vitrine" aria-hidden="true">
-          <div class="vitrine">
-            <div class="vitrine__barra"><i></i><i></i><i></i></div>
-            <div class="vitrine__balao vitrine__balao--eu">Meu filho é autista e preciso de apoio na escola.</div>
-            <div class="vitrine__balao vitrine__balao--bot">Vamos por partes. Montei o passo a passo:</div>
-            <div class="vitrine__lista">
-              <div class="vitrine__item vitrine__item--feito"><b><svg class="icone"><use href="#i-ok"/></svg></b>Matricule e apresente o laudo</div>
-              <div class="vitrine__item"><b>2</b>Fale com a Educação Especial</div>
-              <div class="vitrine__item"><b>3</b>Se negarem, procure a Defensoria</div>
-            </div>
-            <div class="vitrine__contato"><svg class="icone"><use href="#i-fone"/></svg>Defensoria · <strong>(27) 3198-3300</strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= ASSISTENTE ======================= -->
-    <section id="assistente" class="app" aria-labelledby="titulo-assistente">
-      <div class="container">
-        <div class="app__cabeca">
-          <h2 id="titulo-assistente">Converse e monte o seu roteiro</h2>
-          <p>Escreva o que você precisa. O assistente pode fazer perguntas rápidas (como o município) e o <strong>roteiro</strong> vai sendo atualizado ao lado, com um passo a passo que você pode ir marcando.</p>
-        </div>
-
-        <div class="alternar" role="group" aria-label="O que ver">
-          <button type="button" id="ver-conversa" class="btn btn--suave" aria-pressed="true"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversa</button>
-          <button type="button" id="ver-roteiro" class="btn btn--suave" aria-pressed="false"><svg class="icone" aria-hidden="true"><use href="#i-lista"/></svg>Meu roteiro<span id="selo-roteiro" class="selo-novo" hidden>novo</span></button>
-        </div>
-
-        <div class="app__grade">
-          <!-- ---------- CONVERSA ---------- -->
-          <section id="painel-conversa" class="painel painel--conversa" aria-labelledby="titulo-conversa">
-            <header class="painel__cabeca">
-              <div>
-                <h3 id="titulo-conversa">Conversa</h3>
-                <p id="info-base" class="painel__sub">Carregando informações da base…</p>
-              </div>
-              <button type="button" id="btn-nova" class="btn btn--texto"><svg class="icone" aria-hidden="true"><use href="#i-recomecar"/></svg><span>Nova conversa</span></button>
-            </header>
-
-            <div id="conversa" class="conversa" role="log" aria-live="polite" aria-relevant="additions" aria-label="Mensagens da conversa" tabindex="0"></div>
-
-            <form id="form-chat" class="compositor" aria-label="Enviar mensagem">
-              <label for="mensagem" class="sr-only">Sua mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="1" maxlength="1500" placeholder="Escreva aqui. Ex.: meu filho é autista e quero pedir apoio na escola" aria-describedby="dica-envio" enterkeyhint="send"></textarea>
-              <div class="compositor__barra">
-                <div class="compositor__municipio">
-                  <label for="municipio">Município</label>
-                  <select id="municipio" name="municipio">
-                    <option value="">Não informado</option>
-                    <option value="Vitória">Vitória</option>
-                    <option value="Serra">Serra</option>
-                    <option value="Vila Velha">Vila Velha</option>
-                  </select>
-                </div>
-                <p id="dica-envio" class="compositor__dica">Enter envia · Shift + Enter pula linha</p>
-                <button type="submit" id="btn-enviar" class="btn btn--primario"><span>Enviar</span><svg class="icone" aria-hidden="true"><use href="#i-enviar"/></svg></button>
-              </div>
-            </form>
-          </section>
-
-          <!-- ---------- ROTEIRO ---------- -->
-          <section id="painel-roteiro" class="painel painel--roteiro" aria-labelledby="titulo-roteiro" tabindex="-1">
-            <header class="painel__cabeca">
-              <div>
-                <h3 id="titulo-roteiro">Meu roteiro</h3>
-                <p class="painel__sub">Passo a passo, contatos e links oficiais</p>
-              </div>
-              <div class="painel__acoes">
-                <button type="button" id="btn-imprimir" class="btn btn--texto" hidden><svg class="icone" aria-hidden="true"><use href="#i-imprimir"/></svg><span>Imprimir</span></button>
-                <button type="button" id="btn-pdf" class="btn btn--primario" hidden aria-disabled="false"><svg class="icone" aria-hidden="true"><use href="#i-arquivo"/></svg><span>Baixar PDF</span></button>
-              </div>
-            </header>
-            <p id="status-pdf" class="status" role="status" aria-live="polite"></p>
-            <div id="roteiro" class="roteiro"></div>
-          </section>
-        </div>
-        <p id="anuncios" class="sr-only" role="status" aria-live="polite"></p>
-      </div>
-    </section>
-
-    <!-- ======================= COMO FUNCIONA ======================= -->
-    <section id="como-funciona" class="secao secao--clara" aria-labelledby="titulo-como">
-      <div class="container">
-        <h2 id="titulo-como">Como funciona</h2>
-        <ol class="passos-home">
-          <li><span class="passos-home__num" aria-hidden="true">1</span><div><h3>Conte a sua situação</h3><p>Escreva com as suas palavras ou escolha um tema. Se faltar algo, como o município ou a rede de ensino, o assistente pergunta com botões.</p></div></li>
-          <li><span class="passos-home__num" aria-hidden="true">2</span><div><h3>Receba o roteiro</h3><p>Os passos vêm das páginas oficiais, com documentos, links do gov.br e o telefone de quem atende. Marque o que já fez.</p></div></li>
-          <li><span class="passos-home__num" aria-hidden="true">3</span><div><h3>Leve para o atendimento</h3><p>Baixe o PDF com tudo isso e com a lista de fontes, cada uma com a data em que foi conferida.</p></div></li>
-        </ol>
-        <div class="confianca">
-          <h3><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg>Como cuidamos da informação</h3>
-          <ul>
-            <li>Cada serviço vem de uma página oficial (gov.br, prefeituras, Defensoria, Ceturb, Sefaz).</li>
-            <li>Telefones e links passam por um <strong>verificador automático</strong> que confere a página de origem.</li>
-            <li>Os telefones e links que você vê <strong>vêm da base verificada</strong>, nunca do texto escrito pela inteligência artificial.</li>
-            <li>Quando a base não tem a resposta, o assistente diz isso e indica quem pode ajudar.</li>
-            <li>O assistente orienta, mas <strong>não substitui</strong> o atendimento jurídico ou social. Confirme sempre no órgão.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= LOCAIS ======================= -->
-    <section id="locais" class="secao" aria-labelledby="titulo-locais">
-      <div class="container">
-        <div class="secao__cabeca">
-          <div>
-            <h2 id="titulo-locais">Locais acessíveis</h2>
-            <p>Locais com rampa, banheiro adaptado, Braille, ambiente de baixo estímulo e outros recursos de acessibilidade, cadastrados e conferidos pela equipe do projeto e por associações parceiras.</p>
-          </div>
-          <button type="button" id="btn-cadastrar" class="btn btn--primario" hidden><svg class="icone" aria-hidden="true"><use href="#i-mais"/></svg>Cadastrar um local</button>
-        </div>
-
-        <form id="filtros-locais" class="filtros" aria-label="Filtrar locais">
-          <div class="campo"><label for="f-municipio">Município</label><select id="f-municipio"></select></div>
-          <div class="campo"><label for="f-tipo">Tipo de local</label><select id="f-tipo"></select></div>
-          <div class="check check--filtro"><input type="checkbox" id="f-verificados"><label for="f-verificados">Só locais verificados</label></div>
-        </form>
-        <p id="status-locais" class="status" role="status" aria-live="polite"></p>
-        <ul id="lista-locais" class="cards" aria-label="Lista de locais acessíveis"></ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <div class="container rodape__grade">
-      <div>
-        <a class="logo logo--rodape" href="#topo" aria-label="DivergentIA, início">
+  <div class="casca">
+    <!-- ======================= MENU LATERAL =======================
+         Computador: fixo à esquerda, expandido (ícone + nome) ou recolhido (trilho com nome pequeno).
+         Celular: gaveta que abre pelo botão ☰ da barra de cima. -->
+    <aside id="menu" class="menu" aria-label="Menu principal">
+      <div class="menu__topo">
+        <a class="logo menu__logo" href="#inicio" aria-label="DivergentIA, início">
           <span class="logo__marca" aria-hidden="true"><svg class="logo__icone"><use href="#i-infinito"/></svg></span>
           <span class="logo__nome">Divergent<span>IA</span></span>
         </a>
-        <p>Projeto de extensão universitária em desenvolvimento, feito em diálogo com associações e assistentes sociais da Grande Vitória. Protótipo: a base de informações cresce e é revisada continuamente.</p>
-        <p class="rodape__peq">Fontes de texto: Atkinson Hyperlegible (Braille Institute, feita para maximizar a legibilidade) e Lexend, ambas com licença livre.</p>
+        <button type="button" id="btn-recolher" class="menu__botao" aria-controls="menu" aria-expanded="true" aria-label="Recolher o menu" title="Recolher o menu"><svg class="icone" aria-hidden="true"><use href="#i-painel"/></svg></button>
+        <button type="button" id="btn-fechar-menu" class="menu__botao" aria-label="Fechar o menu"><svg class="icone" aria-hidden="true"><use href="#i-fechar"/></svg></button>
       </div>
-      <div id="ajuda-imediata" class="rodape__ajuda" aria-labelledby="titulo-ajuda">
-        <h2 id="titulo-ajuda">Precisa de ajuda agora?</h2>
-        <ul id="lista-ajuda"></ul>
+      <nav class="menu__nav" aria-label="Páginas do DivergentIA">
+        <a class="menu__link" href="#inicio" data-vista="inicio" title="Início"><svg class="icone" aria-hidden="true"><use href="#i-casa"/></svg><span class="menu__rotulo">Início</span></a>
+        <a class="menu__link" href="#assistente" data-vista="assistente" title="Assistente"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg><span class="menu__rotulo">Assistente</span></a>
+        <a class="menu__link" href="#locais" data-vista="locais" title="Locais acessíveis"><svg class="icone" aria-hidden="true"><use href="#i-pino"/></svg><span class="menu__rotulo">Locais acessíveis</span></a>
+        <a class="menu__link" href="#como-funciona" data-vista="como-funciona" title="Como funciona"><svg class="icone" aria-hidden="true"><use href="#i-info"/></svg><span class="menu__rotulo">Como funciona</span></a>
+      </nav>
+      <div class="menu__rodape">
+        <a class="menu__link" id="link-conta" href="entrar.html" title="Entrar"><svg class="icone" aria-hidden="true"><use href="#i-usuario"/></svg><span class="menu__rotulo">Entrar</span></a>
       </div>
+    </aside>
+    <div id="menu-fundo" class="menu__fundo" hidden></div>
+
+    <div class="principal">
+      <header class="barra">
+        <button type="button" id="btn-menu" class="btn btn--icone barra__menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir o menu"><svg class="icone" aria-hidden="true"><use href="#i-menu"/></svg></button>
+        <h1 id="titulo-pagina" class="barra__titulo" tabindex="-1">Início</h1>
+        <div class="a11y">
+          <button type="button" id="btn-a11y" class="btn btn--suave" aria-expanded="false" aria-controls="menu-a11y">
+            <svg class="icone" aria-hidden="true"><use href="#i-acesso"/></svg>
+            <span>Acessibilidade</span>
+          </button>
+          <div id="menu-a11y" class="a11y__menu" role="group" aria-labelledby="titulo-a11y" hidden>
+            <p id="titulo-a11y" class="a11y__titulo">Ajustes de leitura</p>
+            <div class="a11y__linha">
+              <span id="rotulo-tamanho">Tamanho do texto</span>
+              <div class="a11y__tamanho">
+                <button type="button" id="a11y-menos" class="btn btn--icone" aria-label="Diminuir o texto">A−</button>
+                <output id="a11y-tamanho" for="a11y-menos a11y-mais" aria-live="polite">112%</output>
+                <button type="button" id="a11y-mais" class="btn btn--icone" aria-label="Aumentar o texto">A+</button>
+              </div>
+            </div>
+            <div class="a11y__linha"><span id="rot-contraste">Alto contraste</span><button type="button" class="chave" id="sw-contraste" role="switch" aria-checked="false" aria-labelledby="rot-contraste"><span></span></button></div>
+            <div class="a11y__linha"><span id="rot-espaco">Mais espaço entre linhas e letras</span><button type="button" class="chave" id="sw-espaco" role="switch" aria-checked="false" aria-labelledby="rot-espaco"><span></span></button></div>
+            <div class="a11y__linha"><span id="rot-calmo">Modo calmo <small>(sem animações e sem enfeites)</small></span><button type="button" class="chave" id="sw-calmo" role="switch" aria-checked="false" aria-labelledby="rot-calmo"><span></span></button></div>
+            <button type="button" id="a11y-reset" class="btn btn--texto">Restaurar padrão</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="conteudo" tabindex="-1">
+        <!-- ======================= INÍCIO ======================= -->
+        <section class="vista vista--inicio" data-vista="inicio" aria-labelledby="titulo-hero">
+          <div class="hero">
+            <div class="hero__fundo" aria-hidden="true"><svg class="hero__infinito"><use href="#i-infinito"/></svg></div>
+            <div class="container hero__grade">
+              <div class="hero__texto">
+                <p class="etiqueta">Projeto de extensão · Grande Vitória (ES)</p>
+                <h2 id="titulo-hero" class="hero__titulo">Seus direitos, do papel para a prática.</h2>
+                <p class="hero__lead">Conte sua situação com as suas palavras. O DivergentIA monta um passo a passo com <strong>documentos, links oficiais e o telefone de quem pode ajudar</strong> — para pessoas com deficiência, pessoas neurodivergentes e seus cuidadores.</p>
+                <div class="hero__acoes">
+                  <a class="btn btn--claro btn--grande" href="#assistente"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Começar a conversa</a>
+                  <a class="btn btn--fantasma btn--grande" href="#locais"><svg class="icone" aria-hidden="true"><use href="#i-pino"/></svg>Ver locais acessíveis</a>
+                </div>
+                <ul class="hero__garantias">
+                  <li><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg><span><strong>Fontes oficiais</strong> com data de verificação</span></li>
+                  <li><svg class="icone" aria-hidden="true"><use href="#i-fone"/></svg><span><strong>Telefones conferidos</strong> na página do órgão</span></li>
+                  <li><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg><span><strong>Suas perguntas</strong> não são gravadas sem login — logado, fica só o seu histórico, pra você mesmo consultar depois</span></li>
+                </ul>
+              </div>
+              <div class="hero__vitrine" aria-hidden="true">
+                <div class="vitrine">
+                  <div class="vitrine__barra"><i></i><i></i><i></i></div>
+                  <div class="vitrine__balao vitrine__balao--eu">Meu filho é autista e preciso de apoio na escola.</div>
+                  <div class="vitrine__balao vitrine__balao--bot">Vamos por partes. Montei o passo a passo:</div>
+                  <div class="vitrine__lista">
+                    <div class="vitrine__item vitrine__item--feito"><b><svg class="icone"><use href="#i-ok"/></svg></b>Matricule e apresente o laudo</div>
+                    <div class="vitrine__item"><b>2</b>Fale com a Educação Especial</div>
+                    <div class="vitrine__item"><b>3</b>Se negarem, procure a Defensoria</div>
+                  </div>
+                  <div class="vitrine__contato"><svg class="icone"><use href="#i-fone"/></svg>Defensoria · <strong>(27) 3198-3300</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container inicio__grade">
+            <section class="inicio__bloco" aria-labelledby="titulo-ajuda">
+              <h2 id="titulo-ajuda"><svg class="icone" aria-hidden="true"><use href="#i-fone"/></svg>Precisa de ajuda agora?</h2>
+              <p class="dica">Para denunciar uma violação de direitos ou pedir orientação jurídica gratuita.</p>
+              <ul id="lista-ajuda" class="ajuda"></ul>
+            </section>
+            <section class="inicio__bloco inicio__bloco--sobre" aria-labelledby="titulo-sobre">
+              <h2 id="titulo-sobre"><svg class="icone" aria-hidden="true"><use href="#i-livro"/></svg>Sobre o projeto</h2>
+              <p>Projeto de extensão universitária em desenvolvimento, feito em diálogo com associações e assistentes sociais da Grande Vitória. Protótipo: a base de informações cresce e é revisada continuamente.</p>
+              <p class="inicio__peq">Fontes de texto: Atkinson Hyperlegible (Braille Institute, feita para maximizar a legibilidade) e Lexend, ambas com licença livre.</p>
+            </section>
+          </div>
+        </section>
+
+        <!-- ======================= ASSISTENTE ======================= -->
+        <section class="vista vista--assistente" data-vista="assistente" aria-label="Assistente" hidden>
+          <div class="alternar" role="group" aria-label="O que ver">
+            <button type="button" id="ver-conversa" class="btn btn--suave" aria-pressed="true"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversa</button>
+            <button type="button" id="ver-roteiro" class="btn btn--suave" aria-pressed="false"><svg class="icone" aria-hidden="true"><use href="#i-lista"/></svg>Meu roteiro<span id="selo-roteiro" class="selo-novo" hidden>novo</span></button>
+          </div>
+
+          <div class="app__grade" id="area-assistente">
+            <!-- ---------- ROTEIRO (à esquerda) ---------- -->
+            <section id="painel-roteiro" class="painel painel--roteiro" aria-labelledby="titulo-roteiro" tabindex="-1">
+              <header class="painel__cabeca">
+                <div class="painel__titulos">
+                  <h2 id="titulo-roteiro"><svg class="icone" aria-hidden="true"><use href="#i-lista"/></svg>Meu roteiro</h2>
+                  <p class="painel__sub">Passos, contatos e links oficiais</p>
+                </div>
+                <div class="painel__acoes">
+                  <button type="button" id="btn-imprimir" class="btn btn--texto btn--so-icone" title="Imprimir o roteiro" hidden><svg class="icone" aria-hidden="true"><use href="#i-imprimir"/></svg><span>Imprimir</span></button>
+                  <button type="button" id="btn-pdf" class="btn btn--primario" hidden aria-disabled="false"><svg class="icone" aria-hidden="true"><use href="#i-arquivo"/></svg><span>Baixar PDF</span></button>
+                </div>
+              </header>
+              <p id="status-pdf" class="status status--painel" role="status" aria-live="polite"></p>
+              <div id="roteiro" class="roteiro"></div>
+            </section>
+
+            <!-- ---------- CONVERSA (à direita, com mais espaço) ---------- -->
+            <section id="painel-conversa" class="painel painel--conversa" aria-labelledby="titulo-conversa">
+              <header class="painel__cabeca">
+                <div class="painel__titulos">
+                  <h2 id="titulo-conversa"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversa</h2>
+                  <p id="info-base" class="painel__sub">Carregando informações da base…</p>
+                </div>
+                <div class="painel__acoes">
+                  <button type="button" id="btn-historico" class="btn btn--texto" title="Conversas salvas" hidden><svg class="icone" aria-hidden="true"><use href="#i-relogio"/></svg><span>Histórico</span></button>
+                  <button type="button" id="btn-nova" class="btn btn--texto"><svg class="icone" aria-hidden="true"><use href="#i-recomecar"/></svg><span>Nova conversa</span></button>
+                </div>
+              </header>
+
+              <div class="conversa-area">
+                <div id="conversa" class="conversa" role="log" aria-live="polite" aria-relevant="additions" aria-label="Mensagens da conversa" tabindex="0"></div>
+                <button type="button" id="btn-fim" class="btn-fim" hidden><svg class="icone" aria-hidden="true"><use href="#i-seta-baixo"/></svg><span>Ir para a última mensagem</span></button>
+              </div>
+
+              <form id="form-chat" class="compositor" aria-label="Enviar mensagem">
+                <div class="compositor__caixa">
+                  <label for="mensagem" class="sr-only">Sua mensagem</label>
+                  <textarea id="mensagem" name="mensagem" rows="1" maxlength="1500" placeholder="Pergunte o que quiser. Ex.: meu filho é autista e quero pedir apoio na escola" aria-describedby="dica-envio" enterkeyhint="send"></textarea>
+                  <div class="compositor__barra">
+                    <div class="compositor__municipio">
+                      <svg class="icone" aria-hidden="true"><use href="#i-pino"/></svg>
+                      <label for="municipio">Município</label>
+                      <select id="municipio" name="municipio">
+                        <option value="">Não informado</option>
+                        <option value="Vitória">Vitória</option>
+                        <option value="Serra">Serra</option>
+                        <option value="Vila Velha">Vila Velha</option>
+                      </select>
+                    </div>
+                    <p id="dica-envio" class="compositor__dica">Enter envia · Shift + Enter pula linha</p>
+                    <button type="submit" id="btn-enviar" class="btn btn--primario btn-enviar" aria-disabled="true"><span>Enviar</span><svg class="icone" aria-hidden="true"><use href="#i-enviar"/></svg></button>
+                  </div>
+                </div>
+                <p class="aviso-ia">O DivergentIA é uma IA e pode cometer erros. Confirme sempre com os contatos indicados.</p>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <!-- ======================= LOCAIS ======================= -->
+        <section class="vista secao" data-vista="locais" aria-label="Locais acessíveis" hidden>
+          <div class="container">
+            <div class="secao__cabeca">
+              <p>Locais com rampa, banheiro adaptado, Braille, ambiente de baixo estímulo e outros recursos de acessibilidade, cadastrados e conferidos pela equipe do projeto e por associações parceiras.</p>
+              <button type="button" id="btn-cadastrar" class="btn btn--primario" hidden><svg class="icone" aria-hidden="true"><use href="#i-mais"/></svg>Cadastrar um local</button>
+            </div>
+
+            <form id="filtros-locais" class="filtros" aria-label="Filtrar locais">
+              <div class="campo"><label for="f-tipo">Tipo de local</label><select id="f-tipo"></select></div>
+              <div class="check check--filtro"><input type="checkbox" id="f-verificados"><label for="f-verificados">Só locais verificados</label></div>
+            </form>
+            <p id="status-locais" class="status" role="status" aria-live="polite"></p>
+            <ul id="lista-locais" class="cards" aria-label="Lista de locais acessíveis"></ul>
+          </div>
+        </section>
+
+        <!-- ======================= COMO FUNCIONA ======================= -->
+        <section class="vista secao" data-vista="como-funciona" aria-label="Como funciona" hidden>
+          <div class="container">
+            <ol class="passos-home">
+              <li><span class="passos-home__num" aria-hidden="true">1</span><div><h2>Conte a sua situação</h2><p>Escreva com as suas palavras, como numa conversa. Se faltar algo, como o município ou a rede de ensino, o assistente pergunta.</p></div></li>
+              <li><span class="passos-home__num" aria-hidden="true">2</span><div><h2>Receba o roteiro</h2><p>Os passos vêm das páginas oficiais, com documentos, links do gov.br e o telefone de quem atende. Marque o que já fez.</p></div></li>
+              <li><span class="passos-home__num" aria-hidden="true">3</span><div><h2>Leve para o atendimento</h2><p>Baixe o PDF com tudo isso e com a lista de fontes, cada uma com a data em que foi conferida.</p></div></li>
+            </ol>
+            <div class="confianca">
+              <h2><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg>Como cuidamos da informação</h2>
+              <ul>
+                <li>Cada serviço vem de uma página oficial (gov.br, prefeituras, Defensoria, Ceturb, Sefaz).</li>
+                <li>Telefones e links passam por um <strong>verificador automático</strong> que confere a página de origem.</li>
+                <li>A inteligência artificial escreve a resposta <strong>só a partir dessa base verificada</strong>; telefones e links que não estão nela são retirados do texto antes de chegar a você.</li>
+                <li>Quando a base não tem a resposta, o assistente diz isso e indica quem pode ajudar.</li>
+                <li>O assistente orienta, mas <strong>não substitui</strong> o atendimento jurídico ou social. Confirme sempre no órgão.</li>
+              </ul>
+            </div>
+            <p class="como__acao"><a class="btn btn--primario btn--grande" href="#assistente"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Começar a conversa</a></p>
+          </div>
+        </section>
+      </main>
     </div>
-  </footer>
+  </div>
+  <p id="anuncios" class="sr-only" role="status" aria-live="polite"></p>
+
+  <!-- Histórico de conversas (só para quem está logado) -->
+  <dialog id="dlg-historico" class="dialogo" aria-labelledby="dlg-historico-titulo">
+    <div class="dialogo__cabeca"><h2 id="dlg-historico-titulo">Histórico de conversas</h2><button type="button" class="btn btn--icone" data-fechar aria-label="Fechar"><svg class="icone" aria-hidden="true"><use href="#i-fechar"/></svg></button></div>
+    <div class="dialogo__corpo">
+      <p id="status-historico" class="status" role="status" aria-live="polite"></p>
+      <ul id="lista-historico" class="historico"></ul>
+    </div>
+  </dialog>
 
   <!-- Contato em detalhe -->
   <dialog id="dlg-contato" class="dialogo" aria-labelledby="dlg-contato-titulo">
@@ -257,10 +286,7 @@
     <form id="form-local" class="dialogo__corpo">
       <div class="campo"><label for="l-nome">Nome do local</label><input type="text" id="l-nome" name="nome" required maxlength="120" autocomplete="off"></div>
       <div class="campo"><label for="l-endereco">Endereço</label><input type="text" id="l-endereco" name="endereco" required maxlength="200" autocomplete="off"></div>
-      <div class="linha">
-        <div class="campo"><label for="l-municipio">Município</label><select id="l-municipio" name="municipio" required></select></div>
-        <div class="campo"><label for="l-tipo">Tipo de local</label><select id="l-tipo" name="tipo" required></select></div>
-      </div>
+      <div class="campo"><label for="l-tipo">Tipo de local</label><select id="l-tipo" name="tipo" required></select></div>
       <fieldset id="l-recursos"><legend>Recursos de acessibilidade que você encontrou</legend></fieldset>
       <div class="campo"><label for="l-obs">Observações (opcional)</label><p class="dica" id="dica-obs">Por exemplo: “rampa na entrada lateral” ou “ambiente silencioso pela manhã”.</p><textarea id="l-obs" name="observacoes" rows="3" maxlength="500" aria-describedby="dica-obs"></textarea></div>
       <div class="campo"><label for="l-quem">Seu nome ou associação (opcional)</label><input type="text" id="l-quem" name="reportado_por" maxlength="120" autocomplete="off"></div>

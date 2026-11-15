@@ -59,6 +59,13 @@ function dataBR(iso) {
   return `${dia}/${mes}/${ano}`;
 }
 
+function dataHoraBR(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const n2 = (n) => String(n).padStart(2, "0");
+  return `${n2(d.getDate())}/${n2(d.getMonth() + 1)}/${d.getFullYear()} ${n2(d.getHours())}:${n2(d.getMinutes())}`;
+}
+
 function anunciar(texto) {
   const el = $("#anuncios");
   el.textContent = "";
@@ -85,6 +92,101 @@ function mensagemDeErro(erro) {
 const estaDesativado = (botao) => botao.getAttribute("aria-disabled") === "true";
 const MUNICIPIOS_COM_DADOS = ["Vitória", "Serra", "Vila Velha"];
 
+// Rolagem suave só quando a pessoa não pediu menos movimento (modo calmo ou preferência do sistema).
+const movimentoReduzido = () => document.documentElement.dataset.calmo === "1"
+  || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+const comportamentoRolagem = () => (movimentoReduzido() ? "auto" : "smooth");
+
+/* ===================================================================================================
+   Markdown leve para as respostas da IA
+   A IA escreve com **negrito**, listas numeradas e tópicos. Aqui isso vira elementos de verdade (<strong>, <ol>,
+   <ul>...), sempre criados nó a nó: o texto nunca entra como HTML, então nada que venha do modelo vira código.
+   =================================================================================================== */
+
+const RE_INLINE = new RegExp([
+  String.raw`\*\*[^*\n]+?\*\*`,                     // **negrito**
+  String.raw`__[^_\n]+?__`,                         // __negrito__
+  String.raw`\x60[^\x60\n]+\x60`,                   // `código`
+  String.raw`\[[^\]\n]+\]\(https?:\/\/[^\s)]+\)`,    // [texto](https://...)
+  String.raw`https?:\/\/[^\s<>()]*[^\s<>().,;:!?"']`, // https://... solto
+  String.raw`\(\d{2}\)\s?\d{4,5}-?\d{4}`,           // (27) 3198-3300 -> link para ligar
+  String.raw`0800[\s-]?\d{3}[\s-]?\d{4}`,           // 0800 ...
+  String.raw`\*[^*\s][^*\n]*?\*`,                   // *itálico*
+].join("|"), "g");
+
+function linkSeguro(url, rotulo) {
+  if (!/^https?:\/\//i.test(url)) return rotulo;
+  return h("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, rotulo,
+    h("span", { class: "sr-only" }, " (abre em nova aba)"));
+}
+
+function mdInline(texto) {
+  const partes = [];
+  let ultimo = 0;
+  const solto = (t) => t.replace(/\*\*/g, ""); // "**" sem par (resposta cortada) não aparece na tela
+  for (const m of texto.matchAll(RE_INLINE)) {
+    const t = m[0];
+    if (m.index > ultimo) partes.push(solto(texto.slice(ultimo, m.index)));
+    if (t.startsWith("**") || t.startsWith("__")) partes.push(h("strong", {}, mdInline(t.slice(2, -2))));
+    else if (t.startsWith("`")) partes.push(h("code", {}, t.slice(1, -1)));
+    else if (t.startsWith("[")) { const [, rotulo, url] = t.match(/^\[([^\]]+)\]\((.+)\)$/); partes.push(linkSeguro(url, rotulo)); }
+    else if (/^https?:/i.test(t)) partes.push(linkSeguro(t, t));
+    else if (t.startsWith("*")) partes.push(h("em", {}, t.slice(1, -1)));
+    else partes.push(h("a", { href: hrefTel(t), class: "md-fone" }, t, h("span", { class: "sr-only" }, " (ligar)")));
+    ultimo = m.index + t.length;
+  }
+  if (ultimo < texto.length) partes.push(solto(texto.slice(ultimo)));
+  return partes;
+}
+
+function renderMarkdown(texto) {
+  const raiz = h("div", { class: "md" });
+  let paragrafo = null; // <p> aberto (linhas seguidas viram <br>)
+  let lista = null;     // <ol>/<ul> de primeiro nível aberta
+  let sublista = null;  // lista dentro do último item
+  const fecharListas = () => { lista = null; sublista = null; };
+  for (const bruta of String(texto || "").replace(/\r\n?/g, "\n").split("\n")) {
+    const linha = bruta.replace(/\s+$/, "");
+    if (!linha.trim()) { paragrafo = null; continue; } // linha em branco fecha o parágrafo (a lista continua)
+    const recuo = linha.match(/^\s*/)[0].length;
+    const conteudo = linha.trim();
+    const titulo = conteudo.match(/^#{1,6}\s+(.+)$/);
+    const topico = conteudo.match(/^[-*•]\s+(.+)$/);
+    const numero = conteudo.match(/^(\d{1,3})[.)]\s+(.+)$/);
+    if (/^(-{3,}|\*{3,}|_{3,})$/.test(conteudo)) { paragrafo = null; fecharListas(); continue; }
+    if (titulo) {
+      paragrafo = null; fecharListas();
+      raiz.append(h("p", { class: "md__titulo" }, mdInline(titulo[1])));
+      continue;
+    }
+    if (topico || numero) {
+      paragrafo = null;
+      const tag = numero ? "OL" : "UL";
+      const item = h("li", {}, mdInline(numero ? numero[2] : topico[1]));
+      if (recuo >= 2 && lista && lista.lastElementChild) {
+        if (!sublista || sublista.tagName !== tag) { sublista = h(tag.toLowerCase()); lista.lastElementChild.append(sublista); }
+        sublista.append(item);
+      } else {
+        if (!lista || lista.tagName !== tag) {
+          lista = h(tag.toLowerCase(), numero && numero[1] !== "1" ? { start: numero[1] } : {});
+          raiz.append(lista);
+        }
+        sublista = null;
+        lista.append(item);
+      }
+      continue;
+    }
+    if (lista && recuo >= 2) { // continuação de um item de lista
+      ((sublista && sublista.lastElementChild) || lista.lastElementChild).append(h("br"), ...mdInline(conteudo));
+      continue;
+    }
+    fecharListas();
+    if (paragrafo) paragrafo.append(h("br"), ...mdInline(conteudo));
+    else { paragrafo = h("p", {}, mdInline(conteudo)); raiz.append(paragrafo); }
+  }
+  return raiz;
+}
+
 /* ===================================================================================================
    Estado
    =================================================================================================== */
@@ -100,6 +202,7 @@ const estado = {
   ultimaMensagem: "",
   controle: null,
   visao: "conversa",      // no celular: "conversa" ou "roteiro"
+  conversaId: null,       // só existe pra quem está logado (ver GET /chat/conversas)
 };
 
 /* ===================================================================================================
@@ -249,7 +352,7 @@ function renderPasso(p) {
     h("span", { class: "passo__num", "aria-hidden": "true" }, marcador.checked ? icone("ok") : String(p.ordem)),
     h("div", { class: "passo__corpo" },
       h("h6", { class: "passo__titulo" }, h("span", { class: "sr-only" }, `Passo ${p.ordem}: `), p.titulo),
-      h("p", { class: "passo__texto" }, p.descricao),
+      p.descricao ? h("p", { class: "passo__texto" }, mdInline(p.descricao)) : null,
       p.documentos.length ? h("div", { class: "bloco" },
         h("div", { class: "bloco__titulo" }, icone("arquivo"), "Documentos para reunir"),
         h("ul", {}, p.documentos.map((d) => h("li", {}, d)))) : null,
@@ -324,25 +427,32 @@ function renderRoteiro() {
   $("#btn-imprimir").hidden = !r;
   if (!r) {
     alvo.replaceChildren(h("div", { class: "roteiro__vazio" },
-      icone("lista"),
+      h("span", { class: "roteiro__vazio-icone" }, icone("lista")),
       h("h4", {}, "Seu roteiro aparece aqui"),
-      h("p", {}, "Conte sua situação na conversa. Quando eu tiver informações suficientes, monto o passo a passo com documentos, links oficiais e telefones, e você vai marcando o que já fez.")));
+      h("p", {}, "Conte sua situação na conversa. Assim que eu tiver informações suficientes, monto aqui um passo a passo que você vai marcando conforme avança."),
+      h("ul", { class: "roteiro__vazio-lista" },
+        h("li", {}, icone("arquivo"), "Documentos para separar"),
+        h("li", {}, icone("fone"), "Telefones conferidos de quem atende"),
+        h("li", {}, icone("globo"), "Links das páginas oficiais"),
+        h("li", {}, icone("imprimir"), "Tudo em PDF para levar ao atendimento"))));
     return;
   }
   const apoio = estado.apoio.map((id) => estado.contatos.get(id)).filter(Boolean);
-  alvo.replaceChildren(
-    h("h4", { class: "roteiro__titulo" }, r.titulo),
-    r.resumo ? h("p", { class: "roteiro__resumo" }, r.resumo) : null,
-    r.passos.length ? h("div", { class: "progresso" },
-      h("div", { class: "progresso__texto" }, h("span", { class: "progresso__rotulo" }), h("span", { class: "progresso__pct", "aria-hidden": "true" })),
-      h("div", { class: "progresso__trilho", role: "progressbar", "aria-label": "Progresso do roteiro", "aria-valuemin": "0", "aria-valuemax": String(r.passos.length), "aria-valuenow": "0" },
-        h("div", { class: "progresso__barra" }))) : null,
+  // replaceChildren(null) escreveria o texto "null" na tela: as partes que faltam são filtradas antes.
+  alvo.replaceChildren(...[
+    h("div", { class: "roteiro__topo" },
+      h("h4", { class: "roteiro__titulo" }, r.titulo),
+      r.resumo ? h("p", { class: "roteiro__resumo" }, r.resumo) : null,
+      r.passos.length ? h("div", { class: "progresso" },
+        h("div", { class: "progresso__texto" }, h("span", { class: "progresso__rotulo" }), h("span", { class: "progresso__pct", "aria-hidden": "true" })),
+        h("div", { class: "progresso__trilho", role: "progressbar", "aria-label": "Progresso do roteiro", "aria-valuemin": "0", "aria-valuemax": String(r.passos.length), "aria-valuenow": "0" },
+          h("div", { class: "progresso__barra" }))) : null),
     r.aviso ? h("div", { class: "aviso", role: "note" }, icone("alerta"), h("span", {}, r.aviso)) : null,
     r.passos.length ? renderGruposDePassos(r.passos) : null,
     r.direitos.length ? secaoRoteiro("Seus direitos (base legal)", "balanca", renderDireitos(r.direitos)) : null,
     apoio.length ? secaoRoteiro("Quem pode ajudar agora", "fone", h("div", { class: "apoio" }, apoio.map((c) => contatoCard(c)))) : null,
     estado.fontes.length ? renderFontes(estado.fontes) : null,
-  );
+  ].filter(Boolean));
   if (r.passos.length) {
     const feitos = r.passos.filter((p) => estado.feitos.has(chavePasso(p))).length;
     const pct = Math.round((feitos / r.passos.length) * 100);
@@ -405,27 +515,144 @@ function irParaRoteiro() {
   aplicarVisao();
   $("#selo-roteiro").hidden = true;
   const painel = $("#painel-roteiro");
-  painel.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (!telaGrande.matches) painel.scrollIntoView({ behavior: comportamentoRolagem(), block: "start" });
+  $("#roteiro").scrollTo({ top: 0, behavior: comportamentoRolagem() });
+  destacarRoteiro();
   painel.focus({ preventScroll: true });
+}
+
+// Um brilho rápido na borda do roteiro para mostrar onde a novidade apareceu (desligado no modo calmo).
+function destacarRoteiro() {
+  const painel = $("#painel-roteiro");
+  painel.classList.remove("painel--novidade");
+  void painel.offsetWidth; // reinicia a animação
+  painel.classList.add("painel--novidade");
+}
+
+/* ===================================================================================================
+   Navegação: menu lateral e páginas (Início, Assistente, Locais acessíveis, Como funciona)
+   Cada página é uma "vista" deste mesmo HTML, escolhida pelo endereço (#assistente, #locais...): dá para usar o
+   botão Voltar do navegador e salvar o link, e a conversa e o roteiro continuam lá quando a pessoa visita outra
+   página e volta (com arquivos HTML separados, tudo seria apagado a cada troca).
+   =================================================================================================== */
+
+const PAGINAS = { inicio: "Início", assistente: "Assistente", locais: "Locais acessíveis", "como-funciona": "Como funciona" };
+let paginaAtual = null;
+let menuRecolhido = ler("dv-menu") === "recolhido";
+
+function paginaDoEndereco() {
+  const pagina = window.location.hash.replace(/^#\/?/, "");
+  return Object.prototype.hasOwnProperty.call(PAGINAS, pagina) ? pagina : null;
+}
+
+function mostrarPagina(pagina, { foco = true } = {}) {
+  paginaAtual = pagina;
+  document.querySelectorAll(".vista").forEach((vista) => { vista.hidden = vista.dataset.vista !== pagina; });
+  document.querySelectorAll(".menu__nav .menu__link").forEach((link) => {
+    if (link.dataset.vista === pagina) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+  $("#titulo-pagina").textContent = PAGINAS[pagina];
+  document.title = pagina === "inicio" ? "DivergentIA – seus direitos, do papel para a prática" : `${PAGINAS[pagina]} · DivergentIA`;
+  document.body.dataset.pagina = pagina;
+  window.scrollTo(0, 0);
+  fecharMenuMovel(false);
+  if (pagina === "assistente") aplicarVisao();
+  if (!foco) return;
+  // Leitor de tela: o foco vai para o título da página nova. No Assistente (computador), direto para o campo.
+  if (pagina === "assistente" && telaGrande.matches) $("#mensagem").focus({ preventScroll: true });
+  else $("#titulo-pagina").focus({ preventScroll: true });
+}
+
+// Computador: menu expandido (ícone + nome) ou recolhido (trilho estreito). A escolha fica salva no navegador.
+function aplicarMenu() {
+  const menu = $("#menu");
+  const recolher = telaGrande.matches && menuRecolhido;
+  menu.classList.toggle("menu--recolhido", recolher);
+  const botao = $("#btn-recolher");
+  const rotulo = recolher ? "Expandir o menu" : "Recolher o menu";
+  botao.setAttribute("aria-expanded", String(!recolher));
+  botao.setAttribute("aria-label", rotulo);
+  botao.title = rotulo;
+  if (telaGrande.matches) { fecharMenuMovel(false); menu.inert = false; }
+  else menu.inert = !menu.classList.contains("menu--aberto"); // gaveta fechada: links fora do alcance do Tab
+}
+
+// Celular: o menu é uma gaveta. Aberta, o resto da página fica inerte (o foco não escapa para trás dela).
+function abrirMenuMovel() {
+  const menu = $("#menu");
+  menu.classList.add("menu--aberto");
+  menu.inert = false;
+  $("#menu-fundo").hidden = false;
+  $(".principal").inert = true;
+  $("#btn-menu").setAttribute("aria-expanded", "true");
+  (menu.querySelector('[aria-current="page"]') || menu.querySelector(".menu__link")).focus();
+}
+
+function fecharMenuMovel(devolverFoco = true) {
+  const menu = $("#menu");
+  if (!menu.classList.contains("menu--aberto")) return;
+  menu.classList.remove("menu--aberto");
+  if (!telaGrande.matches) menu.inert = true;
+  $("#menu-fundo").hidden = true;
+  $(".principal").inert = false;
+  $("#btn-menu").setAttribute("aria-expanded", "false");
+  if (devolverFoco) $("#btn-menu").focus();
+}
+
+function iniciarNavegacao() {
+  aplicarMenu();
+  $("#btn-recolher").addEventListener("click", () => {
+    menuRecolhido = !menuRecolhido;
+    guardar("dv-menu", menuRecolhido ? "recolhido" : "expandido");
+    aplicarMenu();
+  });
+  $("#btn-menu").addEventListener("click", abrirMenuMovel);
+  $("#btn-fechar-menu").addEventListener("click", () => fecharMenuMovel());
+  $("#menu-fundo").addEventListener("click", () => fecharMenuMovel());
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && $("#menu").classList.contains("menu--aberto")) fecharMenuMovel();
+  });
+  // Clicar na página em que já se está não muda o endereço: só fecha a gaveta.
+  document.querySelectorAll(".menu__link[data-vista]").forEach((link) => link.addEventListener("click", () => {
+    if (link.dataset.vista === paginaAtual) fecharMenuMovel(false);
+  }));
+  telaGrande.addEventListener("change", aplicarMenu);
+  window.addEventListener("hashchange", () => { const pagina = paginaDoEndereco(); if (pagina) mostrarPagina(pagina); });
+  // "Pular para o conteúdo" sem mexer no endereço (senão a página atual se perderia).
+  $(".pular").addEventListener("click", (e) => {
+    e.preventDefault();
+    (paginaAtual === "assistente" ? $("#mensagem") : $("#conteudo")).focus();
+  });
+  mostrarPagina(paginaDoEndereco() || "inicio", { foco: false });
 }
 
 /* ===================================================================================================
    Conversa
    =================================================================================================== */
 
-// Atalhos da conversa: o botão mostra o rótulo curto; ao clicar, a pergunta completa é enviada.
-const TEMAS = [
-  { rotulo: "Apoio ou mediador na escola", mensagem: "Como pedir mediador ou apoio para meu filho na escola?" },
-  { rotulo: "Benefício BPC", mensagem: "Como conseguir o BPC?" },
-  { rotulo: "Isenção de impostos (carro)", mensagem: "Como pedir isenção de impostos na compra de um carro?" },
-  { rotulo: "Credencial de estacionamento", mensagem: "Como tirar a credencial de estacionamento?" },
-  { rotulo: "Carteirinha do autista", mensagem: "Como fazer a carteirinha do autista?" },
-  { rotulo: "Passe livre no ônibus", mensagem: "Como conseguir passe livre no ônibus?" },
-];
-
 const elConversa = () => $("#conversa");
-const rolarParaFim = () => { const c = elConversa(); c.scrollTop = c.scrollHeight; };
 const avatar = () => h("span", { class: "msg__avatar", "aria-hidden": "true" }, iconeInfinito());
+const distanciaDoFim = () => { const c = elConversa(); return c.scrollHeight - c.scrollTop - c.clientHeight; };
+
+function rolarParaFim(comportamento = comportamentoRolagem()) {
+  const c = elConversa();
+  c.scrollTo({ top: c.scrollHeight, behavior: comportamento });
+}
+
+// Resposta nova: em vez de pular para o FIM dela (e a pessoa ter que subir para achar o começo), a conversa para
+// com a pergunta da pessoa no topo e o começo da resposta logo abaixo, como nos chats de IA conhecidos.
+function rolarParaResposta(artigo) {
+  const c = elConversa();
+  const pergunta = artigo.previousElementSibling && artigo.previousElementSibling.classList.contains("msg--eu")
+    ? artigo.previousElementSibling : artigo;
+  const alvo = pergunta.offsetTop - 12;
+  c.scrollTo({ top: Math.max(0, alvo), behavior: comportamentoRolagem() });
+}
+
+function atualizarBotaoFim() {
+  $("#btn-fim").hidden = distanciaDoFim() < 240;
+}
 
 function msgUsuario(texto) {
   elConversa().append(h("article", { class: "msg msg--eu" },
@@ -435,12 +662,34 @@ function msgUsuario(texto) {
 
 function seloCobertura(cobertura) {
   const mapa = {
-    completa: ["completa", "ok", "Resposta baseada nas fontes"],
-    parcial: ["parcial", "alerta", "Resposta parcial: confirme com os contatos"],
-    nenhuma: ["nenhuma", "info", "Não tenho essa informação na base"],
+    completa: ["completa", "ok", "Baseada nas fontes oficiais"],
+    parcial: ["parcial", "alerta", "Confirme os detalhes com os contatos"],
+    nenhuma: ["nenhuma", "info", "Fora da minha base de informações"],
   };
   const [classe, nomeIcone, texto] = mapa[cobertura] || mapa.parcial;
   return h("span", { class: `selo-cobertura selo-cobertura--${classe}` }, icone(nomeIcone), texto);
+}
+
+function botaoCopiar(alvo) {
+  const rotulo = h("span", {}, "Copiar");
+  const botao = h("button", { type: "button", class: "acao" }, icone("copiar"), rotulo);
+  let volta = null;
+  botao.addEventListener("click", async () => {
+    clearTimeout(volta);
+    try {
+      await navigator.clipboard.writeText(alvo.innerText.trim());
+      rotulo.textContent = "Copiado";
+      botao.firstElementChild.replaceWith(icone("ok"));
+      anunciar("Resposta copiada.");
+    } catch (_) {
+      rotulo.textContent = "Não deu para copiar";
+    }
+    volta = setTimeout(() => {
+      rotulo.textContent = "Copiar";
+      botao.firstElementChild.replaceWith(icone("copiar"));
+    }, 2200);
+  });
+  return botao;
 }
 
 function definirMunicipioPorRotulo(rotulo) {
@@ -460,43 +709,42 @@ function blocoPergunta(p) {
     h("p", { class: "pergunta__texto", id: idTexto }, p.pergunta), h("div", { class: "pergunta__opcoes" }, botoes));
 }
 
-function blocoSugestoes(sugestoes) {
-  return h("div", { class: "sugestoes", role: "group", "aria-label": "Sugestões de perguntas" },
-    sugestoes.map((s) => {
-      const item = typeof s === "string" ? { rotulo: s, mensagem: s } : s; // o servidor manda texto; os temas iniciais têm rótulo curto
-      const botao = h("button", { type: "button", class: "chip" }, item.rotulo);
-      botao.addEventListener("click", () => enviar(item.mensagem));
-      return botao;
-    }));
-}
-
 function cartaoRoteiro(roteiro) {
   const partes = [];
   if (roteiro.passos.length) partes.push(`${roteiro.passos.length} passos`);
-  if (roteiro.direitos.length) partes.push(`${roteiro.direitos.length} direito(s) em lei`);
-  const botao = h("button", { type: "button", class: "cartao-roteiro" }, icone("lista"),
-    h("div", {}, h("strong", {}, "Roteiro atualizado"), h("span", {}, `${partes.join(" · ")} · toque para ver`)));
+  if (roteiro.direitos.length) partes.push(roteiro.direitos.length === 1 ? "1 direito em lei" : `${roteiro.direitos.length} direitos em lei`);
+  const onde = telaGrande.matches ? "ver no painel ao lado" : "toque para ver";
+  const botao = h("button", { type: "button", class: "cartao-roteiro" },
+    h("span", { class: "cartao-roteiro__icone" }, icone("lista")),
+    h("span", { class: "cartao-roteiro__texto" }, h("strong", {}, roteiro.titulo || "Roteiro atualizado"),
+      h("span", {}, `Roteiro atualizado · ${partes.join(" · ")} · ${onde}`)));
   botao.addEventListener("click", irParaRoteiro);
   return botao;
 }
 
+// A resposta da IA aparece como texto corrido (sem balão), com largura confortável de leitura; embaixo ficam o
+// roteiro, os contatos, as perguntas de triagem e uma linha discreta com o selo de cobertura e "Copiar".
 function msgAssistente(d, opcoes = {}) {
   const extras = [];
-  const mostrarSelo = d.roteiro || (d.fontes && d.fontes.length) || d.cobertura !== "completa";
-  if (mostrarSelo && !opcoes.semSelo) extras.push(h("div", {}, seloCobertura(d.cobertura)));
   if (d.roteiro) extras.push(cartaoRoteiro(d.roteiro));
   if (!d.roteiro && d.contatos_de_apoio && d.contatos_de_apoio.length) {
     const cartoes = d.contatos_de_apoio.map((id) => estado.contatos.get(id)).filter(Boolean).map((c) => contatoCard(c));
-    extras.push(h("div", { class: "apoio" }, h("p", { class: "pergunta__texto" }, "Quem pode ajudar agora"), cartoes));
+    extras.push(h("div", { class: "apoio" }, h("p", { class: "apoio__titulo" }, icone("fone"), "Quem pode ajudar agora"), cartoes));
   }
   (d.perguntas || []).forEach((p) => extras.push(blocoPergunta(p)));
-  if (d.sugestoes && d.sugestoes.length) extras.push(blocoSugestoes(d.sugestoes));
 
-  elConversa().append(h("article", { class: "msg msg--bot" }, avatar(),
+  const texto = renderMarkdown(d.mensagem);
+  const mostrarSelo = !opcoes.semSelo && (d.roteiro || (d.fontes && d.fontes.length) || d.cobertura !== "completa");
+  const acoes = opcoes.semAcoes ? null
+    : h("div", { class: "msg__acoes" }, mostrarSelo ? seloCobertura(d.cobertura) : null, botaoCopiar(texto));
+
+  const artigo = h("article", { class: "msg msg--bot" }, avatar(),
     h("div", { class: "msg__corpo" },
-      h("div", { class: "msg__balao" }, h("span", { class: "sr-only" }, "Assistente: "), h("p", {}, d.mensagem)),
-      extras.length ? h("div", { class: "msg__extra" }, extras) : null)));
-  rolarParaFim();
+      h("div", { class: "msg__texto" }, h("span", { class: "sr-only" }, "Assistente: "), texto),
+      extras.length ? h("div", { class: "msg__extra" }, extras) : null,
+      acoes));
+  elConversa().append(artigo);
+  return artigo;
 }
 
 function msgErro(texto) {
@@ -519,18 +767,18 @@ function mostrarDigitando(ativo) {
   if (!ativo) return;
   const inicio = Date.now();
   const tempo = h("span", { "aria-hidden": "true" }, "0 s");
-  const texto = h("span", { class: "digitando__texto" }, "Consultando a base de fontes oficiais… ", tempo);
+  const texto = h("span", { class: "digitando__texto" }, "Lendo a sua mensagem e consultando as fontes oficiais… ", tempo);
   const cancelar = h("button", { type: "button", class: "btn btn--texto" }, "Cancelar");
   cancelar.addEventListener("click", () => { if (estado.controle) estado.controle.abort(); });
-  elConversa().append(h("div", { id: "digitando", class: "msg msg--bot", role: "status" }, avatar(),
+  elConversa().append(h("div", { id: "digitando", class: "msg msg--bot msg--digitando", role: "status" }, avatar(),
     h("div", { class: "digitando" },
       h("span", { class: "digitando__pontos", "aria-hidden": "true" }, h("i"), h("i"), h("i")), texto, cancelar)));
   rolarParaFim();
   cronometro = setInterval(() => {
     const s = Math.round((Date.now() - inicio) / 1000);
     tempo.textContent = `${s} s`;
-    if (s === 6) texto.firstChild.textContent = "Montando o roteiro… ";
-    if (s === 25) texto.firstChild.textContent = "Ainda trabalhando: a IA roda neste computador e pode levar um pouco mais… ";
+    if (s === 5) texto.firstChild.textContent = "Escrevendo a resposta… ";
+    if (s === 20) texto.firstChild.textContent = "Ainda escrevendo, é uma resposta mais completa… ";
   }, 1000);
 }
 
@@ -541,20 +789,22 @@ function aplicarResposta(d) {
     estado.fontes = d.fontes || [];
     estado.apoio = d.contatos_de_apoio || [];
     renderRoteiro();
+    destacarRoteiro();
     const n = d.roteiro.passos.length;
     anunciar(n ? `Roteiro atualizado com ${n} passos.` : "Roteiro atualizado com seus direitos.");
     if (!telaGrande.matches && estado.visao !== "roteiro") $("#selo-roteiro").hidden = false;
   }
-  msgAssistente(d);
+  rolarParaResposta(msgAssistente(d));
   estado.historico.push({ papel: "assistente", conteudo: d.mensagem });
   if (d.municipio_detectado && MUNICIPIOS_COM_DADOS.includes(d.municipio_detectado) && !$("#municipio").value) {
     $("#municipio").value = d.municipio_detectado;
   }
 }
 
+// "Enviar" fica com cara de desativado enquanto o campo está vazio ou a resposta ainda não chegou.
 function atualizarBotaoEnviar() {
-  const botao = $("#btn-enviar");
-  botao.setAttribute("aria-disabled", String(estado.carregando));
+  const vazio = !$("#mensagem").value.trim();
+  $("#btn-enviar").setAttribute("aria-disabled", String(estado.carregando || vazio));
 }
 
 async function enviar(texto, opcoes = {}) {
@@ -582,12 +832,14 @@ async function enviar(texto, opcoes = {}) {
         municipio: $("#municipio").value || null,
         historico: historicoEnviado,
         roteiro_atual: estado.roteiro,
+        conversa_id: estado.conversaId,
       }),
       signal: estado.controle.signal,
     });
     if (!resposta.ok) throw await erroDaApi(resposta);
     const dados = await resposta.json();
     mostrarDigitando(false);
+    if (dados.conversa_id) estado.conversaId = dados.conversa_id;
     aplicarResposta(dados);
   } catch (erro) {
     mostrarDigitando(false);
@@ -604,16 +856,18 @@ async function enviar(texto, opcoes = {}) {
 function ajustarCampo() {
   const campo = $("#mensagem");
   campo.style.height = "auto";
-  campo.style.height = `${Math.min(campo.scrollHeight, 144)}px`;
+  campo.style.height = `${Math.min(campo.scrollHeight, 200)}px`;
+  atualizarBotaoEnviar();
 }
 
 function saudacaoInicial() {
   elConversa().replaceChildren();
   msgAssistente({
-    mensagem: "Olá! Sou o assistente do DivergentIA. Posso te orientar sobre direitos, benefícios e serviços para pessoas com deficiência e neurodivergentes na Grande Vitória, e montar um passo a passo com documentos, links oficiais e telefones. Sobre o que você quer falar?",
-    cobertura: "completa", fontes: [], perguntas: [], sugestoes: TEMAS, contatos_de_apoio: [], roteiro: null,
-  }, { semSelo: true });
+    mensagem: "Olá! Sou o assistente do **DivergentIA**. Posso te orientar sobre direitos, benefícios e serviços para pessoas com deficiência e neurodivergentes na Grande Vitória, e montar um passo a passo com documentos, links oficiais e telefones.\n\nMe conte com as suas palavras o que você precisa. Pode ser algo bem do dia a dia, como uma dúvida sobre a escola, um benefício, um documento ou uma situação que te incomodou.",
+    cobertura: "completa", fontes: [], perguntas: [], contatos_de_apoio: [], roteiro: null,
+  }, { semSelo: true, semAcoes: true });
   elConversa().scrollTop = 0; // a 1ª mensagem precisa ficar visível (no celular a área é pequena)
+  atualizarBotaoFim();
 }
 
 let temporizadorNova = null;
@@ -633,6 +887,7 @@ function novaConversa() {
   estado.fontes = [];
   estado.apoio = [];
   estado.feitos.clear();
+  estado.conversaId = null;
   $("#municipio").value = "";
   $("#status-pdf").textContent = "";
   saudacaoInicial();
@@ -640,25 +895,102 @@ function novaConversa() {
   anunciar("Conversa reiniciada.");
 }
 
+// Histórico (só para quem está logado com conta de usuário — ver verificarConta()).
+async function abrirHistorico() {
+  const dialogo = $("#dlg-historico");
+  const lista = $("#lista-historico");
+  const status = $("#status-historico");
+  status.textContent = "Carregando…";
+  lista.replaceChildren();
+  dialogo.showModal();
+  try {
+    const resposta = await fetch("/chat/conversas");
+    if (!resposta.ok) throw await erroDaApi(resposta);
+    const conversas = await resposta.json();
+    status.textContent = conversas.length ? "" : "Você ainda não tem conversas salvas.";
+    lista.replaceChildren(...conversas.map((c) => {
+      const abrir = h("button", { type: "button", class: "btn btn--texto" },
+        h("span", { class: "historico__titulo" }, c.titulo),
+        h("span", { class: "historico__data" }, dataHoraBR(c.atualizada_em)));
+      abrir.addEventListener("click", () => carregarConversa(c.id));
+      const excluir = h("button", {
+        type: "button", class: "btn btn--icone historico__excluir",
+        "aria-label": `Excluir a conversa "${c.titulo}"`,
+      }, icone("fechar"));
+      excluir.addEventListener("click", () => excluirConversa(c.id));
+      return h("li", { class: "historico__item" }, abrir, excluir);
+    }));
+  } catch (erro) {
+    status.textContent = `Não foi possível carregar o histórico. ${mensagemDeErro(erro)}`;
+  }
+}
+
+async function carregarConversa(id) {
+  const status = $("#status-historico");
+  status.textContent = "Abrindo conversa…";
+  try {
+    const resposta = await fetch(`/chat/conversas/${id}`);
+    if (!resposta.ok) throw await erroDaApi(resposta);
+    const conversa = await resposta.json();
+    if (estado.controle) estado.controle.abort();
+    estado.historico = conversa.mensagens.map((m) => ({ papel: m.papel, conteudo: m.conteudo }));
+    estado.roteiro = conversa.roteiro_final;
+    estado.conversaId = conversa.id;
+    estado.fontes = [];
+    estado.apoio = [];
+    estado.feitos.clear();
+    elConversa().replaceChildren();
+    conversa.mensagens.forEach((m) => {
+      if (m.papel === "usuario") msgUsuario(m.conteudo);
+      else msgAssistente({
+        mensagem: m.conteudo, cobertura: "completa", fontes: [], perguntas: [],
+        contatos_de_apoio: [], roteiro: null,
+      }, { semSelo: true });
+    });
+    rolarParaFim("auto");
+    renderRoteiro();
+    $("#dlg-historico").close();
+    anunciar("Conversa carregada do seu histórico.");
+  } catch (erro) {
+    status.textContent = `Não foi possível abrir essa conversa. ${mensagemDeErro(erro)}`;
+  }
+}
+
+async function excluirConversa(id) {
+  const status = $("#status-historico");
+  try {
+    const resposta = await fetch(`/chat/conversas/${id}`, { method: "DELETE" });
+    if (!resposta.ok) throw await erroDaApi(resposta);
+    if (estado.conversaId === id) estado.conversaId = null;
+    await abrirHistorico();
+  } catch (erro) {
+    status.textContent = `Não foi possível excluir essa conversa. ${mensagemDeErro(erro)}`;
+  }
+}
+
 /* ===================================================================================================
    Locais acessíveis (mapa colaborativo)
    =================================================================================================== */
 
-const MUNICIPIOS_GV = ["Cariacica", "Fundão", "Guarapari", "Serra", "Viana", "Vila Velha", "Vitória"];
-const TIPOS = { comercio: "Comércio", saude: "Saúde", educacao: "Educação", lazer: "Lazer e cultura", orgao_publico: "Órgão público", outro: "Outro" };
+const MUNICIPIO_LOCAIS = "Vitória"; // única cidade com base de dados por enquanto
+const TIPOS = {
+  comercio: "Comércio", saude: "Saúde", educacao: "Educação", lazer: "Lazer e cultura",
+  orgao_publico: "Órgão público", apoio_especializado: "Apoio especializado", outro: "Outro",
+};
 const RECURSOS = {
   rampa: "Rampa", banheiro_adaptado: "Banheiro adaptado", braille: "Sinalização em Braille",
   cardapio_acessivel: "Cardápio acessível", baixo_estimulo_sensorial: "Baixo estímulo sensorial",
-  atendimento_preferencial: "Atendimento preferencial real",
+  atendimento_preferencial: "Atendimento preferencial real", libras: "Atendimento em Libras",
+  cadeira_anfibia: "Cadeira anfíbia (banho de mar)", brinquedos_adaptados: "Brinquedos adaptados",
+  vaga_exclusiva: "Vaga de estacionamento exclusiva", tecnologia_assistiva: "Tecnologia assistiva",
+  estrutura_sensorial: "Estrutura de estímulo sensorial", piso_tatil: "Piso tátil",
+  alto_contraste: "Sinalização de alto contraste",
 };
 
 function preencherOpcoes() {
-  const municipios = MUNICIPIOS_GV.map((m) => h("option", { value: m }, m));
   const tipos = Object.entries(TIPOS).map(([valor, rotulo]) => h("option", { value: valor }, rotulo));
   const selecione = () => h("option", { value: "", disabled: true, selected: true }, "Selecione…");
-  $("#f-municipio").append(h("option", { value: "" }, "Todos os municípios"), ...municipios.map((o) => o.cloneNode(true)));
   $("#f-tipo").append(h("option", { value: "" }, "Todos os tipos"), ...tipos.map((o) => o.cloneNode(true)));
-  $("#l-municipio").append(selecione(), ...municipios);
   $("#l-tipo").append(selecione(), ...tipos);
   Object.entries(RECURSOS).forEach(([valor, rotulo], i) => {
     $("#l-recursos").append(h("div", { class: "check" },
@@ -668,8 +1000,7 @@ function preencherOpcoes() {
 }
 
 async function carregarLocais() {
-  const parametros = new URLSearchParams();
-  if ($("#f-municipio").value) parametros.set("municipio", $("#f-municipio").value);
+  const parametros = new URLSearchParams({ municipio: MUNICIPIO_LOCAIS });
   if ($("#f-tipo").value) parametros.set("tipo", $("#f-tipo").value);
   if ($("#f-verificados").checked) parametros.set("apenas_verificados", "true");
   const status = $("#status-locais");
@@ -696,13 +1027,23 @@ function renderLocais(locais) {
       ? h("span", { class: "selo selo--ok" }, icone("ok"), "Verificado por parceiros")
       : h("span", { class: "selo selo--pendente" }, icone("relogio"), "Aguardando verificação"),
     h("h3", {}, local.nome),
-    h("p", { class: "local__meta" }, `${TIPOS[local.tipo] || local.tipo} · ${local.municipio}`),
+    h("p", { class: "local__meta" }, `${TIPOS[local.tipo] || local.tipo} · ${local.bairro ? local.bairro + ", " : ""}${local.municipio}`),
     h("p", {}, local.endereco),
+    local.horario_funcionamento ? h("p", { class: "local__horario" }, icone("relogio"), " ", local.horario_funcionamento) : null,
+    local.telefones && local.telefones.length
+      ? h("p", { class: "local__telefones" },
+          local.telefones.map((tel, i) => [i ? " · " : "", h("a", { href: hrefTel(tel) }, tel)]))
+      : null,
     local.recursos_acessibilidade && local.recursos_acessibilidade.length
       ? h("ul", { class: "tags", "aria-label": "Recursos de acessibilidade" },
           local.recursos_acessibilidade.map((r) => h("li", { class: "tag" }, RECURSOS[r] || r)))
       : null,
-    local.observacoes ? h("p", { class: "local__obs" }, local.observacoes) : null)));
+    local.observacoes ? h("p", { class: "local__obs" }, local.observacoes) : null,
+    local.fonte_url
+      ? h("p", { class: "local__fonte" },
+          h("a", { href: local.fonte_url, target: "_blank", rel: "noopener" }, "Fonte ", icone("externo")),
+          local.verificado_em ? ` · conferido em ${dataBR(local.verificado_em)}` : "")
+      : null)));
 }
 
 async function cadastrarLocal(evento) {
@@ -720,7 +1061,7 @@ async function cadastrarLocal(evento) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        nome: texto("nome"), municipio: texto("municipio"), endereco: texto("endereco"), tipo: texto("tipo"),
+        nome: texto("nome"), municipio: MUNICIPIO_LOCAIS, endereco: texto("endereco"), tipo: texto("tipo"),
         recursos_acessibilidade: dados.getAll("recursos"),
         observacoes: texto("observacoes") || null, reportado_por: texto("reportado_por") || null,
       }),
@@ -764,11 +1105,20 @@ function ligarEventos() {
   const formChat = $("#form-chat");
   const campo = $("#mensagem");
   formChat.addEventListener("submit", (e) => { e.preventDefault(); enviar(campo.value); });
+  // No celular o exemplo longo ocupa 3 linhas do campo: lá vai um texto curto.
+  const telaPequena = window.matchMedia("(max-width: 560px)");
+  const exemplo = campo.getAttribute("placeholder");
+  const ajustarExemplo = () => { campo.placeholder = telaPequena.matches ? "Escreva sua mensagem…" : exemplo; };
+  ajustarExemplo();
+  telaPequena.addEventListener("change", ajustarExemplo);
   campo.addEventListener("input", ajustarCampo);
   campo.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); formChat.requestSubmit(); }
   });
+  elConversa().addEventListener("scroll", atualizarBotaoFim, { passive: true });
+  $("#btn-fim").addEventListener("click", () => rolarParaFim());
   $("#btn-nova").addEventListener("click", novaConversa);
+  $("#btn-historico").addEventListener("click", abrirHistorico);
   $("#btn-pdf").addEventListener("click", baixarPdf);
   $("#btn-imprimir").addEventListener("click", () => window.print());
 
@@ -793,6 +1143,7 @@ function ligarEventos() {
 async function verificarConta() {
   const link = $("#link-conta");
   const botaoCadastrar = $("#btn-cadastrar");
+  const botaoHistorico = $("#btn-historico");
   let rotulo = null;
   let ehAdmin = false;
   try {
@@ -807,8 +1158,10 @@ async function verificarConta() {
     } catch (_) { /* ignora */ }
   }
   if (botaoCadastrar) botaoCadastrar.hidden = !ehAdmin;
+  if (botaoHistorico) botaoHistorico.hidden = !rotulo || ehAdmin; // histórico é só de conta de usuário, não do admin
   if (!rotulo) return;
-  link.textContent = `Sair (${rotulo})`;
+  link.querySelector(".menu__rotulo").textContent = `Sair (${rotulo})`;
+  link.title = `Sair da conta (${rotulo})`;
   link.removeAttribute("href");
   link.tabIndex = 0;
   link.setAttribute("role", "button");
@@ -826,6 +1179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   preencherOpcoes();
   saudacaoInicial();
   renderRoteiro();
+  iniciarNavegacao();
   aplicarVisao();
   carregarBase();
   carregarLocais();

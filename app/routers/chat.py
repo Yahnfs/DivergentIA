@@ -1,25 +1,33 @@
 """Chat do DivergentIA.
 
-Regra de ouro: o assistente não inventa. Por isso a divisão de trabalho é esta:
+Divisão de trabalho:
 
-  - O SERVIDOR escolhe as fontes (ranking da busca + etiquetas exatas), monta o roteiro com os passos oficiais
-    da base, anexa links e contatos verificados e decide o que perguntar (município, rede de ensino, laudo).
-  - O MODELO de IA escreve só uma frase curta reconhecendo o que a pessoa disse. Ele nunca afirma fatos: os
-    fatos vêm do resumo verificado da base. Se o modelo estiver fora do ar, o chat continua funcionando.
+  - O SERVIDOR escolhe as fontes (ranking da busca + etiquetas exatas, com a IA como último recurso quando a
+    busca não acha nada), monta o roteiro com os passos oficiais da base, anexa links e contatos verificados
+    e decide o que perguntar (município, rede de ensino, laudo).
+  - O MODELO de IA escreve a resposta em texto, mas só pode afirmar o que estiver nos fatos verificados que o
+    servidor entrega a ela (resumo, passos, trechos de lei) — nunca completa com conhecimento geral próprio, e
+    diz quando não tem um detalhe específico. Por isso a tela mostra sempre o aviso "pode cometer erros": o
+    texto é gerado, mesmo que baseado em fatos verificados. Se o modelo estiver fora do ar, o chat continua
+    funcionando (cai para o resumo puro da base).
 """
+import datetime
 import json
 import logging
 import re
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, HTTPException, Request
+from sqlalchemy.orm import Session
 
+from app.db import ConversaDB, MensagemConversaDB, UsuarioDB, get_db
 from app.models.schemas import (
-    ChatRequest, ChatResponse, ContatoOut, DireitoOut, FonteOut, MensagemChat, OpcaoResposta, PassoOut,
-    PerguntaOut, RoteiroOut,
+    ChatRequest, ChatResponse, ConversaOut, ConversaResumo, ContatoOut, DireitoOut, FonteOut, MensagemChat,
+    OpcaoResposta, PassoOut, PerguntaOut, RoteiroOut,
 )
+from app.services import auth_service
 from app.services.llm_provider import LLMProviderError, get_llm_provider
 from app.services.rag_engine import (
-    MUNICIPIO_OUTRO, MUNICIPIOS_COBERTOS, base, detectar_municipio, detectar_rede, normalizar, radical,
+    MUNICIPIO_OUTRO, MUNICIPIOS_COBERTOS, base, detectar_municipio, detectar_rede, normalizar,
 )
 
 router = APIRouter(prefix="/chat", tags=["chat"])
@@ -36,50 +44,22 @@ ESCOLAS_MUNICIPAIS = {"educacao-apoio-escolar-vitoria", "educacao-apoio-escolar-
 ESCOLA_ESTADUAL = "educacao-apoio-escolar-estadual"
 EDUCACAO = ESCOLAS_MUNICIPAIS | {ESCOLA_ESTADUAL}
 
-SYSTEM_ABERTURA = """\
-Você ajuda a entender o que uma pessoa quer. Complete a frase "Você quer ..." resumindo o PEDIDO dela em até 20 \
-palavras, usando só o que ela disse. Comece por um verbo no infinitivo (pedir, saber, conseguir...). Não acrescente \
-leis, direitos, prazos, valores, números, telefones nem links. Não dê instruções e não faça perguntas.
-
-Exemplos:
-- Pessoa: "Meu filho é autista e quero pedir mediador na escola" -> "pedir apoio na escola para o seu filho autista"
-- Pessoa: "como faço isenção de imposto para comprar carro, tenho deficiência física" -> "conseguir isenção de impostos para comprar um carro, por causa da sua deficiência física"
-- Pessoa: "e se a escola negar?" -> "saber o que fazer se a escola negar o pedido"
-Assunto do roteiro: {foco}.
-"""
-ESQUEMA_ABERTURA = {
-    "type": "object",
-    "properties": {"complemento": {"type": "string"}},
-    "required": ["complemento"],
-}
-PALAVRAS_DE_PERGUNTA = {"como", "qual", "quais", "onde", "quando", "que", "porque", "por", "quem", "quanto"}
-# Palavras de "fato" que a frase de abertura não pode conter (fatos só vêm do texto verificado da base).
-PALAVRAS_DE_FATO = re.compile(r"\b(lei|leis|artigo|garant\w*|estabelec\w*|determin\w*|obrigat\w*|prazo|gratuit\w*|"
-                              r"direitos?|deve|devem|precisa|precisam|necess[aá]ri\w*)\b", re.I)
-# Palavras neutras que a frase pode usar mesmo sem a pessoa tê-las dito.
-PALAVRAS_NEUTRAS = {radical(p)[:5] for p in ("voce", "quer", "quero", "querer", "saber", "fazer", "pedir", "obter",
-                                             "conseguir", "entender", "devido", "sobre", "porque", "causa", "tirar",
-                                             "situacao", "informacao", "informacoes", "ajuda", "apoio", "apoiar",
-                                             "morando", "morar", "cidade", "municipio", "vivendo", "solicitar")}
-
-
-def _radicais_de_conteudo(texto: str) -> set[str]:
-    """Radicais (5 letras) das palavras longas do texto: 'autista' e 'autismo' contam como a mesma."""
-    return {radical(p)[:5] for p in re.findall(r"[a-z0-9]+", normalizar(texto)) if len(p) > 4}
-
 SAUDACAO = re.compile(
     r"^\s*(oi+|ol[aá]|bom dia|boa tarde|boa noite|e a[ií]|opa|tudo bem\??)([\s,!.?]+(tudo bem\??|td bem\??))?[\s!?.]*$",
     re.I,
 )
-AGRADECIMENTO = re.compile(r"^\s*((muito|mto)\s+)?(obrigad[oa]s?|valeu|agrade[cç]o|brigad[oa]|tchau|at[eé] mais)\b[\s!?.,a-zçãõé]*$", re.I)
+AGRADECIMENTO = re.compile(
+    r"^\s*((ok|okay|certo|entendi|beleza|blz|show|t[aá] bom|t[aá] certo)[\s,!.]+)*"
+    r"((muito|mto)\s+)?(obrigad[oa]s?|valeu|agrade[cç]o|brigad[oa]|tchau|at[eé] mais)\b[\s!?.,a-zçãõé]*$", re.I)
 SO_RESPOSTA = re.compile(r"^\s*(moro|sou d[aeo]|estou)\b|escola [ée] d[ae]|(j[aá]|ainda n[aã]o) (tem|existe)\b.*laudo", re.I)
-
-TEMAS_INICIAIS = [
-    "Como pedir mediador ou apoio para meu filho na escola?",
-    "Como conseguir o BPC?",
-    "Como pedir isenção de impostos na compra de um carro?",
-    "Como tirar a credencial de estacionamento?",
-]
+# Pergunta sobre a PRÓPRIA conversa (resumir, relembrar, voltar a um ponto) — checado no texto já normalizado
+# (sem acento), antes da busca por palavras, para o contexto da conversa não "puxar" um assunto qualquer.
+SOBRE_CONVERSA = re.compile(
+    r"\b(resum[ae]|resumir|relembr[ae]|relembrar|repit[ae]|repetir)\b.{0,25}\b(pergunta|chat|conversa|mensage)"
+    r"|\b(quais|que)\s+perguntas\s+(eu\s+)?(te\s+)?fiz\b"
+    r"|\bo\s+que\s+(eu\s+)?(ja\s+)?(te\s+)?perguntei\b"
+    r"|\bhistorico\s+(da\s+conversa|de\s+perguntas)\b",
+)
 
 # Perguntas de triagem: o texto e os botões são fixos; o servidor decide QUANDO perguntar.
 PERGUNTAS = {
@@ -150,33 +130,151 @@ def _historico_para_llm(historico: list[MensagemChat], mensagem: str) -> list[di
     return mensagens
 
 
-def _abertura(payload: ChatRequest, foco: str, textos_da_pessoa: str) -> str:
-    """Uma frase do modelo reconhecendo a fala da pessoa. Vazia se o modelo falhar ou fugir das regras."""
+def _fatos_para_ia(itens: list[dict]) -> str:
+    """Texto com os fatos já verificados (resumo, passos, trechos de lei) que a IA pode usar para responder.
+    É o único material que ela pode tratar como fato — tudo fora daqui é "não tenho essa informação"."""
+    blocos = []
+    for item in itens:
+        linhas = [f"### {item.get('titulo_curto') or item['titulo']}"]
+        if item.get("resumo"):
+            linhas.append(item["resumo"])
+        for p in item.get("passos", []):
+            linhas.append(f"- {p['titulo']}: {p['texto']}")
+        for t in item.get("trechos", []):
+            linhas.append(f"- {t}")
+        if item.get("atencao"):
+            linhas.append(f"Atenção: {item['atencao']}")
+        blocos.append("\n".join(linhas))
+    return "\n\n".join(blocos)
+
+
+SYSTEM_RESPONDER = """\
+Você é o assistente do DivergentIA, especializado em direitos e serviços para pessoas com deficiência e \
+neurodivergentes na Grande Vitória (ES). Responda à ÚLTIMA mensagem da pessoa de forma natural, direta e \
+acolhedora, levando em conta o que já foi dito antes na conversa.
+
+Use SÓ os fatos verificados abaixo para qualquer informação específica (valor, prazo, documento, nome de lei, \
+procedimento, telefone, link). Se a pergunta pedir algo que não está nestes fatos — por exemplo um valor de \
+indenização, um prazo que não foi informado, ou um órgão que não está listado — diga com clareza que você não \
+tem essa informação específica; nunca complete com conhecimento geral seu nem invente um número, link ou valor. \
+Não diga "veja ao lado" nem fale do roteiro — isso é adicionado automaticamente depois da sua resposta.
+
+As mensagens suas que aparecem no histórico da conversa JÁ FORAM enviadas por completo — nunca estão cortadas \
+ou incompletas, mesmo que os "fatos verificados" abaixo pareçam ter mais detalhes do que você disse antes. Não \
+diga que uma resposta sua "ficou cortada" ou "incompleta". Se a pessoa só agradeceu ou confirmou que entendeu, \
+responda de forma breve — não repita um passo a passo que você já deu, a não ser que ela peça de novo.
+
+Fatos verificados disponíveis:
+{fatos}
+"""
+
+
+def _compor_resposta(payload: ChatRequest, itens: list[dict], validos: set[str]) -> str:
+    """A resposta de verdade da conversa: a IA lê a pergunta atual + o histórico e responde usando só os fatos
+    já reunidos no roteiro. Nunca solta telefone/link que não esteja na base (ver _sanear). Se a IA falhar,
+    cai para o resumo verificado puro — o chat nunca trava por causa disso."""
+    fatos = _fatos_para_ia(itens)
     try:
         bruto = get_llm_provider().generate(
-            SYSTEM_ABERTURA.format(foco=foco), _historico_para_llm(payload.historico, payload.mensagem), ESQUEMA_ABERTURA
+            SYSTEM_RESPONDER.format(fatos=fatos), _historico_para_llm(payload.historico, payload.mensagem),
         )
-        complemento = str(json.loads(re.sub(r"^```(?:json)?|```$", "", bruto.strip(), flags=re.M))["complemento"])
+    except LLMProviderError as exc:
+        log.warning("IA indisponível para compor a resposta (%s): usando o resumo verificado puro.", exc)
+        return itens[0]["resumo"] if len(itens) == 1 else " ".join(_primeira_frase(i["resumo"]) for i in itens)
+    return _sanear(bruto.strip(), validos)
+
+
+SYSTEM_CONVERSA = """\
+A pessoa está perguntando sobre a PRÓPRIA conversa — pedir um resumo do que já perguntou, relembrar algo que \
+você disse antes, ou pedir uma síntese / "o melhor caminho" com base no que já foi discutido — não um direito \
+ou serviço novo. Responda com base no histórico da conversa abaixo e, quando ajudar a responder com mais \
+precisão, também nos fatos verificados do roteiro já montado. Não invente nenhuma lei, serviço, telefone ou \
+link que não esteja no histórico ou nestes fatos; se faltar um dado para dizer qual é "o melhor" caminho \
+(ex.: renda, se já tem laudo), diga isso e pergunte.
+
+Fatos verificados do roteiro já montado nesta conversa (pode estar vazio, se nada foi montado ainda):
+{fatos}
+"""
+
+
+def _responder_sobre_conversa(payload: ChatRequest) -> str:
+    """Pergunta sobre a conversa em si (ex.: "resuma minhas perguntas", "qual o melhor resultado pra mim") —
+    usa o histórico e, quando já existe, também os fatos verificados do roteiro montado até agora."""
+    servicos, leis = _itens_do_roteiro(payload.roteiro_atual)
+    fatos = _fatos_para_ia([*servicos, *leis]) or "(nenhum roteiro montado ainda)"
+    try:
+        bruto = get_llm_provider().generate(
+            SYSTEM_CONVERSA.format(fatos=fatos), _historico_para_llm(payload.historico, payload.mensagem),
+        )
+    except LLMProviderError as exc:
+        log.warning("IA indisponível para responder sobre a conversa (%s).", exc)
+        return "No momento não consigo acessar o histórico para responder isso. Tente de novo em instantes."
+    return _sanear(bruto.strip(), _numeros_validos())
+
+
+# ---------------------------------------------------------------------------
+# Último recurso: a busca por palavras não achou nada. Antes de dizer "não sei", pergunta a uma IA se o pedido
+# (dito com as palavras da pessoa) corresponde a algum assunto da base — ela só pode apontar um id de uma lista
+# fechada, nunca escrever um fato novo. O roteiro continua vindo 100% do JSON verificado; a IA só aponta ONDE olhar.
+# ---------------------------------------------------------------------------
+
+def _catalogo_assuntos() -> str:
+    linhas = []
+    for item in base.itens:
+        titulo = item.get("titulo_curto") or item["titulo"]
+        resumo = (item.get("resumo") or "").strip()
+        if len(resumo) > 160:
+            resumo = resumo[:160].rsplit(" ", 1)[0] + "…"
+        etiquetas = ", ".join(item.get("tags", [])[:8])
+        linhas.append(f"- {item['id']}: {titulo}. {resumo} (etiquetas: {etiquetas})")
+    return "\n".join(linhas)
+
+
+CATALOGO_ASSUNTOS = _catalogo_assuntos()
+
+SYSTEM_CLASSIFICAR = """\
+A busca por palavras-chave não achou nada para o que a pessoa escreveu. Veja se o pedido dela, dito do jeito \
+dela, corresponde a UM dos assuntos abaixo — mesmo sem nenhuma palavra do título ou do resumo em comum. Pense na \
+necessidade por trás da frase (ex.: "não me deixaram entrar por causa da cadeira de rodas" é sobre discriminação \
+e denúncia, mesmo sem citar essas palavras).
+
+Se a pergunta não for sobre nenhum direito/serviço, mas sim sobre a PRÓPRIA CONVERSA (pedir um resumo do que já \
+foi perguntado, relembrar algo já dito, voltar a um ponto anterior), responda "conversa".
+
+Responda só com o id do assunto escolhido. Se não tiver certeza de que é EXATAMENTE aquele assunto, ou se nenhum \
+da lista nem "conversa" servir, responda "nenhum". Nunca responda um id que não esteja nesta lista.
+
+Assuntos:
+{catalogo}
+"""
+CONVERSA = "conversa"
+NENHUM = "nenhum"
+ESQUEMA_CLASSIFICAR = {
+    "type": "object",
+    "properties": {"id": {"type": "string", "enum": [*(i["id"] for i in base.itens), CONVERSA, NENHUM]}},
+    "required": ["id"],
+}
+
+
+def _classificar_por_ia(mensagem: str) -> dict | str | None:
+    """Devolve um item da base, a string CONVERSA (pergunta sobre a própria conversa) ou None (nada encontrado)."""
+    try:
+        bruto = get_llm_provider().generate(
+            SYSTEM_CLASSIFICAR.format(catalogo=CATALOGO_ASSUNTOS), [{"role": "user", "content": mensagem[:500]}],
+            ESQUEMA_CLASSIFICAR,
+        )
+        id_escolhido = str(json.loads(re.sub(r"^```(?:json)?|```$", "", bruto.strip(), flags=re.M))["id"]).strip()
     except (LLMProviderError, ValueError, KeyError, TypeError) as exc:
-        log.warning("Modelo indisponível para a frase de abertura (%s): usando só o texto da base.", exc)
-        return ""
-    # O servidor escreve o começo ("Entendi: você quer ..."); o modelo só completa. Tolera se ele repetir o começo.
-    complemento = re.sub(r"^(você\s+)?(quer\s+)?", "", complemento.strip(" .!?\"'“”"), flags=re.I).strip()
-    palavras = complemento.split()
-    primeira_palavra = normalizar(palavras[0]) if palavras else ""
-    numeros_da_pessoa = set(re.findall(r"\d+", textos_da_pessoa))
-    inventadas = _radicais_de_conteudo(complemento) - _radicais_de_conteudo(textos_da_pessoa) - PALAVRAS_NEUTRAS
-    # Só vale se começar por um verbo no infinitivo (o pedido foi um complemento de "você quer ..."), tiver mais de
-    # uma palavra, não trouxer fatos, números novos, links ou perguntas, nem palavras que a pessoa não usou
-    # (ex.: "seu filho" quando ela disse "minha filha"; "interestadual" quando ela não falou disso), e não repetir a fala dela.
-    if (len(palavras) < 2 or not re.match(r"^\w{3,}(ar|er|ir)$", primeira_palavra)
-            or len(complemento) > 150 or "?" in complemento or URL.search(complemento)
-            or primeira_palavra in PALAVRAS_DE_PERGUNTA or PALAVRAS_DE_FATO.search(complemento)
-            or any(n not in numeros_da_pessoa for n in re.findall(r"\d+", complemento))
-            or inventadas or normalizar(complemento) == normalizar(payload.mensagem.strip(" .!?"))):
-        log.warning("Frase de abertura descartada (%s): %r", ", ".join(sorted(inventadas)) or "regras", complemento[:120])
-        return ""
-    return f"Entendi: você quer {complemento}."
+        log.warning("Classificador por IA indisponível (%s): segue sem achar nada na base.", exc)
+        return None
+    if id_escolhido == CONVERSA:
+        return CONVERSA
+    item = base.por_id.get(id_escolhido)
+    if item is None and id_escolhido != NENHUM:
+        log.warning("Classificador por IA respondeu um id fora da lista: %r", id_escolhido[:60])
+    elif item is not None:
+        log.info("Classificador por IA achou %r para uma pergunta que a busca por palavras não achou.", id_escolhido)
+    return item
 
 
 # ---------------------------------------------------------------------------
@@ -211,6 +309,16 @@ def _selecionar(itens: list[dict], mensagem: str) -> tuple[list[dict], list[dict
     return escolhidos, leis
 
 
+def _itens_do_roteiro(roteiro: RoteiroOut | None) -> tuple[list[dict], list[dict]]:
+    """Os serviços e leis por trás de um roteiro já montado, a partir dos fonte_id guardados em passos/direitos."""
+    if not roteiro:
+        return [], []
+    ids_servicos = dict.fromkeys(p.fonte_id for p in roteiro.passos if p.fonte_id)
+    servicos = [base.por_id[i] for i in ids_servicos if i in base.por_id]
+    leis = [base.por_id[d.fonte_id] for d in roteiro.direitos if d.fonte_id in base.por_id]
+    return servicos, leis
+
+
 def _acumular(roteiro: RoteiroOut | None, novos: list[dict], leis_novas: list[dict],
               filtro: str | None) -> tuple[list[dict], list[dict]]:
     """Junta o roteiro da conversa com o que veio agora.
@@ -218,12 +326,7 @@ def _acumular(roteiro: RoteiroOut | None, novos: list[dict], leis_novas: list[di
     Assuntos diferentes se somam (BPC + passe livre). Variantes do mesmo assunto (escola de Vitória, da Serra,
     estadual...) se substituem, para o roteiro acompanhar o município e a rede que a pessoa foi informando.
     """
-    antigos: list[dict] = []
-    antigas_leis: list[dict] = []
-    if roteiro:
-        ids = dict.fromkeys(p.fonte_id for p in roteiro.passos if p.fonte_id)
-        antigos = [base.por_id[i] for i in ids if i in base.por_id]
-        antigas_leis = [base.por_id[d.fonte_id] for d in roteiro.direitos if d.fonte_id in base.por_id]
+    antigos, antigas_leis = _itens_do_roteiro(roteiro)
     antigos = [a for a in antigos if not a.get("municipio") or a["municipio"] == filtro]
 
     pendentes = list(novos)
@@ -255,6 +358,18 @@ def _titulo_e_resumo(servicos: list[dict], leis: list[dict]) -> tuple[str, str]:
     return titulo, "Reúne o passo a passo de: " + "; ".join(nomes) + "."
 
 
+def _sem_titulo_repetido(titulo: str, texto: str) -> str:
+    """Tira do texto do passo o título repetido no começo, que na tela aparece logo acima dele.
+
+    "Agende pelo site" + "Agende pelo site: em defensoria.es.def.br, faça..." -> "Em defensoria.es.def.br, faça...".
+    Só corta quando o título vem seguido de ":" ou "." (senão a frase ficaria sem sujeito, ex.: "Acompanhe o pedido no...").
+    """
+    if not texto.lower().startswith(titulo.lower()) or texto[len(titulo):len(titulo) + 1] not in (":", "."):
+        return texto
+    resto = texto[len(titulo) + 1:].strip()
+    return resto[:1].upper() + resto[1:] if resto else texto
+
+
 def _montar_roteiro(servicos: list[dict], leis: list[dict], filtro: str | None,
                     titulo: str, resumo: str, aviso: str | None) -> RoteiroOut | None:
     """Passos oficiais (palavra por palavra) dos serviços + base legal das leis."""
@@ -264,7 +379,8 @@ def _montar_roteiro(servicos: list[dict], leis: list[dict], filtro: str | None,
         for k, p in enumerate(item["passos"]):
             primeiro = k == 0  # links, contatos, documentos e alertas ficam no 1º passo de cada fonte
             passos.append(PassoOut(
-                ordem=len(passos) + 1, titulo=p["titulo"], descricao=p["texto"], fonte_id=item["id"],
+                ordem=len(passos) + 1, titulo=p["titulo"], descricao=_sem_titulo_repetido(p["titulo"], p["texto"]),
+                fonte_id=item["id"],
                 fonte_titulo=item.get("titulo_curto"),
                 documentos=item.get("documentos", []) if primeiro else [],
                 links=item.get("links", []) if primeiro else [],
@@ -343,8 +459,7 @@ def _pede_laudo(item: dict) -> bool:
     return "laudo" in texto or "relatorio medico" in texto
 
 
-@router.post("", response_model=ChatResponse)
-def conversar(payload: ChatRequest) -> ChatResponse:
+def _gerar_resposta(payload: ChatRequest) -> ChatResponse:
     anteriores = [m.conteudo for m in payload.historico if m.papel == "usuario"]
     textos = " ".join([*anteriores[-3:], payload.mensagem])
 
@@ -359,10 +474,14 @@ def conversar(payload: ChatRequest) -> ChatResponse:
         return _resposta(
             "Olá! Sou o assistente do DivergentIA. Posso te orientar sobre direitos, benefícios e serviços para "
             "pessoas com deficiência e neurodivergentes na Grande Vitória, e montar um passo a passo com documentos, "
-            "links oficiais e telefones. Sobre o que você quer falar?", "completa", sugestoes=TEMAS_INICIAIS, **ctx)
+            "links oficiais e telefones. Sobre o que você quer falar?", "completa", **ctx)
     if AGRADECIMENTO.match(payload.mensagem):
         return _resposta("Por nada! Se precisar de mais alguma coisa, é só me chamar. O roteiro fica ao lado para você "
                          "consultar e baixar em PDF.", "completa", **ctx)
+    if payload.historico and SOBRE_CONVERSA.search(normalizar(payload.mensagem)):
+        # Pergunta sobre a conversa em si: checa ANTES da busca, senão o contexto acumulado (ex.: "BPC" dito
+        # antes) "puxa" um assunto qualquer da base para dentro de uma pergunta que não é sobre nenhum assunto.
+        return _resposta(_responder_sobre_conversa(payload), "completa", **ctx)
 
     # 2) Pergunta que a base sabidamente NÃO responde (ex.: lista de escolas com rampa): resposta honesta e fixa,
     #    com o contato de quem sabe.
@@ -372,12 +491,18 @@ def conversar(payload: ChatRequest) -> ChatResponse:
         if lacuna["contatos"]:  # lacuna sem contatos (ex.: locais acessíveis) remete à seção da página, não a um órgão
             contatos = contatos or base.contatos_gerais(filtro)
         faltando = [p for p in lacuna.get("perguntas", []) if not (p == "municipio" and municipio)]
-        return _resposta(lacuna["mensagem"] + nota, "nenhuma", perguntas=faltando, sugestoes=lacuna.get("sugestoes", []),
-                         apoio=contatos[:4], **ctx)
+        return _resposta(lacuna["mensagem"] + nota, "nenhuma", perguntas=faltando, apoio=contatos[:4], **ctx)
 
     # 3) Busca na base (a mensagem atual pesa mais que as anteriores).
     consulta = f"{payload.mensagem} {payload.mensagem} " + " ".join(anteriores[-2:])
     encontrados = base.buscar(consulta, top_k=8, municipio=filtro, mensagem_atual=payload.mensagem)
+    via_ia = False
+    if not encontrados:
+        item_ia = _classificar_por_ia(payload.mensagem)
+        if item_ia == CONVERSA:
+            return _resposta(_responder_sobre_conversa(payload), "completa", **ctx)
+        if item_ia:
+            encontrados, via_ia = [{**item_ia, "score": 0.3}], True
     rede = detectar_rede(textos)
 
     # 3a) Triagem da escola: o caminho para pedir apoio muda entre a rede municipal (e a cidade) e a estadual.
@@ -412,11 +537,11 @@ def conversar(payload: ChatRequest) -> ChatResponse:
 
     if not itens:
         if SO_RESPOSTA.search(payload.mensagem) and not payload.roteiro_atual:
-            return _resposta("Anotei! Sobre o que você quer falar?", "completa", sugestoes=TEMAS_INICIAIS, **ctx)
+            return _resposta("Anotei! Sobre o que você quer falar?", "completa", **ctx)
         return _resposta(
             "Não encontrei na minha base informações sobre isso, e prefiro não te passar nada incerto." + nota +
             " Veja abaixo quem pode te orientar. Se quiser, reformule a pergunta com outras palavras (por exemplo, "
-            "o nome do benefício ou do documento).", "nenhuma", sugestoes=TEMAS_INICIAIS[:3],
+            "o nome do benefício ou do documento).", "nenhuma",
             apoio=base.contatos_gerais(filtro), **ctx)
 
     # 4) Seleção determinística + roteiro que acumula os assuntos da conversa.
@@ -426,7 +551,8 @@ def conversar(payload: ChatRequest) -> ChatResponse:
         leis = [i for i in itens if i["origem"] != "servico"][:1]
 
     cobertura = "completa"
-    if (municipio and municipio not in MUNICIPIOS_COBERTOS) or municipais_pendentes or itens[0]["score"] < LIMITE_CONFIANCA:
+    if (via_ia or (municipio and municipio not in MUNICIPIOS_COBERTOS) or municipais_pendentes
+            or itens[0]["score"] < LIMITE_CONFIANCA):
         cobertura = "parcial"
     if any(s.get("cobertura") == "parcial" for s in servicos):
         cobertura = "parcial"  # a base só tem parte do que se costuma perguntar sobre esse assunto (ver "atencao")
@@ -443,29 +569,89 @@ def conversar(payload: ChatRequest) -> ChatResponse:
     if any(s["id"] not in ids_antigos and _pede_laudo(s) for s in servicos) and "laudo" not in normalizar(textos):
         perguntas.append("laudo")
 
-    # 6) Mensagem: frase do modelo (opcional) + resumo verificado da base do que entrou agora no roteiro.
+    # 6) Mensagem: a IA responde à pergunta de agora com base nos fatos já reunidos (nunca texto livre fora deles).
+    algo_novo = bool(novos or leis_novas)
+    ponteiro = ""
     if novos:
-        em_foco, final = novos, ("Montei o passo a passo ao lado." if len(novos) == 1 else "Montei o passo a passo dos dois ao lado.")
+        ponteiro = " Montei o passo a passo ao lado." if len(novos) == 1 else " Montei o passo a passo dos dois ao lado."
     elif leis_novas or not payload.roteiro_atual:
-        em_foco, final = (leis_novas or leis)[:1], "Veja ao lado o que a lei garante."
-    else:
-        em_foco, final = [], ""
-    if em_foco:
-        corpo = em_foco[0]["resumo"] if len(em_foco) == 1 else " ".join(_primeira_frase(i["resumo"]) for i in em_foco)
-        abertura = _abertura(payload, em_foco[0].get("titulo_curto") or em_foco[0]["titulo"], textos)
-        mensagem = " ".join(p for p in (abertura, corpo, final) if p) + nota
-    else:
-        # Nada novo na base sobre esta pergunta: o roteiro que a pessoa já tem continua valendo (não é reenviado).
-        mensagem = ("Não achei nada novo sobre isso na minha base. O roteiro ao lado continua valendo; para mais "
-                    "detalhes, use os contatos indicados." + nota)
+        ponteiro = " Veja ao lado o que a lei garante."
+    mensagem = _compor_resposta(payload, [*servicos, *leis], _numeros_validos()) + ponteiro + nota
+    if not algo_novo and payload.roteiro_atual:
+        # Nada novo no roteiro desta vez: não reenvia o mesmo roteiro (a resposta em texto continua respondendo).
         roteiro = None
         cobertura = "parcial"
 
     apoio = _contatos_de_apoio(servicos, cobertura, filtro) if "municipio" not in perguntas or servicos else []
-    # Atalho "E se negarem?": faz sentido para pedidos (benefícios, documentos, apoio escolar), não para CRAS ou Defensoria.
-    pedidos = [s for s in servicos if s["tipo"] in ("beneficio", "documento") or s.get("topico") == "apoio-escolar"]
-    sugestoes = ["E se o pedido for negado?"] if pedidos and all(s["id"] != "defensoria-es" for s in servicos) else []
     return _resposta(
-        mensagem, cobertura, perguntas=perguntas, sugestoes=sugestoes, roteiro=roteiro, apoio=apoio,
+        mensagem, cobertura, perguntas=perguntas, roteiro=roteiro, apoio=apoio,
         fontes=_fontes_out([*servicos, *leis]), **ctx,
     )
+
+
+# ---------------------------------------------------------------------------
+# Histórico: só existe para quem está logado. Sem login, nada muda (ver GET /chat/opcoes-lgpd na home).
+# ---------------------------------------------------------------------------
+
+def _salvar_turno(db: Session, usuario_id: int, payload: ChatRequest, resposta: ChatResponse) -> int:
+    conversa = None
+    if payload.conversa_id:
+        conversa = (
+            db.query(ConversaDB)
+            .filter(ConversaDB.id == payload.conversa_id, ConversaDB.usuario_id == usuario_id)
+            .first()
+        )
+    if conversa is None:
+        conversa = ConversaDB(usuario_id=usuario_id, titulo=payload.mensagem.strip()[:80])
+        db.add(conversa)
+
+    conversa.mensagens.append(MensagemConversaDB(papel="usuario", conteudo=payload.mensagem))
+    conversa.mensagens.append(MensagemConversaDB(papel="assistente", conteudo=resposta.mensagem))
+    if resposta.roteiro:
+        conversa.roteiro_final = resposta.roteiro.model_dump(mode="json")
+    conversa.atualizada_em = datetime.datetime.utcnow()
+    db.commit()
+    db.refresh(conversa)
+    return conversa.id
+
+
+@router.post("", response_model=ChatResponse)
+def conversar(payload: ChatRequest, request: Request, db: Session = Depends(get_db)) -> ChatResponse:
+    resposta = _gerar_resposta(payload)
+    usuario_id = auth_service.usuario_id_da_sessao(request)
+    if usuario_id:
+        resposta.conversa_id = _salvar_turno(db, usuario_id, payload, resposta)
+    return resposta
+
+
+@router.get("/conversas", response_model=list[ConversaResumo])
+def listar_conversas(
+    usuario: UsuarioDB = Depends(auth_service.usuario_logado), db: Session = Depends(get_db),
+) -> list[ConversaDB]:
+    return (
+        db.query(ConversaDB).filter(ConversaDB.usuario_id == usuario.id)
+        .order_by(ConversaDB.atualizada_em.desc()).all()
+    )
+
+
+@router.get("/conversas/{conversa_id}", response_model=ConversaOut)
+def obter_conversa(
+    conversa_id: int, usuario: UsuarioDB = Depends(auth_service.usuario_logado), db: Session = Depends(get_db),
+) -> ConversaDB:
+    conversa = db.query(ConversaDB).filter(ConversaDB.id == conversa_id, ConversaDB.usuario_id == usuario.id).first()
+    if conversa is None:
+        raise HTTPException(status_code=404, detail="Conversa não encontrada.")
+    return conversa
+
+
+@router.delete("/conversas/{conversa_id}")
+def apagar_conversa(
+    conversa_id: int, usuario: UsuarioDB = Depends(auth_service.usuario_logado), db: Session = Depends(get_db),
+) -> dict:
+    apagadas = (
+        db.query(ConversaDB).filter(ConversaDB.id == conversa_id, ConversaDB.usuario_id == usuario.id).delete()
+    )
+    db.commit()
+    if not apagadas:
+        raise HTTPException(status_code=404, detail="Conversa não encontrada.")
+    return {"ok": True}

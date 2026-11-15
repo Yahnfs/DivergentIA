@@ -1,0 +1,711 @@
+[
+  {
+    "id": "praia_acessivel_curva_da_jurema_vitoria",
+    "orgao": "Semesp - Secretaria Municipal de Esportes e Lazer",
+    "unidade": "Projeto Praia Acessível - Curva da Jurema",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": "Praia da Curva da Jurema, Enseada do Suá, Vitória - ES",
+    "horario_funcionamento": "Sextas-feiras e sábados, das 8h às 13h (gratuito, sem inscrição prévia)",
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "praia acessível",
+      "cadeira anfíbia",
+      "cadeirante",
+      "mobilidade reduzida",
+      "banho de mar assistido",
+      "curva da jurema",
+      "semesp",
+      "lazer",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.folhavitoria.com.br/geral/praia-acessivel-onde-tem-banho-de-mar-inclusivo-e-quem-pode-usar/"
+  },
+  {
+    "id": "praia_acessivel_camburi_vitoria",
+    "orgao": "Semesp - Secretaria Municipal de Esportes e Lazer",
+    "unidade": "Projeto Praia Acessível - Jardim Camburi (2º ponto)",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "praia acessível",
+      "cadeira anfíbia",
+      "cadeirante",
+      "mobilidade reduzida",
+      "praia de camburi",
+      "jardim camburi",
+      "semesp",
+      "lazer",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.folhavitoria.com.br/geral/projeto-praia-acessivel-inaugura-novo-ponto-em-jardim-camburi/"
+  },
+  {
+    "id": "tancredao_paradesporto_vitoria",
+    "orgao": "Semesp - Secretaria Municipal de Esportes e Lazer",
+    "unidade": "Complexo Esportivo Tancredão (Paradesporto)",
+    "municipio": "Vitória",
+    "bairro": "Mário Cypreste",
+    "endereco": "Rua Rosilda Falcão dos Anjos, Mário Cypreste, Vitória - ES (próximo à rodoviária)",
+    "horario_funcionamento": null,
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "tancredão",
+      "paradesporto",
+      "esporte inclusivo",
+      "pessoa com deficiência",
+      "paralímpico",
+      "semesp",
+      "mário cypreste",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/cidades/tancredao-recebe-festival-paralimpico-neste-sabado-150565"
+  },
+  {
+    "id": "parque_pedra_da_cebola_vitoria",
+    "orgao": "Prefeitura de Vitória - Projeto Viver Vitória",
+    "unidade": "Parque Pedra da Cebola - Praça Inclusiva (brinquedos adaptados para cadeirantes)",
+    "municipio": "Vitória",
+    "bairro": "Mata da Praia / Jardim da Penha",
+    "endereco": "Av. João Batista Celestino, s/nº, Mata da Praia, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "(27) 3327-4353",
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "parque",
+      "pedra da cebola",
+      "praça inclusiva",
+      "viver vitória",
+      "brinquedos adaptados",
+      "cadeirante",
+      "mata da praia",
+      "jardim da penha",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.agazeta.com.br/es/cotidiano/parque-pedra-da-cebola-ganha-praca-inclusiva-em-vitoria-1026"
+  },
+  {
+    "id": "parque_pedra_da_cebola_estimulo_sensorial",
+    "orgao": "Prefeitura de Vitória - Projeto Viver Vitória",
+    "unidade": "Parque Pedra da Cebola - Praça Inclusiva (estruturas de estímulo sensorial e cognitivo)",
+    "municipio": "Vitória",
+    "bairro": "Mata da Praia / Jardim da Penha",
+    "endereco": "Av. João Batista Celestino, s/nº, Mata da Praia, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "(27) 3327-4353",
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "parque",
+      "pedra da cebola",
+      "praça inclusiva",
+      "viver vitória",
+      "estímulo sensorial",
+      "estímulo cognitivo",
+      "autismo",
+      "neurodivergente",
+      "mata da praia",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.agazeta.com.br/es/cotidiano/parque-pedra-da-cebola-ganha-praca-inclusiva-em-vitoria-1026"
+  },
+  {
+    "id": "shopping_vitoria_sala_sensorial",
+    "orgao": "Shopping Vitória (privado)",
+    "unidade": "Shopping Vitória - Sala de Apoio Sensorial",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "shopping",
+      "sala de apoio sensorial",
+      "autorregulação",
+      "abafador de ruído",
+      "vaga exclusiva TEA",
+      "autismo",
+      "tea",
+      "neurodivergente",
+      "enseada do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/_/300277"
+  },
+  {
+    "id": "shopping_vitoria_abafadores_ruido",
+    "orgao": "Shopping Vitória (privado)",
+    "unidade": "Shopping Vitória - Cessão de abafadores de ruído",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "shopping vitória",
+      "abafador de ruído",
+      "autismo",
+      "tea",
+      "hipersensibilidade auditiva",
+      "enseada do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/_/300277"
+  },
+  {
+    "id": "shopping_vitoria_vagas_tea",
+    "orgao": "Shopping Vitória (privado)",
+    "unidade": "Shopping Vitória - Vagas de estacionamento exclusivas para pessoas com TEA",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "shopping vitória",
+      "vaga exclusiva",
+      "estacionamento",
+      "autismo",
+      "tea",
+      "enseada do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/_/300277"
+  },
+  {
+    "id": "cinemark_vitoria_sessao_azul",
+    "orgao": "Cinemark (privado) - Shopping Vitória",
+    "unidade": "Cinemark Vitória - Sessão Azul",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": null,
+    "horario_funcionamento": "Sessões pontuais adaptadas (luz e som reduzidos); datas variam, consultar programação",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "cinema",
+      "sessão azul",
+      "autismo",
+      "tea",
+      "hipersensibilidade sensorial",
+      "luz suave",
+      "som reduzido",
+      "cinemark",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/_/300277"
+  },
+  {
+    "id": "seme_vitoria_aee_salas_recursos",
+    "orgao": "Seme - Secretaria Municipal de Educação de Vitória",
+    "unidade": "Rede municipal (EMEFs e CMEIs) com Salas de Recursos Multifuncionais / AEE",
+    "municipio": "Vitória",
+    "bairro": null,
+    "endereco": null,
+    "horario_funcionamento": "AEE no contraturno escolar, conforme cada unidade",
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "educação especial",
+      "aee",
+      "atendimento educacional especializado",
+      "sala de recursos multifuncionais",
+      "emef",
+      "cmei",
+      "seme",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.agazeta.com.br/es/cotidiano/mpes-cobra-mais-profissionais-de-educacao-especial-em-escolas-da-grande-vitoria-0726"
+  },
+  {
+    "id": "vale_jardim_sensorial",
+    "orgao": "Vale S.A. (privado, entrada gratuita)",
+    "unidade": "Parque Botânico Vale - Jardim Sensorial",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Terça a domingo, das 8h às 17h (fecha em 24, 25 e 31/12 e 1º/01)",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "jardim sensorial",
+      "regulação sensorial",
+      "cinco sentidos",
+      "autismo",
+      "neurodivergente",
+      "área verde",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.agazeta.com.br/patrocinado/preservacao-da-natureza-e-o-lema-do-parque-botanico-0519"
+  },
+  {
+    "id": "vale_orquidario",
+    "orgao": "Vale S.A. (privado, entrada gratuita)",
+    "unidade": "Parque Botânico Vale - Orquidário",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Terça a domingo, das 8h às 17h",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "orquidário",
+      "área verde",
+      "baixa estimulação",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.agazeta.com.br/patrocinado/preservacao-da-natureza-e-o-lema-do-parque-botanico-0519"
+  },
+  {
+    "id": "vale_vagao_conhecimento",
+    "orgao": "Vale S.A. (privado, entrada gratuita)",
+    "unidade": "Parque Botânico Vale - Vagão do Conhecimento",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Terça a domingo, das 8h às 17h",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "vagão do conhecimento",
+      "educação ambiental",
+      "atividade educativa",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://saladeimprensa.vale.com/uso-futuro"
+  },
+  {
+    "id": "vale_trilhas_interpretativas",
+    "orgao": "Vale S.A. (privado, entrada gratuita)",
+    "unidade": "Parque Botânico Vale - Trilhas interpretativas (com inscrição)",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Terça a domingo, das 8h às 17h; inscrição na administração do parque",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "trilha",
+      "inscrição prévia",
+      "educação ambiental",
+      "mata atlântica",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://guia.melhoresdestinos.com.br/parque-botanico-da-vale-vitoria-62-362-l.html"
+  },
+  {
+    "id": "vale_passeio_onibus_unidade_tubarao",
+    "orgao": "Vale S.A. (privado, gratuito com agendamento)",
+    "unidade": "Parque Botânico Vale - Passeio de ônibus pela Unidade Tubarão",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Mediante agendamento (não é permitido sair do veículo durante o passeio)",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "passeio guiado",
+      "ônibus",
+      "agendamento",
+      "unidade tubarão",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://guia.melhoresdestinos.com.br/parque-botanico-da-vale-vitoria-62-362-l.html"
+  },
+  {
+    "id": "vale_area_piquenique",
+    "orgao": "Vale S.A. (privado, entrada gratuita)",
+    "unidade": "Parque Botânico Vale - Área de piquenique e lazer",
+    "municipio": "Vitória",
+    "bairro": "Jardim Camburi",
+    "endereco": "Av. dos Expedicionários, s/nº, Jardim Camburi, Vitória - ES, CEP 29090-070",
+    "horario_funcionamento": "Terça a domingo, das 8h às 17h",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "parque botânico vale",
+      "piquenique",
+      "lazer",
+      "área verde",
+      "convívio",
+      "jardim camburi",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://vale.com/vale-botanical-park-vitoria"
+  },
+  {
+    "id": "tamar_vitoria_museu_tartarugas",
+    "orgao": "Fundação Projeto Tamar",
+    "unidade": "Centro de Visitantes Projeto Tamar Vitória (Museu Aberto das Tartarugas Marinhas)",
+    "municipio": "Vitória",
+    "bairro": "Enseada do Suá",
+    "endereco": "Av. Nossa Senhora dos Navegantes, 700A, Praça do Papa, Enseada do Suá, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "(27) 3225-3787",
+      "(27) 99925-2279"
+    ],
+    "email": null,
+    "etiquetas": [
+      "projeto tamar",
+      "museu",
+      "plano de acessibilidade",
+      "desníveis",
+      "educação ambiental",
+      "enseada do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.es.gov.br/Noticia/museu-das-tartarugas-marinhas-em-vitoria-passa-por-modernizacao-museologica"
+  },
+  {
+    "id": "sesc_gloria_biblioteca_acessivel",
+    "orgao": "Sesc ES",
+    "unidade": "Centro Cultural Sesc Glória - Biblioteca Guilherme Santos Neves (acervo em braile e tecnologia assistiva)",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Av. Jerônimo Monteiro, 428, 4º andar, Centro, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "sesc glória",
+      "biblioteca",
+      "braille",
+      "deficiência visual",
+      "tecnologia assistiva",
+      "cultura",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.agazeta.com.br/hz/cultura/teatro-turbantes-e-inclusao-semana-de-acessibilidade-cultural-tem-programacao-gratuita-em-vitoria-0926"
+  },
+  {
+    "id": "sesc_gloria_teatro_libras",
+    "orgao": "Sesc ES",
+    "unidade": "Centro Cultural Sesc Glória - Teatro com sessões com intérprete de Libras",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Av. Jerônimo Monteiro, 428, Centro, Vitória - ES",
+    "horario_funcionamento": "Conforme programação (Libras em sessões específicas)",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "sesc glória",
+      "teatro",
+      "libras",
+      "surdez",
+      "intérprete",
+      "cultura",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.agazeta.com.br/hz/cultura/acessibilidade-e-tema-da-peca-hora-do-recreio-no-sesc-gloria-0822"
+  },
+  {
+    "id": "theatro_carlos_gomes_acessibilidade",
+    "orgao": "Governo do Estado do ES - Secult",
+    "unidade": "Theatro Carlos Gomes (restaurado com acessibilidade)",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Praça Costa Pereira, Centro, Vitória - ES",
+    "horario_funcionamento": "Conforme programação",
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "theatro carlos gomes",
+      "teatro",
+      "acessibilidade universal",
+      "restauro",
+      "cultura",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://tribunaonline.com.br/_/287951"
+  },
+  {
+    "id": "theatro_carlos_gomes_visita_guiada",
+    "orgao": "Governo do Estado do ES - Secult",
+    "unidade": "Theatro Carlos Gomes - Visitação guiada das adequações de acessibilidade",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Praça Costa Pereira, Centro, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "theatro carlos gomes",
+      "visita guiada",
+      "adequações de acessibilidade",
+      "cultura",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-04",
+    "fonte_url": "https://www.es.gov.br/Noticia/theatro-carlos-gomes-abre-visitacao-guiada-para-o-publico-conhecer-obras-de-restauro-e-readequacao"
+  },
+  {
+    "id": "praca_inclusiva_viver_vitoria_praca_dos_desejos",
+    "orgao": "Prefeitura de Vitória - Projeto Viver Vitória",
+    "unidade": "Praça Inclusiva Viver Vitória - Praça dos Desejos",
+    "municipio": "Vitória",
+    "bairro": "Praia do Canto",
+    "endereco": "Praça dos Desejos, Praia do Canto, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "praça inclusiva",
+      "viver vitória",
+      "brinquedos adaptados",
+      "cadeirante",
+      "estímulo sensorial",
+      "praça dos desejos",
+      "praia do canto",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.agazeta.com.br/es/cotidiano/parque-pedra-da-cebola-ganha-praca-inclusiva-em-vitoria-1026"
+  },
+  {
+    "id": "praca_inclusiva_viver_vitoria_parque_moscoso",
+    "orgao": "Prefeitura de Vitória - Projeto Viver Vitória",
+    "unidade": "Praça Inclusiva Viver Vitória - Parque Moscoso",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Parque Moscoso, Centro, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "praça inclusiva",
+      "viver vitória",
+      "brinquedos acessíveis",
+      "crianças com e sem deficiência",
+      "parque moscoso",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://eshoje.com.br/?p=894827"
+  },
+  {
+    "id": "amaes_goiabeiras_vitoria",
+    "orgao": "AMAES - Associação dos Amigos dos Autistas do Espírito Santo",
+    "unidade": "AMAES - Sede Goiabeiras",
+    "municipio": "Vitória",
+    "bairro": "Goiabeiras",
+    "endereco": "Av. Fernando Ferrari, 2115, Goiabeiras, Vitória - ES, CEP 29075-073",
+    "horario_funcionamento": null,
+    "telefones": [
+      "(27) 3327-1836"
+    ],
+    "email": "amaes@amaes.org.br",
+    "etiquetas": [
+      "amaes",
+      "autismo",
+      "tea",
+      "habilitação",
+      "reabilitação",
+      "atividades com famílias",
+      "goiabeiras",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://viana.es.gov.br/uploads/files/AMAES/Plano_de_trabalho.pdf"
+  },
+  {
+    "id": "cap_es_deficiencia_visual_praia_do_sua",
+    "orgao": "Governo do Estado do ES - Sedu",
+    "unidade": "CAP - Centro de Apoio Pedagógico para Pessoas com Deficiência Visual",
+    "municipio": "Vitória",
+    "bairro": "Praia do Suá",
+    "endereco": "Escola Desembargador Carlos Xavier Paes Barreto, Av. Leitão da Silva, s/nº, Praia do Suá, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "cap",
+      "deficiência visual",
+      "educação especial",
+      "apoio pedagógico",
+      "braille",
+      "praia do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.es.gov.br/Noticia/pessoas-com-deficiencia-visual-contam-com-atendimento-especializado-na-rede-estadual"
+  },
+  {
+    "id": "ilbes_instituto_luiz_braille_es",
+    "orgao": "ILBES - Instituto Luiz Braille do Espírito Santo",
+    "unidade": "Instituto Luiz Braille do Espírito Santo",
+    "municipio": "Vitória",
+    "bairro": null,
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "ilbes",
+      "luiz braille",
+      "deficiência visual",
+      "assistência social",
+      "tecnologia assistiva",
+      "óculos inteligentes orcam",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.es.gov.br/Noticia/governo-do-estado-entrega-oculos-inteligentes-ao-instituto-luiz-braille"
+  },
+  {
+    "id": "seme_vitoria_lego_braille",
+    "orgao": "Seme - Secretaria Municipal de Educação de Vitória",
+    "unidade": "Rede municipal - Lego Braille Bricks para alunos com deficiência visual",
+    "municipio": "Vitória",
+    "bairro": null,
+    "endereco": null,
+    "horario_funcionamento": null,
+    "telefones": [
+      "156"
+    ],
+    "email": null,
+    "etiquetas": [
+      "educação especial",
+      "lego braille",
+      "deficiência visual",
+      "emef",
+      "cmei",
+      "seme",
+      "rede municipal",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.agazeta.com.br/es/cotidiano/lego-em-braille-ensina-diverte-e-muda-realidade-de-criancas-cegas-em-vitoria-0524"
+  },
+  {
+    "id": "palacio_anchieta_sinalizacao_acessivel",
+    "orgao": "Governo do Estado do ES - Secult",
+    "unidade": "Palácio Anchieta - Visita guiada com sinalização acessível",
+    "municipio": "Vitória",
+    "bairro": "Centro",
+    "endereco": "Praça João Clímaco, s/nº, Centro, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [
+      "(27) 3636-1032",
+      "(27) 3636-1035"
+    ],
+    "email": null,
+    "etiquetas": [
+      "palácio anchieta",
+      "museu",
+      "visita guiada",
+      "sinalização acessível",
+      "cultura",
+      "centro",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://midiatecacapixaba.substack.com/p/newsletter-edicao-especial-um-olhar"
+  },
+  {
+    "id": "bpes_levy_curcio_sinalizacao_acessivel",
+    "orgao": "Governo do Estado do ES - Secult",
+    "unidade": "Biblioteca Pública Estadual Levy Cúrcio da Rocha - Sinalização acessível",
+    "municipio": "Vitória",
+    "bairro": "Praia do Suá",
+    "endereco": "Av. João Batista Parra, 165, Praia do Suá, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "biblioteca pública estadual",
+      "bpes",
+      "sinalização acessível",
+      "cultura",
+      "leitura",
+      "praia do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://midiatecacapixaba.substack.com/p/newsletter-edicao-especial-um-olhar"
+  },
+  {
+    "id": "bpes_levy_curcio_acervo_audio_ebooks",
+    "orgao": "Governo do Estado do ES - Secult",
+    "unidade": "Biblioteca Pública Estadual Levy Cúrcio da Rocha - Acervo digital em áudio e e-books",
+    "municipio": "Vitória",
+    "bairro": "Praia do Suá",
+    "endereco": "Av. João Batista Parra, 165, Praia do Suá, Vitória - ES",
+    "horario_funcionamento": null,
+    "telefones": [],
+    "email": null,
+    "etiquetas": [
+      "biblioteca pública estadual",
+      "bpes",
+      "audiolivros",
+      "e-books",
+      "acervo digital",
+      "leitura acessível",
+      "praia do suá",
+      "vitória"
+    ],
+    "verificado_em": "2026-11-08",
+    "fonte_url": "https://www.es.gov.br/Noticia/biblioteca-publica-disponibiliza-acervo-com-19-mil-livros-em-formato-de-audio-e-e-books"
+  }
+]

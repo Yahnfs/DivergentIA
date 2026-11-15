@@ -102,10 +102,13 @@ class ChatRequest(BaseModel):
     municipio: Optional[str] = Field(None, description="Município escolhido pelo usuário")
     historico: list[MensagemChat] = Field(
         default_factory=list, max_length=20,
-        description="Mensagens anteriores da conversa (o servidor não guarda conversas)",
+        description="Mensagens anteriores da conversa (sem login, o servidor não guarda nada)",
     )
     roteiro_atual: Optional[RoteiroOut] = Field(
         None, description="Último roteiro mostrado ao usuário, para o assistente atualizá-lo",
+    )
+    conversa_id: Optional[int] = Field(
+        None, description="Para quem está logado: id da conversa a continuar salvando (None = nova conversa)",
     )
 
 
@@ -131,6 +134,23 @@ class ChatResponse(BaseModel):
     contatos_de_apoio: list[str] = []        # ids dos contatos para "Quem pode ajudar agora"
     fontes: list[FonteOut] = []
     municipio_detectado: Optional[str] = None
+    conversa_id: Optional[int] = None  # presente só para quem está logado (ver GET /chat/conversas)
+
+
+class ConversaResumo(BaseModel):
+    """Um item da lista de histórico (GET /chat/conversas) — sem as mensagens, para carregar rápido."""
+    id: int
+    titulo: str
+    criada_em: datetime
+    atualizada_em: datetime
+
+    class Config:
+        from_attributes = True
+
+
+class ConversaOut(ConversaResumo):
+    mensagens: list[MensagemChat]
+    roteiro_final: Optional[RoteiroOut] = None
 
 
 class PdfRequest(BaseModel):
@@ -147,14 +167,19 @@ class PdfRequest(BaseModel):
 class LocalAcessivelCreate(BaseModel):
     nome: str = Field(..., min_length=1, max_length=120)
     municipio: str = Field(..., min_length=1, max_length=60)
+    bairro: Optional[str] = Field(None, max_length=80)
     endereco: str = Field(..., min_length=1, max_length=200)
     tipo: str = Field(..., max_length=40, description="Ex: comercio, saude, educacao, lazer, orgao_publico")
     recursos_acessibilidade: list[str] = Field(
         default=[], max_length=12,
         description="Ex: rampa, banheiro_adaptado, braille, baixo_estimulo_sensorial, atendimento_preferencial",
     )
+    telefones: list[str] = Field(default=[], max_length=6)
+    horario_funcionamento: Optional[str] = Field(None, max_length=200)
     observacoes: Optional[str] = Field(None, max_length=500)
     reportado_por: Optional[str] = Field(None, max_length=120)
+    fonte_url: Optional[str] = Field(None, max_length=300)
+    verificado_em: Optional[str] = Field(None, max_length=20)
 
 
 class LocalAcessivelOut(LocalAcessivelCreate):
